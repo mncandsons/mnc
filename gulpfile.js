@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const shell = require('gulp-shell');
 const htmlmin = require('gulp-htmlmin');
-const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const responsive = require('gulp-responsive');
@@ -58,12 +57,4 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 })
 
-gulp.task('minify-css', () => {
-    return gulp.src('public/**/*.css')
-        .pipe(cleanCSS())
-        .pipe(gulp.dest('./public'))
-})
-
-
-gulp.task('build', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html',
-          'minify-css'));
+gulp.task('build', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html'));
