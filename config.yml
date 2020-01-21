@@ -1,5 +1,5 @@
 title: MNC+Sons Contractors
-baseURL: 'https://carpaltunnelcenter.com'
+baseURL: 'https://mnc.netlify.com'
 languageCode: en-us
 theme: mnc
 enableRobotsTXT: true
