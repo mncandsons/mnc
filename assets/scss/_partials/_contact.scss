@@ -1,0 +1,17 @@
+.contact {
+  padding: 120px 0 144px;
+  @include respond-to(sm){
+    padding: 40px 0 116px;
+  }
+  background: $color-neutral-100;
+	&__result {
+
+	}
+
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}

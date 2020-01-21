@@ -1,0 +1,33 @@
+{{ "<!-- Scripts Bundle -->" | safeHTML }}
+{{ $bundle := resources.Get "js/bundle.min.js"}}
+{{ $bundle_dest := slice $bundle | resources.Concat "assets/js/bundle.min.js"}}
+<script src="{{ $bundle_dest.RelPermalink }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.js" integrity="sha256-yE0r0xKguW5+Mx31/ApDi0I3aYuUMfSwUD5208Ajz9k=" crossorigin="anonymous"></script>
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/scripts.js"}}
+{{ $script_dest := slice $script | resources.Concat "assets/js/scripts.js"}}
+<script src="{{ $script_dest.RelPermalink }}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{.Site.Params.googleAnalitycsID}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{.Site.Params.googleAnalitycsID}}');
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

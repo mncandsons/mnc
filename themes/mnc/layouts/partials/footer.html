@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 col-xl-4 d-flex justify-content-end-md">
+        <div class="site-footer__item pr-48-xl">
+          <i class="icon icon-phone"></i>
+          <a href="tel:{{ replaceRE " " "" .Site.Data.contact.contact_phone}}">{{.Site.Data.contact.contact_phone}}</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-9 col-xl-8">
+        <div class="site-footer__item">
+          <i class="icon icon-location"></i>
+          New York Office: <a target="_blank" href="{{.Site.Data.contact.new_york_address_link}}">{{.Site.Data.contact.new_york_address}}</a>
+        </div>
+        <div class="site-footer__item">
+          New Jersey Office:  <a target="_blank" href="{{.Site.Data.contact.new_jersey_address_link}}">{{.Site.Data.contact.new_jersey_address}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <div>Copyright © 2019 MNC+Sons</div>
+    <a class="site-footer__insta" href="" target="_blank"><i class="icon icon-instagram"></i> Follow us on instagram</a>
+  </div>
+</footer>

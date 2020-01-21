@@ -1,0 +1,105 @@
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  label{
+    text-align: left;
+    display: block;
+    color: $color-black;
+    @include fsz(20px);
+    position: absolute;
+    top: 16px;
+    left: 88px;
+    pointer-events: none;
+    transition: 150ms;
+    @include respond-to(sm){
+      @include fsz(14px);
+      left: 16px;
+      top: 14px;
+    }
+  }
+}
+
+.form-control {
+  width: 100%;
+  height: 60px;
+  background: none;
+  border-bottom: 2px solid rgba($color-neutral-300, 0.3);
+  transition: 300ms;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: left;
+  @include fsz(20px);
+  font-weight: $weight-medium;
+  padding:  0 24px 0 88px;
+  caret-color: $color-primary-500;
+  @include respond-to(sm){
+    @include fsz(14px);
+    height: 48px;
+    padding: 0 16px;
+  }
+  @at-root textarea#{&}{
+    padding: 16px 24px 10px 88px;
+    resize: none;
+    line-height: 1.4;
+    font-family: $font;
+    @include respond-to(sm){
+      padding: 11px 16px;
+    }
+    &:focus, &.filled{
+      height: 110px;
+    }
+  }
+  &:focus, &.filled{
+    border-color: $color-neutral-300;
+    ~ label{
+      @include fsz(13px);
+      letter-spacing: 0.8px;
+      left: 12px;
+      top: 22px;
+      color: $color-neutral-500;
+      @include respond-to(sm){
+        @include fsz(12px);
+        letter-spacing: 0.74px;
+        left: 16px;
+        top: -8px;
+      }
+    }
+  }
+  &.error{
+    border-color: rgba($color-primary-500, 0.5);
+  }
+}
+
+[data-type='validator-error'] {
+  font-size: 11px;
+  position: absolute;
+  z-index: 10;
+  margin-top: 2px;
+  right: 0;
+  bottom: -28px;
+  color: $color-white;
+  background: $color-primary-500;
+  box-shadow: 0 6px 2px -2px rgba($color-primary-500, 0.3);
+  padding: 4px 10px;
+  border-radius: 1px;
+  pointer-events: none;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    top: -5px;
+    position: absolute;
+    right: 6px;
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px solid $color-primary-500;
+  }
+}
+.form-hint{
+  margin-top: 16px;
+  @include fsz(10px);
+}
+.grecaptcha-badge { visibility: hidden; }

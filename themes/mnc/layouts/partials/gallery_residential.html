@@ -1,0 +1,22 @@
+<aside id="residential-gallery" class="gallery">
+  <div class="gallery__inner">
+    <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
+    <div class="slideshow">
+      {{ range .Site.Data.portfolio_residential.portfolio_item }}
+      <div class="slideshow__item">
+        <div class="slideshow-inside">
+          {{ range .gallery_pictures }}
+          <div class="slideshow-inside__item">
+            <picture>
+              {{ $image_ext_res := path.Ext .gallery_img }}
+              <source type="image/webp" data-srcset="{{ replace .gallery_img $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive lazy" data-srcset="{{ .gallery_img | relURL }}" alt="…">
+            </picture>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</aside>

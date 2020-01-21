@@ -1,0 +1,26 @@
+title: MNC+Sons Contractors
+baseURL: 'https://carpaltunnelcenter.com'
+languageCode: en-us
+theme: mnc
+enableRobotsTXT: true
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+menu:
+  main:
+    - URL: '#portfolio'
+      name: Portfolio
+      weight: 1
+    - URL: '#about-res'
+      name: About us
+      weight: 2
+    - URL: '#contact'
+      name: Contact
+      weight: 3
+params:
+  author: modstud.io
+  description:
+  googleAnalitycsID: UA-426069-3
+  images: /assets/images/carpal-tunnel-center.jpg
+  logo: assets/images/logo.svg
+  robotsTXTtext: 'User-agent: *'

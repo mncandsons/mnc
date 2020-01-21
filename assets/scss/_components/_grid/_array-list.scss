@@ -1,0 +1,94 @@
+
+// grid screen array (type,size) list
+$grid-type-list: ("xs", $screen-xs),("sm", $screen-sm),("md", $screen-md),("lg", $screen-lg),("xl", $screen-xl);
+
+
+// text-align array list
+$text-align-type-list: (
+    text-center: ('center'),
+    text-left: ('left'),
+    text-right: ('right')
+);
+
+// padding array list
+$padding-type-list: (
+    p: ('null'),
+    pt: ('top'),
+    pr: ('right'),
+    pb: ('bottom'),
+    pl: ('left')
+);
+
+
+// margin array list
+$margin-type-list: (
+    m: ('null'),
+    mt: ('top'),
+    mr: ('right'),
+    mb: ('bottom'),
+    ml: ('left')
+);
+
+$flex-attribute-list: (
+
+    // flex-direction
+    d-flex:                   (display: "flex"),
+    d-inline-flex:            (display: "inline-flex"),
+
+
+    // flex-direction
+    flex-row:                       (flex-direction: "row"),
+    flex-row-reverse:               (flex-direction: "row-reverse"),
+    flex-column:                    (flex-direction: "column"),
+    flex-column-reverse:            (flex-direction: "column-reverse"),
+
+
+    // flex-wrap
+    flex-wrap:                      (flex-wrap: "wrap"),
+    flex-wrap-reverse:              (flex-wrap: "wrap-reverse"),
+    flex-nowrap:                    (flex-wrap: "nowrap"),
+
+
+    // justfy-content
+    justify-content-start:          (justify-content: "flex-start"),
+    justify-content-end:            (justify-content: "flex-end"),
+    justify-content-center:         (justify-content: "center"),
+    justify-content-baseline:       (justify-content: "baseline"),
+    justify-content-around:         (justify-content: "space-around"),
+    justify-content-between:        (justify-content: "space-between"),
+
+
+    // align-items
+    align-items-start:              (align-items: "flex-start"),
+    align-items-end:                (align-items: "flex-end"),
+    align-items-center:             (align-items: "center"),
+    align-items-baseline:           (align-items: "baseline"),
+    align-items-stretch:            (align-items: "stretch"),
+
+
+    // align-self
+    align-self-start:               (align-self: "flex-start"),
+    align-self-end:                 (align-self: "flex-end"),
+    align-self-center:              (align-self: "center"),
+    align-self-baseline:            (align-self: "baseline"),
+    align-self-stretch:             (align-self: "stretch"),
+
+
+    // align-content
+    align-content-start:            (align-content: "flex-start"),
+    align-content-end:              (align-content: "flex-end"),
+    align-content-center:           (align-content: "center"),
+    align-content-between:          (align-content: "space-between"),
+    align-content-around:           (align-content: "space-around"),
+
+
+    // flex margin (left,right) justfy-content
+    m-auto:                   (margin: "auto"),
+
+    ml-auto:                   (margin-left: "auto"),
+    mr-auto:                   (margin-right: "auto"),
+
+    // flex margin (top,bottom) align-items
+    mt-auto:                   (margin-top: "auto"),
+    mb-auto:                   (margin-bottom: "auto")
+);

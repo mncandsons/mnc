@@ -1,0 +1,114 @@
+.about {
+  padding: 120px 0 176px;
+  @include respond-to(sm){
+    padding: 72px 0;
+  }
+}
+
+.about-photo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  position: relative;
+  &:before{
+    content: '';
+    width: calc(100% + 60px);
+    height: 0;
+    padding-bottom: 80%;
+    background: $color-neutral-100;
+    position: absolute;
+    right: -60px;
+    bottom: -86px;
+    @include respond-to(xl){
+      right: -48px;
+    }
+    @include respond-to(sm){
+      width: calc(100% + 96px);
+    }
+  }
+  &__image{
+    max-width: 394px;
+    flex: 1 1 auto;
+    position: relative;
+    &:before{
+      content: '';
+      width: 192px;
+      height: 4px;
+      position: absolute;
+      background: $color-neutral-300;
+      right: -112px;
+      top: 88px;
+      z-index: 2;
+      @include respond-to(xl){
+        width: 104px;
+        right: -24px;
+      }
+    }
+  }
+  &__image-inner{
+    height: 0;
+    position: relative;
+    padding-bottom: 149%;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      font-family: 'object-fit: cover; object-position: center;';
+    }
+  }
+}
+
+
+.about-badge {
+  @include fsz(16px);
+  color: $color-white;
+  line-height: 1.33;
+  width: 154px;
+  height: 196px;
+  font-weight: $weight-medium;
+  background: $color-primary-500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 28px;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 64px;
+  @include respond-to(sm){
+    transform: scale(0.8) translateY(-80%);
+  }
+  span{
+    display: block;
+    @include fsz(76px);
+    letter-spacing: 0.7px;
+    font-weight: $weight-black;
+    line-height: 0.9;
+  }
+  &:after{
+    content: '';
+    width: 24px;
+    height: 4px;
+    background: inherit;
+    position: absolute;
+    bottom: -4px;
+  }
+}
+
+.heading-text {
+
+}
+
+.about-info-block {
+  &:not(:last-of-type){
+    margin-bottom: 120px;
+    @include respond-to(lg){
+      margin-bottom: 80px;
+    }
+    @include respond-to(sm){
+      margin-bottom: 56px;
+    }
+  }
+}

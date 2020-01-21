@@ -1,0 +1,30 @@
+// flex grid variable
+
+$grid-hidden-name: "d-none";
+$grid-visible-name: "d-block";
+$grid-visible-flex-name: "d-flex";
+$margin-name: "margin";
+$padding-name: "padding";
+$grid-container-name: "container";
+
+$grid-columns:               12 !default;
+$grid-font-size:             16 !default;
+$grid-fraction:              8 !default;
+$grid-gutter-width:          $grid-fraction * 4;
+
+
+//grid media queries
+$screen-xs:                  575px !default;
+$screen-sm:                  767px !default;
+$screen-md:                  991px !default;
+$screen-lg:                  1199px !default;
+$screen-xl:                  1440px !default;
+
+
+//flex container
+$container-media-list: (
+    xs: 540px,
+    sm: 720px,
+    md: 960px,
+    lg: 1440px,
+);

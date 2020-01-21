@@ -1,0 +1,187 @@
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-top__wrap">
+      <div class="portfolio-top">
+        <ol class="hashTabber-nav portfolio-nav" data-hashtabber-id="portfolio" data-hashtabber-default="residential">
+          <li data-hashtabber-pair="residential"><a>Residential</a></li>
+          <li data-hashtabber-pair="commercial"><a>Commercial</a></li>
+        </ol>
+
+        <ol class="hashTabber-data portfolio-top__inner" data-hashtabber-id="portfolio">
+          <li data-hashtabber-pair="residential">
+            <picture>
+              {{ $image_ext_res := path.Ext .Site.Data.portfolio_residential.main_img }}
+              <source type="image/webp" srcset="{{ replace .Site.Data.portfolio_residential.main_img $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive" srcset="{{ .Site.Data.portfolio_residential.main_img | relURL }}" alt="…">
+            </picture>
+          </li>
+          <li data-hashtabber-pair="commercial">
+            <picture>
+              {{ $image_ext_res := path.Ext .Site.Data.portfolio_commercial.main_img }}
+              <source type="image/webp" srcset="{{ replace .Site.Data.portfolio_commercial.main_img $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive" srcset="{{ .Site.Data.portfolio_commercial.main_img | relURL }}" alt="…">
+            </picture>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+
+    <div class="portfolio-bottom">
+      <div class="portfolio-container">
+        <ol class="hashTabber-data" data-hashtabber-id="portfolio">
+
+          <li data-hashtabber-pair="residential">
+            <div class="subheading">Our work</div>
+            <h1>{{ .Site.Data.portfolio_residential.heading }}</h1>
+            <div class="row gutter-16">
+              {{ $.Scratch.Set "counter" -1 }}
+              {{ range first 6 .Site.Data.portfolio_residential.portfolio_item }}
+              {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="p-block__outer">
+                  <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
+                    <div class="p-block__inner">
+                      <picture>
+                        {{ $image_ext_res := path.Ext .picture }}
+                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                      </picture>
+                      <div class="p-block__overlay d-flex align-items-center justify-content-center">
+                        <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+            {{ $range_len := (len .Site.Data.portfolio_residential.portfolio_item) }}
+            {{ with gt $range_len 6 }}
+              <div class="d-flex align-items-center justify-content-center mt-16 mt-48-sm">
+                <a class="btn btn-default btn-lg" href="/portfolio-residential">View more</a>
+              </div>
+            {{ end }}
+
+            {{- partial "about_residential.html" . -}}
+          </li>
+
+          <li data-hashtabber-pair="commercial">
+            <div class="subheading">Our work</div>
+            <h1>{{ .Site.Data.portfolio_commercial.heading }}</h1>
+            <div class="row gutter-16">
+
+            {{ range first 6 .Site.Data.portfolio_commercial.portfolio_item }}
+              {{ $sub_list := (.sub_item) }}
+              {{ $sublist_len := (len $sub_list) }}
+
+              {{ if lt $sublist_len 2 }}
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="p-block__outer">
+                  <div class="p-block commercial">
+                    <div class="p-block__inner">
+                      <picture>
+                        {{ $image_ext_res := path.Ext .picture }}
+                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                      </picture>
+                      <div class="p-block__overlay commercial">
+                        <div class="p-block__info">
+                          <h3>{{ .name }}</h3>
+                          <ul>
+                            {{ with .type }}
+                                <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .address }}
+                                <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .area }}
+                                <li><i class="icon icon-size"></i>{{ . }}</li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                        <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {{ else }}
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="p-block__outer">
+                  <div class="p-block">
+                    <div class="p-block__inner">
+                      <picture>
+                        {{ $image_ext_res := path.Ext .picture }}
+                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                      </picture>
+                      <div class="p-block__overlay commercial">
+                        <div class="p-block__info">
+                          <h3>{{ .name }}</h3>
+                          <ul>
+                            {{ with .address }}
+                                <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                        <div class="p-block__btn"><span>View All</span><i class="icon icon-arrow-more"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-block__subblocks">
+                    <div class="portfolio-container">
+                      <h3 class="text-center mb-32">{{ .name }} Projects</h3>
+                      <div class="row gutter-16">
+                        {{ range .sub_item }}
+                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                          <div class="p-block__outer">
+                            <div class="p-block commercial">
+                              <div class="p-block__inner">
+                                <picture>
+                                  {{ $image_ext_res := path.Ext .picture }}
+                                  <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                                  <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                                </picture>
+                                <div class="p-block__overlay commercial">
+                                  <div class="p-block__info">
+                                    <h3>{{ .name }}</h3>
+                                    <ul>
+                                      {{ with .type }}
+                                          <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                                      {{ end }}
+                                      {{ with .area }}
+                                          <li><i class="icon icon-size"></i>{{ . }}</li>
+                                      {{ end }}
+                                    </ul>
+                                  </div>
+                                  <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+            {{ end }}
+            </div>
+
+            {{ $range_len := (len .Site.Data.portfolio_commercial.portfolio_item) }}
+            {{ with gt $range_len 6 }}
+              <div class="d-flex align-items-center justify-content-center mt-16 mt-48-sm">
+                <a class="btn btn-default btn-lg" href="/portfolio-commercial">View more</a>
+              </div>
+            {{ end }}
+
+            {{- partial "about_commercial.html" . -}}
+          </li>
+        </ol>
+      </div>
+    </div>
+</section>

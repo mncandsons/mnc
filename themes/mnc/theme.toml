@@ -1,0 +1,9 @@
+name = "MNC"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "Made for MNC"
+homepage = ""
+
+[author]
+  name = "modstud.io"
+  homepage = "https://modstud.io/"

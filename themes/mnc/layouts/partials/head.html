@@ -1,0 +1,45 @@
+<head>
+<meta charset="utf-8">
+<title>{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{.Title }} - {{ .Site.Title }} {{ end }} </title>
+
+{{ "<!-- mobile responsive meta -->" | safeHTML }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{.Title }}{{ end }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ if .IsHome }}<meta property="og:image" content="{{.Site.Params.images | absURL }}">{{ else }}
+{{ with .Params.images }}<meta property="og:image" content="{{.}}">{{ else }}
+<meta property="og:image" content="{{.Site.Params.images | absURL }}">
+{{ end }}{{ end }}
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{.Title }}{{ end }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}"/>
+{{ if .IsHome }}<meta name="twitter:image" content="{{.Site.Params.images | absURL }}">{{ else }}
+{{ with .Params.images }}<meta name="twitter:image" content="{{.}}">{{ else }}
+<meta name="twitter:image" content="{{.Site.Params.images | absURL }}">
+{{ end }}{{ end }}
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/favicon/apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "assets/favicon/favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "assets/favicon/favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "assets/favicon/site.webmanifest" | relURL }}">
+<link rel="mask-icon" href="{{ "assets/favicon/safari-pinned-tab.svg" | relURL }}" color="#16bafb">
+<link rel="shortcut icon" href="{{ "assets/favicon/favicon.ico" | relURL }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="{{ "assets/favicon/browserconfig.xml" | relURL }}">
+<meta name="theme-color" content="#ffffff">
+
+
+{{ $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
+{{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
+<link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+<script src="https://www.google.com/recaptcha/api.js?render=6LdVncAUAAAAAPHpUu5pG4USDM31dffdj6c8oGUA"></script>
+
+</head>

@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a class="site-header__logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo | relURL }}" alt="{{.Site.Title}}"></a>
+  <button class="toggle-menu d-none-sm" type="button">
+    <span class="toggle-menu__inner"></span>
+  </button>
+  <nav class="site-nav">
+    <ul>
+      {{ range $index, $element := .Site.Menus.main }}
+        {{ if eq $.Kind "home" }}
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+          </li>
+        {{ else }}
+          <li class="site-nav__item {{ if (eq $index 1) }}d-none{{ end }}">
+            <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+        <li class="site-nav__instagram">
+          <a href="" target="_blank"><i class="icon icon-instagram"></i></a>
+        </li>
+    </ul>
+  </nav>
+</header>

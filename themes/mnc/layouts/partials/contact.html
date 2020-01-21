@@ -1,0 +1,25 @@
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="subheading">Contact us</div>
+    <h1>{{.Site.Data.contact.contact_heading}}</h1>
+      <div class="form">
+        <form name="contact-form" method="POST" action="https://us-central1-carpal-tunnel-center-form.cloudfunctions.net/form_sending" novalidate>
+          <div class="contact__result"></div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="name" data-rule="required|name">
+              <label>Name</label>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" data-rule="required|email">
+              <label>Email</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" data-rule="required"></textarea>
+              <label>Message</label>
+            </div>
+            <button class="btn btn-lg btn-default btn-w-arrow mt-56" type="submit">Send <i class="icon icon-arrow-right"></i></button>
+            <p class="form-hint">This site is protected by reCAPTCHA and the Google <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> and <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+        </form>
+      </div>
+    </div>
+</section>

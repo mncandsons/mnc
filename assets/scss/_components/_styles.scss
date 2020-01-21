@@ -1,0 +1,22 @@
+.wrapper{
+  transition: 500ms;
+  &.active{
+    transform: translateX(-20%);
+  }
+}
+.overflow-hidden{
+  overflow: hidden !important;
+}
+hr{
+  height: 1px;
+  background: $color-neutral-100;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  @include respond-to(md){
+    margin-top: 32px;
+    margin-bottom: 56px;
+  }
+  @include respond-to(sm){
+    margin-top: 24px;
+  }
+}

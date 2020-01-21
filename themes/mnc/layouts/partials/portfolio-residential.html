@@ -1,0 +1,35 @@
+<section class="portfolio-inside" id="portfolio">
+  <div class="portfolio-bottom">
+    <div class="portfolio-container">
+      <div class="portfolio-inside__header">
+        <a href="{{ .Site.BaseURL }}" class="btn btn-bordered"><i class="icon icon-arrow-left-sm mr-8"></i><span>Back to Homepage</span></a>
+        <h1>{{ .Site.Data.portfolio_residential.heading }}</h1>
+      </div>
+      <div class="row gutter-16">
+        {{ $.Scratch.Set "counter" -1 }}
+        {{ range .Site.Data.portfolio_residential.portfolio_item }}
+        {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="p-block__outer">
+            <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
+              <div class="p-block__inner">
+                <picture>
+                  {{ $image_ext_res := path.Ext .picture }}
+                  <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                </picture>
+                <div class="p-block__overlay d-flex align-items-center justify-content-center">
+                  <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      <div class="d-flex align-items-center justify-content-center mt-16 mt-48-sm">
+        <a href="{{ .Site.BaseURL }}" class="btn btn-bordered"><i class="icon icon-arrow-left-sm mr-8"></i><span>Back to Homepage</span></a>
+      </div>
+    </div>
+  </div>
+</section>

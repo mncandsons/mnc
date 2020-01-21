@@ -1,0 +1,367 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "themes/carpal-tunnel/static/assets/images/"
+public_folder: "/assets/images/"
+
+collections:
+  - label: "General"
+    name: "general"
+    files:
+    - label: "General Info"
+      name: "general_info"
+      file: "config.yml"
+      fields:
+        - label: "Site Title"
+          name: "title"
+          widget: "string"
+        - label: "Site Domain"
+          name: "baseURL"
+          widget: "string"
+        - label: "Language"
+          name: "languageCode"
+          widget: "hidden"
+        - label: "Theme"
+          name: "theme"
+          widget: "hidden"
+        - label: "Disable Kinds"
+          name: "disableKinds"
+          widget: "hidden"
+        - label: "Menu"
+          name: "menu"
+          widget: "hidden"
+          fields:
+            - label: "Main Menu"
+              name: "main"
+              widget: "list"
+              fields:
+                - {label: "Name", name: "name", widget: "string"}
+                - {label: "URL", name: "URL", widget: "string"}
+                - {label: "Position", name: "weight", widget: "string"}
+        - label: "Parameters"
+          name: "params"
+          widget: "object"
+          fields:
+            - name: "logo"
+              label: "Logo"
+              widget: "file"
+            - name: "description"
+              label: "Description"
+              widget: "text"
+            - name: "images"
+              label: "Meta Image"
+              widget: "file"
+              required: false
+            - name: "author"
+              label: "Site Author"
+              widget: "string"
+            - name: "googleAnalitycsID"
+              label: "Google Analytics Code"
+              widget: "string"
+            - name: "appointment_text"
+              label: "Appointment Button Text"
+              widget: "string"
+  - label: "Contact"
+    name: "contact"
+    files:
+    - label: "Contact Info"
+      name: "contact_info"
+      file: "themes/carpal-tunnel/data/contact.yml"
+      fields:
+        - label: "Contact Title"
+          name: "contact_heading"
+          widget: "string"
+        - label: "Location Title"
+          name: "locations_heading"
+          widget: "string"
+        - label: "Cleveland Office"
+          name: "cleveland"
+          widget: "object"
+          fields:
+            - name: "cleveland_address_1"
+              label: "Address field #1"
+              widget: "string"
+            - name: "cleveland_address_2"
+              label: "Address field #2"
+              widget: "string"
+            - name: "cleveland_email"
+              label: "Email"
+              widget: "string"
+            - name: "cleveland_phone"
+              label: "Phone number"
+              widget: "string"
+            - name: "cleveland_hours_1"
+              label: "Working hours field #1"
+              widget: "string"
+            - name: "cleveland_hours_2"
+              label: "Working hours field #2"
+              widget: "string"
+        - label: "Lakewood Office"
+          name: "lakewood"
+          widget: "object"
+          fields:
+            - name: "lakewood_address_1"
+              label: "Address field #1"
+              widget: "string"
+            - name: "lakewood_address_2"
+              label: "Address field #2"
+              widget: "string"
+            - name: "lakewood_address_3"
+              label: "Address field #3"
+              widget: "string"
+            - name: "lakewood_phone"
+              label: "Phone number"
+              widget: "string"
+  - label: "Homepage"
+    name: "homepage"
+    files:
+    - label: "Page Settings"
+      name: "settings"
+      file: "content/_index.md"
+      fields:
+        - label: "Page Heading"
+          name: "title"
+          widget: "string"
+        - label: "Page Subheading"
+          name: "subheading"
+          widget: "text"
+        - label: "Description"
+          name: "description"
+          widget: "text"
+        - name: "images"
+          label: "Meta Image"
+          widget: "file"
+          required: false
+        - label: "Top section background image"
+          name: "background"
+          widget: "file"
+    - label: "Slideshow"
+      name: "slideshow"
+      file: "themes/carpal-tunnel/data/slideshow.yml"
+      fields:
+        - label: "Heading"
+          name: "heading"
+          widget: "string"
+        - label: "Subheading"
+          name: "subheading"
+          widget: "string"
+        - label: "Slideshow Autoplay Time, ms"
+          name: "speed"
+          widget: "string"
+        - label: "Section ID"
+          name: "id"
+          widget: "string"
+          hint: No spaces allowed
+        - label: "Slides Info"
+          name: "item"
+          widget: "list"
+          fields:
+            - label: "Image"
+              name: "image"
+              widget: "file"
+            - label: "Heading"
+              name: "heading"
+              widget: "string"
+            - label: "Text"
+              name: "text"
+              widget: "markdown"
+            - label: "Button Link"
+              name: button_link
+              widget: string
+              required: false
+              hint: Use relative link (if link address is "https://domain.com/about/" type "about". If button should go to some section type f.e. "about/#section-id" or "#section-id", if this section is on the same page with this button)
+    - label: "Our process"
+      name: "our_process"
+      file: "themes/carpal-tunnel/data/our_process.yml"
+      fields:
+        - label: "Heading"
+          name: "heading"
+          widget: "string"
+        - label: "Subheading"
+          name: "subheading"
+          widget: "string"
+        - label: "Section ID"
+          name: "id"
+          widget: "string"
+          hint: No spaces allowed
+        - label: "Our Process List"
+          name: "item"
+          widget: "list"
+          fields:
+            - {label: "Icon", name: "icon", widget: "file"}
+            - {label: "Text", name: "text", widget: "markdown"}
+    - label: "Testimonials"
+      name: "testimonials"
+      file: "themes/carpal-tunnel/data/testimonials.yml"
+      fields:
+        - label: "Heading"
+          name: "heading"
+          widget: "string"
+        - label: "Section ID"
+          name: "id"
+          widget: "string"
+          hint: No spaces allowed
+        - label: "Testimonials List"
+          name: "review"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Additional Info", name: "company", widget: "string", required: false}
+            - {label: "Photo", name: "image", widget: "file", required: false}
+            - {label: "Text", name: "text", widget: "markdown"}
+  - label: "Team"
+    name: "team"
+    files:
+    - name: "team_settings"
+      label: "Page Settings"
+      file: "content/our-team/_index.md"
+      fields:
+        - label: "Page Title"
+          name: "title"
+          widget: "string"
+        - label: "Description"
+          name: "description"
+          widget: "text"
+        - name: "images"
+          label: "Meta Image"
+          widget: "file"
+          required: false
+        - label: "Top section background image"
+          name: "background"
+          widget: "file"
+    - name: "team_members"
+      label: "Members"
+      file: "themes/carpal-tunnel/data/team.yml"
+      fields:
+        - label: "Homepage Heading"
+          name: "home_title"
+          widget: "string"
+        - label: "Homepage Section ID"
+          name: "home_id"
+          widget: "string"
+          hint: No spaces allowed
+        - label: "Members"
+          name: "member"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "title", widget: "string"}
+            - {label: "Specialty", name: "specialty", widget: "string"}
+            - {label: "ID", name: "id", widget: "string"}
+            - {label: "Text", name: "text", widget: "markdown"}
+            - {label: "Link to Linkedin", name: "linkedin_link", widget: "string", required: false}
+            - {label: "Photo", name: "image", widget: "file"}
+        - label: "Additional Staff Heading"
+          name: "staff_title"
+          widget: "string"
+        - label: "Staff Section ID"
+          name: "staff_id"
+          widget: "string"
+          hint: No spaces allowed
+        - label: "Additional Staff"
+          name: "staff"
+          widget: "list"
+          fields:
+            - {label: "Name", name: "title", widget: "string"}
+            - {label: "Specialty", name: "specialty", widget: "string"}
+            - {label: "Link to Linkedin", name: "linkedin_link", widget: "string", required: false}
+            - {label: "Photo", name: "image", widget: "file"}
+  - label: "FAQ"
+    name: "faq"
+    files:
+      - label: "Page Settings"
+        name: "faq_settings"
+        file: "content/faq/_index.md"
+        fields:
+          - label: "Page Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - name: "images"
+            label: "Meta Image"
+            widget: "file"
+            required: false
+          - label: "Top section background image"
+            name: "background"
+            widget: "file"
+      - label: "Questions"
+        name: "faq_questions"
+        file: "themes/carpal-tunnel/data/faq.yml"
+        fields:
+          - label: "Question List"
+            name: "list"
+            widget: "list"
+            fields:
+              - label: "Question"
+                name: "question"
+                widget: "string"
+              - label: "Question ID"
+                name: "id"
+                widget: "string"
+                hint: No spaces allowed
+              - label: "Answer"
+                name: "answer"
+                widget: "markdown"
+  - label: "About"
+    name: "about"
+    files:
+      - label: "Page Settings"
+        name: "about_settings"
+        file: "content/about/_index.md"
+        fields:
+          - label: "Page Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - name: "images"
+            label: "Meta Image"
+            widget: "file"
+            required: false
+          - label: "Top section background image"
+            name: "background"
+            widget: "file"
+      - label: "Info"
+        name: "about_info"
+        file: "themes/carpal-tunnel/data/about.yml"
+        fields:
+          - label: "Main Text"
+            name: "about_text"
+            widget: "object"
+            fields:
+              - label: "Heading"
+                name: "title"
+                widget: "markdown"
+              - label: "Section ID"
+                name: "id"
+                widget: "string"
+                hint: No spaces allowed
+              - label: "Photo"
+                name: "photo"
+                widget: "file"
+              - label: "Text"
+                name: "text"
+                widget: "markdown"
+          - label: "Clinic"
+            name: "clinic"
+            widget: "object"
+            fields:
+              - label: "Clinic Heading"
+                name: "clinic_title"
+                widget: "string"
+              - label: "Section ID"
+                name: "id"
+                widget: "string"
+                hint: No spaces allowed
+              - label: "Clinic Image"
+                name: "clinic_image"
+                widget: "file"
+          - label: "Process"
+            name: "process"
+            widget: "list"
+            fields:
+              - {label: "Icon", name: "icon", widget: "file"}
+              - {label: "Text", name: "text", widget: "markdown"}

@@ -1,0 +1,81 @@
+.site-footer {
+  padding: 48px 0;
+  @include respond-to(sm){
+    padding: 24px 0 16px;
+  }
+	&__item {
+    @include fsz(20px);
+    color: $color-neutral-500;
+    padding-left: 56px;
+    position: relative;
+    margin-bottom: 32px;
+    line-height: 1.5;
+    @include respond-to(lg){
+      padding-left: 48px;
+    }
+    @include respond-to(sm){
+      @include fsz(14px);
+      padding-left: 34px;
+      margin-bottom: 24px;
+    }
+    a{
+      color: $color-black;
+      font-weight: $weight-medium;
+      @include respond-to(xl){
+        display: block;
+      }
+      &:hover{
+        color: $color-primary-500;
+      }
+    }
+    i{
+      position: absolute;
+      color: $color-primary-500;
+      @include fsz(32px);
+      left: 0;
+      top: -6px;
+      @include respond-to(sm){
+        @include fsz(20px);
+        top: -4px;
+      }
+    }
+	}
+  &__bottom{
+    margin-top: 16px;
+    border-top: 1px solid rgba($color-neutral-300, 0.2);
+    padding: 48px 80px 0;
+    display: flex;
+    justify-content: space-between;
+    @include fsz(14px);
+    font-weight: $weight-medium;
+    @include respond-to(sm){
+      margin-top: 0;
+      padding: 24px 16px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__insta{
+    @include fsz(11px);
+    letter-spacing: 3.18px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    @include respond-to(sm){
+      order: -1;
+      margin-bottom: 24px;
+    }
+    i{
+      @include fsz(16px);
+      color: $color-neutral-300;
+      margin-right: 16px;
+      transition: inherit;
+    }
+    &:hover{
+      color: $color-primary-500;
+      i{
+        color: inherit;
+      }
+    }
+  }
+}

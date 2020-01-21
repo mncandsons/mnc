@@ -1,0 +1,98 @@
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: ($grid-gutter-width) + px;
+    padding-right: ($grid-gutter-width) + px;
+    @include respond-to(xs_up){
+      max-width: map-get($container-media-list, xs);
+    }
+    @include respond-to(sm_up){
+      max-width: map-get($container-media-list, sm);
+    }
+    @include respond-to(md_up){
+      max-width: map-get($container-media-list, md);
+    }
+    @include respond-to(lg_up){
+      max-width: map-get($container-media-list, lg);
+    }
+    &--fluid{
+      max-width: none;
+    }
+    &--sm{
+      @include respond-to(lg_up){
+        max-width: 1224px;
+      }
+    }
+    @include respond-to(sm){
+      padding-left: ($grid-gutter-width / 2) + px;
+      padding-right: ($grid-gutter-width / 2) + px;
+    }
+}
+
+.row {
+  margin-left: (-$grid-gutter-width) + px;
+  margin-right: (-$grid-gutter-width) + px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  @include respond-to(sm){
+    margin-left: ($grid-gutter-width / -2) + px;
+    margin-right: ($grid-gutter-width / -2) + px;
+  }
+  &.gutter-16{
+    margin-left: (-$grid-gutter-width / 2) + px;
+    margin-right: (-$grid-gutter-width / 2) + px;
+    .col, [class^="col"], [class*=" col"]{
+      padding-left: ($grid-gutter-width / 2) + px;
+      padding-right: ($grid-gutter-width / 2) + px;
+    }
+  }
+}
+
+.col, [class^="col"], [class*=" col"] {
+  padding-left: ($grid-gutter-width) + px;
+  padding-right: ($grid-gutter-width) + px;
+  @include respond-to(sm){
+    padding-left: ($grid-gutter-width / 2) + px;
+    padding-right: ($grid-gutter-width / 2) + px;
+  }
+}
+
+// make grid function
+@mixin make-grid($item){
+    @for $i from 1 through $grid-columns {
+        .col-#{$item}-#{$i} {
+            max-width: (100% / $grid-columns) * $i;
+            flex:0 0 (100% / $grid-columns) * $i;
+        }
+    }
+}
+
+
+// make screen-size grid
+@each $item, $screen-size in $grid-type-list {
+    @if ($item!="xs") {
+        @media (min-width: $screen-size) {
+            @include make-grid($item);
+            .col-#{$item}{
+              flex-basis: 0;
+              flex-grow: 1;
+              max-width: 100%;
+            }
+        }
+    }
+    @else{
+      .col{
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      @for $i from 1 through $grid-columns {
+          .col-#{$i} {
+              max-width: (100% / $grid-columns) * $i;
+              flex:0 0 (100% / $grid-columns) * $i;
+          }
+      }
+    }
+}

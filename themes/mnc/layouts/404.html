@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+    {{ with site.GetPage "_404.md" }}
+    {{- partial "head.html" . -}}
+    <body>
+      <section class="not-found" style="background-image: url(/{{.Params.background}})">
+        <div class="container container--sm">
+          <a class="not-found__logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo | relURL }}" alt="{{.Site.Title}}"></a>
+          <h1>Page not found</h1>
+          <div class="not-found__error">404</div>
+        </div>
+        <div class="top-section__appointment">
+          <a href="{{ .Site.BaseURL }}" class="top-section__appointment-link"></a>
+          <div class="container container--sm">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="top-section__appointment-text">
+                  Back to homepage
+                  <i class="icon icon-arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+    {{ end }}
+</html>

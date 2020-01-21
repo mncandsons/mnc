@@ -1,0 +1,89 @@
+<div class="about" id="about-res">
+  <div class="container pb-56 pb-120-sm pl-0 pr-0">
+    <div class="pl-0 pr-0 pl-24-lg pr-24-lg">
+      <div class="subheading">About us</div>
+      <h1>{{ .Site.Data.about_residential.about_heading }}</h1>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <div class="about-photo">
+            <div class="about-photo__image">
+              <div class="about-photo__image-inner">
+                <picture>
+                  {{ $image_ext_res := path.Ext .Site.Data.about_residential.top.about_pic }}
+                  <source type="image/webp" srcset="{{ replace .Site.Data.about_residential.top.about_pic $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ .Site.Data.about_residential.top.about_pic | relURL }}" alt="…">
+                </picture>
+              </div>
+              <div class="about-badge"><span data-time="{{.Site.Data.about_residential.top.year}}">14</span>years of<br> experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 mt-128 mt-0-sm">
+          <div class="heading-text mb-24 mb-64-md pl-112-xl pr-24-xl">
+            {{ .Site.Data.about_residential.top.heading | markdownify}}
+          </div>
+          <div class="pl-112-xl">
+            <div class="row">
+              <div class="col-12 col-xl-5 mb-24 mb-32-md mb-0-xl">
+                <p>{{ .Site.Data.about_residential.top.paragraph_1}}</p>
+              </div>
+              <div class="col-12 col-xl-7">
+                <p>{{ .Site.Data.about_residential.top.paragraph_2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container container--sm pt-48-sm pt-160-md pl-0 pr-0">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        {{ range .Site.Data.about_residential.bottom.left_column }}
+        <div class="about-info-block pr-0 pr-64-lg">
+          <h3 class="mb-24 mb-40-md">{{ .heading | markdownify}}</h3>
+          <div>
+            {{ if in (string .text) "\n\n" }}
+              {{ .text | markdownify }}
+            {{ else }}
+              <p>{{ .text | markdownify}}</p>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="col-12 col-md-8 mt-56 mt-0-md">
+        <h2>{{ .Site.Data.about_residential.bottom.right_column.heading }}</h2>
+        <div class="heading-text pr-40">
+          {{ .Site.Data.about_residential.bottom.right_column.subheading | markdownify }}
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-10">
+            <picture>
+              {{ $image_ext_res := path.Ext .Site.Data.about_residential.bottom.family_pic }}
+              <source type="image/webp" srcset="{{ replace .Site.Data.about_residential.bottom.family_pic $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive mt-32 mb-32 mt-64-sm mb-48-sm" srcset="{{ .Site.Data.about_residential.bottom.family_pic | relURL }}" alt="…">
+            </picture>
+            {{ if in (string .Site.Data.about_residential.bottom.right_column.text) "\n\n" }}
+              {{ .Site.Data.about_residential.bottom.right_column.text | markdownify }}
+            {{ else }}
+              <p>{{.Site.Data.about_residential.bottom.right_column.text | markdownify}}</p>
+            {{ end }}
+          </div>
+        </div>
+        <hr>
+        {{ range .Site.Data.about_residential.bottom.right_column.block }}
+        <div class="about-info-block">
+          <h3 class="mb-24">{{ .heading }}</h3>
+          {{ if in (string .text) "\n\n" }}
+            {{ .text | markdownify }}
+          {{ else }}
+            <p>{{ .text | markdownify}}</p>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

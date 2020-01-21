@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="wrapper">
+    {{- partial "header.html" . -}}
+    {{- partial "portfolio.html" . -}}
+    {{- partial "contact.html" . -}}
+    {{- partial "footer.html" . -}}
+  </div>
+
+  {{- partial "gallery_commercial.html" . -}}
+  {{- partial "gallery_residential.html" . -}}
+
+{{ end }}
