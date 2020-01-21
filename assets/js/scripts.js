@@ -314,7 +314,7 @@ new Validator(formHandle, function (err, res) {
         data.append('g-recaptcha-response', token);
         var request = new XMLHttpRequest();
         request.onload = function() {
-          btn.innerHTML = 'Send Message';
+          btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
           var response = {};
           try {
             response = JSON.parse(this.responseText);
@@ -326,13 +326,12 @@ new Validator(formHandle, function (err, res) {
               successContainer.classList.remove('error');
               successContainer.classList.add('success');
               successContainer.innerHTML = '<span>' + response.message + '</span>';
-              btn.innerHTML = 'Thank you';
-              btn.classList.add('success');
+              btn.innerHTML = '<div class="text-center">Thank you</div>';
 
               setTimeout(function () {
                 successContainer.classList.remove('success');
                 successContainer.style.display = 'none';
-                btn.innerHTML = 'Send';
+                btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
                 btn.classList.remove('success');
                 btn.disabled = false;
               }, 10000);
@@ -352,7 +351,7 @@ new Validator(formHandle, function (err, res) {
           }
         }
         request.onerror = function(err) {
-          btn.innerHTML = 'Send Message';
+          btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
           btn.disabled = false;
         }
         request.open(form.method, form.action);

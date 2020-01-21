@@ -35,6 +35,8 @@
   font-weight: $weight-medium;
   padding:  0 24px 0 88px;
   caret-color: $color-primary-500;
+  font-family: $font;
+  font-weight: $weight-medium;
   @include respond-to(sm){
     @include fsz(14px);
     height: 48px;
@@ -44,7 +46,6 @@
     padding: 16px 24px 10px 88px;
     resize: none;
     line-height: 1.4;
-    font-family: $font;
     @include respond-to(sm){
       padding: 11px 16px;
     }
