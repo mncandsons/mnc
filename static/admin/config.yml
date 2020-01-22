@@ -48,13 +48,13 @@ collections:
           fields:
             - name: "logo"
               label: "Logo"
-              widget: "file"
+              widget: "image"
             - name: "description"
               label: "Description"
               widget: "text"
             - name: "images"
               label: "Meta Image"
-              widget: "file"
+              widget: "image"
               required: false
             - name: "author"
               label: "Site Author"
@@ -94,3 +94,10 @@ collections:
         - label: "New Jersey Link to Google Map"
           name: "new_jersey_address_link"
           widget: "string"
+  - label: "Residential Portfolio"
+    name: "res_portfolio"
+    file: "themes/mnc/data/portfolio_residential.yml"
+    fields:
+      - label: "Hero Image"
+        name: "main_img"
+        widget: "image"
