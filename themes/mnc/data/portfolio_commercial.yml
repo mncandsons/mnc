@@ -1,54 +1,41 @@
 main_img: /assets/images/public/commercial.jpg
 heading: Commercial portfolio
 portfolio_item:
-  - name: 'Emerald City'
-    type:
-    address: 'New Jersey, NJ'
-    area:
-    price:
-    architect:
-    design:
+  - address: 'New Jersey, NJ'
+    name: Emerald City
     picture: /assets/images/public/commercial.jpg
     sub_item:
-      - name: 'Sub Industry'
-        type: 'Some Build out'
+      - architect: Guido Capone
         area: '30,000 SF'
+        design: Valerie Landon
+        gallery_pictures:
+          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/Cohen_1083.jpg
+        name: Sub Industry
         price: '$400,000'
-        architect: 'Guido Capone'
-        design: 'Valerie Landon'
-        picture: /assets/images/public/commercial.jpg
-        gallery_pictures:
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
-      - name: 'Sub Industry #2'
-        type: 'Some Build out'
+        type: Some Build out
+      - architect: Serena Green
         area: '20,000 SF'
+        design: John Doherty
+        gallery_pictures:
+          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/commercial.jpg
+        name: 'Sub Industry #2'
         price: '$500,000'
-        architect: 'Serena Green'
-        design: 'John Doherty'
-        picture: /assets/images/public/commercial.jpg
-        gallery_pictures:
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
-  - name: 'Onyx City'
-    type: 'Commercial Build out'
-    address: 'Brooklyn, NY'
+        type: Some Build out
+  - address: 'Brooklyn, NY'
+    architect: Denis Alessio
     area: '122,000 SF'
-    price: '$2,000,000'
-    architect: 'Denis Alessio'
-    design: 'Felicia Sans'
+    design: Felicia Sans
+    name: Onyx City
     picture: /assets/images/public/commercial.jpg
+    price: '$2,000,000'
     sub_item:
-      - name:
-        type:
-        address:
-        area:
-        price:
-        architect:
-        design:
-        picture:
-        gallery_pictures:
+      - gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/Cohen_1152.jpg
+    type: Commercial Build out
