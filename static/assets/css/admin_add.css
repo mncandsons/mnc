@@ -11,7 +11,8 @@
   font-size: 13px;
   background: rgb(23, 162, 184);
   padding: 1px 6px;
-  border-radius: 0 0 3px 3px;
+  border-radius: 3px;
+  pointer-events: none;
 }
 [id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="css"] {
 	 border-color: rgb(221, 245, 249);
