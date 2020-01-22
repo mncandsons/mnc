@@ -20,3 +20,10 @@
 [id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="NestedObjectLabel"] {
 	 background: rgb(221, 245, 249);
 }
+[class*="ImageWrapper-checkerboard"]{
+	overflow: hidden;
+	height: auto;
+}
+[class*="ImageWrapper-checkerboard"] img{
+	display: block;
+}
