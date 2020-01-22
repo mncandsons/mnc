@@ -13,7 +13,7 @@ portfolio_item:
           - gallery_img: /assets/images/public/Azrak_7751.jpg
           - gallery_img: /assets/images/public/Cohen_1083.jpg
           - gallery_img: /assets/images/public/Cohen_1138.jpg
-        name: Sub Industry
+        name: 'Sub Industry #1'
         price: '$400,000'
         type: Some Build out
       - architect: Serena Green
@@ -21,7 +21,7 @@ portfolio_item:
         design: John Doherty
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/Cohen_7714.jpg
         name: 'Sub Industry #2'
         price: '$500,000'
         type: Some Build out
