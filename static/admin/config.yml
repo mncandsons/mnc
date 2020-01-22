@@ -107,10 +107,13 @@ collections:
           - label: "Section Heading"
             name: "heading"
             widget: "string"
-          - label: "Portfolio Items"
+          - label: "Portfolio Item"
             name: "portfolio_item"
             widget: "list"
             fields:
+              - label: "Project Name"
+                name: "project_name"
+                widget: "string"
               - label: "Main Image"
                 name: "picture"
                 widget: "image"
@@ -118,9 +121,6 @@ collections:
                 name: gallery_pictures
                 widget: "list"
                 fields:
-                  - label: "Gallery Images"
+                  - label: "Gallery Image"
                     name: "gallery_img"
                     widget: "image"
-                    media_library:
-                      config:
-                        multiple: true

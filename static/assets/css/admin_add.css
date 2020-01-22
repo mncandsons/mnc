@@ -1,0 +1,6 @@
+[id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] {
+	 background: #8ccbea;
+}
+ [id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="css"] {
+	 border-color: #8ccbea;
+}
