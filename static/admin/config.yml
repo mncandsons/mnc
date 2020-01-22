@@ -114,6 +114,7 @@ collections:
               - label: "Project Name"
                 name: "project_name"
                 widget: "string"
+                hint: "Not shown on the site. Added to simplify project administration"
               - label: "Main Image"
                 name: "picture"
                 widget: "image"
