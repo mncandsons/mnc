@@ -97,6 +97,16 @@ collections:
   - label: "Residential"
     name: "residential"
     files:
+      - label: "Residential Page Settings"
+        name: "residential_settings"
+        file: "content/portfolio_residential/_index.md"
+        fields:
+          - label: "Page Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
       - label: "Portfolio"
         name: "portfolio"
         file: "themes/mnc/data/portfolio_residential.yml"
