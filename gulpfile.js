@@ -21,7 +21,7 @@ gulp.task('minify-js', () => {
 gulp.task('images', () => {
   return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
     .pipe(responsive({
-      '**/*.{jpg,png}': [{
+      '**/*.{jpg,png,jpeg}': [{
         width: 2000,
         quality: 75,
         compressionLevel: 7,
