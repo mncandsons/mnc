@@ -326,7 +326,7 @@ new Validator(formHandle, function (err, res) {
               successContainer.classList.remove('error');
               successContainer.classList.add('success');
               successContainer.innerHTML = '<span>' + response.message + '</span>';
-              btn.innerHTML = '<div class="text-center">Thank you</div>';
+              btn.innerHTML = '<div class="ml-auto mr-auto">Thank you</div>';
 
               setTimeout(function () {
                 successContainer.classList.remove('success');

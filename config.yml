@@ -21,7 +21,6 @@ params:
   author: modstud.io
   description:
   googleAnalitycsID: UA-426069-3
-  images: /assets/images/carpal-tunnel-center.jpg
+  images:
   logo: assets/images/logo.svg
-  instagram: https://www.instagram.com/mnccontractors/
   robotsTXTtext: 'User-agent: *'
