@@ -107,3 +107,20 @@ collections:
           - label: "Section Heading"
             name: "heading"
             widget: "string"
+          - label: "Portfolio Items"
+            name: "portfolio_item"
+            widget: "list"
+            fields:
+              - label: "Main Image"
+                name: "picture"
+                widget: "image"
+              - label: "Gallery"
+                name: gallery_pictures
+                widget: "list"
+                fields:
+                  - label: "Gallery Images"
+                    name: "gallery_img"
+                    widget: "image"
+                    media_library:
+                      config:
+                        multiple: true
