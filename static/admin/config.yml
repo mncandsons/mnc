@@ -103,7 +103,7 @@ collections:
         fields:
           - label: "Hero Image"
             name: "main_img"
-            widget: "file"
+            widget: "image"
           - label: "Section Heading"
             name: "heading"
             widget: "string"
