@@ -96,11 +96,14 @@ collections:
           widget: "string"
   - label: "Residential Portfolio"
     name: "res_portfolio"
-    file: "themes/mnc/data/portfolio_residential.yml"
-    fields:
-      - label: "Hero Image"
-        name: "main_img"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
+    files:
+      - label: "Gallery"
+        name: "res_gallery"
+        file: "themes/mnc/data/portfolio_residential.yml"
+        fields:
+          - label: "Hero Image"
+            name: "main_img"
+            widget: "file"
+          - label: "Section Heading"
+            name: "heading"
+            widget: "string"
