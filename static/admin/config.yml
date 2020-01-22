@@ -48,13 +48,13 @@ collections:
           fields:
             - name: "logo"
               label: "Logo"
-              widget: "image"
+              widget: "file"
             - name: "description"
               label: "Description"
               widget: "text"
             - name: "images"
               label: "Meta Image"
-              widget: "image"
+              widget: "file"
               required: false
             - name: "author"
               label: "Site Author"
@@ -101,3 +101,6 @@ collections:
       - label: "Hero Image"
         name: "main_img"
         widget: "image"
+        media_library:
+          config:
+            multiple: false
