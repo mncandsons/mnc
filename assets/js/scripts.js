@@ -348,6 +348,7 @@ new Validator(formHandle, function (err, res) {
             successContainer.style.display = 'block';
             successContainer.classList.add('error');
             successContainer.innerHTML = 'Something went wrong. Please, try again later.</span>';
+            btn.disabled = false;
           }
         }
         request.onerror = function(err) {

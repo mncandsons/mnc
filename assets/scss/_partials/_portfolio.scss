@@ -2,11 +2,10 @@
   overflow: hidden;
 }
 .portfolio-top {
-  padding-bottom: 61%;
-  height: 0;
+  height: calc(100vh - 109px - 64px);
   position: relative;
   @include respond-to(sm){
-    padding-bottom: 110%;
+    height: calc(100vh - 70px - 16px);
   }
   &__wrap{
     padding: 32px;

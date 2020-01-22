@@ -5,7 +5,19 @@
   }
   background: $color-neutral-100;
 	&__result {
-
+    padding: 16px 24px;
+    background: $color-white;
+    margin-bottom: 24px;
+    font-weight: $weight-medium;
+    display: none;
+    &.error{
+      color: $color-primary-500;
+      border-bottom: 2px solid;
+    }
+    &.success{
+      color: $color-black;
+      border-bottom: 2px solid $color-neutral-300;
+    }
 	}
 
 }
