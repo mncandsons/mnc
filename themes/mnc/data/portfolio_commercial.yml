@@ -1,8 +1,8 @@
 main_img: /assets/images/public/commercial.jpg
 heading: Commercial portfolio
 portfolio_item:
-  - address: 'New Jersey, NJ'
-    name: Emerald City
+  - address: 'Brooklyn, NY'
+    name: Industry City
     picture: /assets/images/public/commercial.jpg
     sub_item:
       - architect: Guido Capone
@@ -10,9 +10,9 @@ portfolio_item:
         design: Valerie Landon
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/Azrak_7751.jpg
           - gallery_img: /assets/images/public/Cohen_1083.jpg
+          - gallery_img: /assets/images/public/Cohen_1138.jpg
         name: Sub Industry
         price: '$400,000'
         type: Some Build out
@@ -29,13 +29,13 @@ portfolio_item:
     architect: Denis Alessio
     area: '122,000 SF'
     design: Felicia Sans
-    name: Onyx City
-    picture: /assets/images/public/commercial.jpg
+    name: YDE High School
+    picture: /assets/images/public/Bildirici_Shoot 0282.jpeg
     price: '$2,000,000'
     sub_item:
       - gallery_pictures:
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/commercial.jpg
+          - gallery_img: /assets/images/public/Cohen_1138.jpg
+          - gallery_img: /assets/images/public/Cohen_1087.jpg
+          - gallery_img: /assets/images/public/Cohen_1170.jpg
           - gallery_img: /assets/images/public/Cohen_1152.jpg
     type: Commercial Build out
