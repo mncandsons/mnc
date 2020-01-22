@@ -19,8 +19,9 @@ menu:
       weight: 3
 params:
   author: modstud.io
-  description:
+  description: Some description
   googleAnalitycsID: UA-426069-3
-  images:
   logo: assets/images/logo.svg
-  robotsTXTtext: 'User-agent: *'
+  robotsTXTtext: |-
+    User-agent: *
+    Disallow: /
