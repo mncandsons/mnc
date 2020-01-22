@@ -236,7 +236,7 @@ collections:
                 name: "picture"
                 widget: "image"
               - label: "Address"
-                name: "type"
+                name: "address"
                 widget: "string"
               - label: "Type"
                 name: "type"
