@@ -62,6 +62,7 @@ collections:
             - name: "googleAnalitycsID"
               label: "Google Analytics Code"
               widget: "string"
+              required: false
             - name: "robotsTXTtext"
               label: "Robots.txt"
               widget: text
@@ -128,7 +129,7 @@ collections:
               - label: "Main Image"
                 name: "picture"
                 widget: "image"
-              - label: "Gallery"
+              - label: "Image"
                 name: gallery_pictures
                 widget: "list"
                 fields:
@@ -297,7 +298,7 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Gallery"
+                  - label: "Image"
                     name: gallery_pictures
                     widget: "list"
                     fields:

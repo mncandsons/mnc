@@ -8,15 +8,17 @@
 {{ $script_dest := slice $script | resources.Concat "assets/js/scripts.js"}}
 <script src="{{ $script_dest.RelPermalink }}"></script>
 
+{{ with .Site.Params.googleAnalitycsID }}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{.Site.Params.googleAnalitycsID}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{.}}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{.Site.Params.googleAnalitycsID}}');
+  gtag('config', '{{.}}');
 </script>
+{{ end }}
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 

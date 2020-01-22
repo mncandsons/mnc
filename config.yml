@@ -20,7 +20,7 @@ menu:
 params:
   author: modstud.io
   description: Some description
-  googleAnalitycsID: UA-426069-3
+  googleAnalitycsID: 
   logo: /assets/images/logo.svg
   robotsTXTtext: |-
     User-agent: *
