@@ -1,6 +1,17 @@
 [id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] {
-	 background: #8ccbea;
+	 background: #a2dffd;
 }
- [id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="css"] {
-	 border-color: #8ccbea;
+[id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"]:after {
+	 content: 'Favorite';
+   position: absolute;
+   right: 30px;
+   color: rgb(68, 74, 87);
+   top: 50%;
+   transform: translateY(-50%);
+}
+[id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="css"] {
+	 border-color: #a2dffd;
+}
+[id*="portfolio_item"] > div > [class*="ListItem"]:nth-child(-n+6) > [class*="TopBar"] ~ [class*="NestedObjectLabel"] {
+	 background: #a2dffd;
 }
