@@ -21,7 +21,7 @@ params:
   author: modstud.io
   description: Some description
   googleAnalitycsID: UA-426069-3
-  logo: assets/images/logo.svg
+  logo: /assets/images/logo.svg
   robotsTXTtext: |-
     User-agent: *
     Disallow: /

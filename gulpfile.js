@@ -40,7 +40,7 @@ gulp.task('images', () => {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest('./static/assets/images/'));
+    .pipe(gulp.dest('./static/assets/images/public/'));
 });
 
 gulp.task('hugo-build', shell.task(['hugo']))
