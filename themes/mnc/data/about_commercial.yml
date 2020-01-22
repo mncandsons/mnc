@@ -12,7 +12,7 @@ top:
   paragraph_2:
     Whether we’re preparing foundations, sanding floors, or working on those finishing touches, our family will work tirelessly to turn inspiration into beautiful reality.
 bottom:
-  family_pic: assets/images/company-sons.jpg
+  family_pic: /assets/images/public/company-sons.jpg
   left_column:
     - heading:
         Industrial Building Construction Company in NY Metropolitan Area
