@@ -8,6 +8,7 @@ portfolio_item:
       - architect: Guido Capone
         area: '30,000 SF'
         design: Valerie Landon
+        picture: /assets/images/public/commercial.jpg
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/Azrak_7751.jpg
@@ -19,6 +20,7 @@ portfolio_item:
       - architect: Serena Green
         area: '20,000 SF'
         design: John Doherty
+        picture: /assets/images/public/commercial.jpg
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/Cohen_7714.jpg
