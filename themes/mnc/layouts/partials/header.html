@@ -16,11 +16,11 @@
       {{ range $index, $element := .Site.Menus.main }}
         {{ if eq $.Kind "home" }}
           <li class="site-nav__item">
-            <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ else }}
           <li class="site-nav__item {{ if (eq $index 1) }}d-none{{ end }}">
-            <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}

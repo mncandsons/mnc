@@ -1,28 +1,32 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-    {{ with site.GetPage "_404.md" }}
-    {{- partial "head.html" . -}}
-    <body>
-      <section class="not-found" style="background-image: url(/{{.Params.background}})">
-        <div class="container container--sm">
-          <a class="not-found__logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo | relURL }}" alt="{{.Site.Title}}"></a>
-          <h1>Page not found</h1>
-          <div class="not-found__error">404</div>
-        </div>
-        <div class="top-section__appointment">
-          <a href="{{ .Site.BaseURL }}" class="top-section__appointment-link"></a>
-          <div class="container container--sm">
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="top-section__appointment-text">
-                  Back to homepage
-                  <i class="icon icon-arrow"></i>
-                </div>
+{{ define "main" }}
+  <div class="wrapper">
+    <header class="site-header">
+      {{ $picture :=  replaceRE "(\\s)" "_" .Site.Params.logo }}
+      <a class="site-header__logo" href="{{ .Site.BaseURL }}"><img src="{{ $picture | relURL }}" alt="{{.Site.Title}}"></a>
+    </header>
+
+    <section class="portfolio">
+      <div class="portfolio-top__wrap">
+        <div class="portfolio-top">
+          <ol class="portfolio-top__inner">
+            <li class="active">
+              <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" .Site.Params.no_found_bg }}
+                {{ $image_ext_res := path.Ext $picture }}
+                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+              </picture>
+              <div class="portfolio-top__404">
+                <h1>
+                  <div class="portfolio-top__404-number">404</div>
+                  {{ .Site.Params.no_found_text }}
+                </h1>
+                <a class="btn btn-lg btn-default btn-default--non-transparent" href="{{ .Site.BaseURL }}">Home</a>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
-      </section>
-    </body>
-    {{ end }}
-</html>
+      </div>
+    </div>
+  </div>
+{{ end }}

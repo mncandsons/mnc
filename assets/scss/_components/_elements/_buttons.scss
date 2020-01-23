@@ -33,6 +33,13 @@
       background: none;
       color: $color-primary-500;
     }
+    &--non-transparent{
+      &:hover{
+        background: lighten($color-primary-500, 5%);
+        color: $color-white;
+        border-color: transparent;
+      }
+    }
   }
   &.btn-w-arrow{
     justify-content: space-between;

@@ -20,8 +20,10 @@ menu:
 params:
   author: modstud.io
   description: Some description
-  googleAnalitycsID: 
+  googleAnalitycsID:
   logo: /assets/images/logo.svg
+  no_found_text: Page not found
+  no_found_bg: /assets/images/public/commercial.jpg
   robotsTXTtext: |-
     User-agent: *
     Disallow: /

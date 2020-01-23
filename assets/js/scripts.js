@@ -28,11 +28,12 @@ if (dateSelector){
 let toggleButton = document.querySelector('.toggle-menu');
 let menu = document.querySelector('.site-nav');
 
-toggleButton.addEventListener('click',function(e){
-  toggleButton.classList.toggle('is-pushed');
-  menu.classList.toggle('active');
-});
-
+if (toggleButton){
+  toggleButton.addEventListener('click',function(e){
+    toggleButton.classList.toggle('is-pushed');
+    menu.classList.toggle('active');
+  });
+}
 
 // Gallery
 
@@ -250,7 +251,7 @@ for(let i = 0; i < galleryHeading.length; i++){
 
 // Scroll to Anchor
 
-const scrollElems = document.querySelectorAll('.site-nav__link');
+const scrollElems = document.querySelectorAll('.rel-link');
 for(let i = 0; i < scrollElems.length; i++){
   const elem = scrollElems[i];
   elem.addEventListener('click',function(e) {
@@ -258,6 +259,7 @@ for(let i = 0; i < scrollElems.length; i++){
 
    menu.classList.remove('active');
    toggleButton.classList.remove('is-pushed');
+
 
    let scrollElemId = e.target.href.split('#')[1];
    let hash = window.location.hash;
@@ -281,102 +283,115 @@ for(let i = 0; i < scrollElems.length; i++){
 })
 }
 
+// Add animation to Scroll arrow
+let tabLink = document.querySelectorAll('.portfolio-nav li a');
+let arrow = document.querySelector('.portfolio-top__icon')
+for(let i = 0; i < tabLink.length; i++){
+  tabLink[i].addEventListener('click',function(e) {
+    arrow.style.animation = 'none';
+    arrow.offsetHeight;
+    arrow.style.animation = null;
+  })
+}
 
 // Form Validation
 
+
 let formHandle = document.querySelector('form[name="contact-form"]');
-let options = {
-    eventsList: ['change', 'blur']
-};
+if (formHandle) {
+  let options = {
+      eventsList: ['change', 'blur']
+  };
 
-// Check if the field is not empty
-function checkEmpty(item) {
-  if (item.value){
-    item.classList.add('filled');
+  // Check if the field is not empty
+  function checkEmpty(item) {
+    if (item.value){
+      item.classList.add('filled');
+    }
+    else{
+      item.classList.remove('filled');
+    }
   }
-  else{
-    item.classList.remove('filled');
-  }
-}
-let input = document.querySelectorAll('.form-control');
-for(let i = 0; i < input.length; i++){
-  document.addEventListener('DOMContentLoaded',function(e) {
-    checkEmpty(input[i]);
-  });
-  input[i].addEventListener('change',function(e) {
-    checkEmpty(input[i]);
-  });
-  input[i].addEventListener('blur',function(e) {
-    checkEmpty(input[i]);
-  });
-}
-
-
-// Got to validation
-
-new Validator(formHandle, function (err, res) {
-  if (res){
-    var form = document.querySelector('form[name="contact-form"]');
-    var btn = form.querySelector('button[type=submit]');
-    var successContainer = document.querySelector('.contact__result');
-    btn.innerHTML = 'Sending...';
-    btn.disabled = true;
-    grecaptcha.ready(function() {
-      grecaptcha.execute('6Leqb9EUAAAAANBVxAoiJhHl7kNiTv9_a8RZNWr9', {action: 'homepage'}).then(function(token) {
-        var data = new FormData(form);
-        data.append('g-recaptcha-response', token);
-        var request = new XMLHttpRequest();
-        request.onload = function() {
-          btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
-          var response = {};
-          try {
-            response = JSON.parse(this.responseText);
-          } catch(err) {}
-          if (this.status === 200 && response.success) {
-            form.reset();
-            if (response.message) {
-              successContainer.style.display = 'block';
-              successContainer.classList.remove('error');
-              successContainer.classList.add('success');
-              successContainer.innerHTML = '<span>' + response.message + '</span>';
-              btn.innerHTML = '<div class="ml-auto mr-auto">Thank you</div>';
-
-              setTimeout(function () {
-                successContainer.classList.remove('success');
-                successContainer.style.display = 'none';
-                btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
-                btn.classList.remove('success');
-                btn.disabled = false;
-              }, 10000);
-            }
-            return true;
-          }
-          else if (this.status === 200 && response.success === false) {
-            successContainer.style.display = 'block';
-            successContainer.classList.add('error');
-            successContainer.innerHTML = '<span>' + response.message + '</span>';
-            btn.disabled = false;
-          }
-          else {
-            successContainer.style.display = 'block';
-            successContainer.classList.add('error');
-            successContainer.innerHTML = 'Something went wrong. Please, try again later.</span>';
-            btn.disabled = false;
-          }
-        }
-        request.onerror = function(err) {
-          btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
-          btn.disabled = false;
-        }
-        request.open(form.method, form.action);
-        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-         var requestData = {};
-         data.forEach(function(value, key) {
-           requestData[key] = value;
-         });
-         request.send(JSON.stringify(requestData));
+  let input = document.querySelectorAll('.form-control');
+  for(let i = 0; i < input.length; i++){
+    document.addEventListener('DOMContentLoaded',function(e) {
+      checkEmpty(input[i]);
     });
-  });
+    input[i].addEventListener('change',function(e) {
+      checkEmpty(input[i]);
+    });
+    input[i].addEventListener('blur',function(e) {
+      checkEmpty(input[i]);
+    });
   }
-  return false;
-}, options);
+
+
+  // Got to validation
+
+  new Validator(formHandle, function (err, res) {
+    if (res){
+      var form = document.querySelector('form[name="contact-form"]');
+      var btn = form.querySelector('button[type=submit]');
+      var successContainer = document.querySelector('.contact__result');
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Leqb9EUAAAAANBVxAoiJhHl7kNiTv9_a8RZNWr9', {action: 'homepage'}).then(function(token) {
+          var data = new FormData(form);
+          data.append('g-recaptcha-response', token);
+          var request = new XMLHttpRequest();
+          request.onload = function() {
+            btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
+            var response = {};
+            try {
+              response = JSON.parse(this.responseText);
+            } catch(err) {}
+            if (this.status === 200 && response.success) {
+              form.reset();
+              if (response.message) {
+                successContainer.style.display = 'block';
+                successContainer.classList.remove('error');
+                successContainer.classList.add('success');
+                successContainer.innerHTML = '<span>' + response.message + '</span>';
+                btn.innerHTML = '<div class="ml-auto mr-auto">Thank you</div>';
+
+                setTimeout(function () {
+                  successContainer.classList.remove('success');
+                  successContainer.style.display = 'none';
+                  btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
+                  btn.classList.remove('success');
+                  btn.disabled = false;
+                }, 10000);
+              }
+              return true;
+            }
+            else if (this.status === 200 && response.success === false) {
+              successContainer.style.display = 'block';
+              successContainer.classList.add('error');
+              successContainer.innerHTML = '<span>' + response.message + '</span>';
+              btn.disabled = false;
+            }
+            else {
+              successContainer.style.display = 'block';
+              successContainer.classList.add('error');
+              successContainer.innerHTML = 'Something went wrong. Please, try again later.</span>';
+              btn.disabled = false;
+            }
+          }
+          request.onerror = function(err) {
+            btn.innerHTML = 'Send <i class="icon icon-arrow-right"></i>';
+            btn.disabled = false;
+          }
+          request.open(form.method, form.action);
+          request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+           var requestData = {};
+           data.forEach(function(value, key) {
+             requestData[key] = value;
+           });
+           request.send(JSON.stringify(requestData));
+      });
+    });
+    }
+    return false;
+  }, options);
+}

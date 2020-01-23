@@ -7,6 +7,30 @@
   @include respond-to(sm){
     height: calc(100vh - 70px - 16px);
   }
+  &__404{
+    @include center(vertical);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    text-align: center;
+    h1{
+      color: $color-neutral-100;
+      margin-bottom: 4.5vw;
+      @include respond-to(sm){
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__404-number{
+    @include fsz(100px);
+    letter-spacing: -1.85px;
+    margin-bottom: 2.5vw;
+    @include respond-to(sm){
+      @include fsz(60px);
+      margin-bottom: 30px;
+    }
+  }
   &__icon{
     position: absolute;
     left: 0;
@@ -15,10 +39,12 @@
     bottom: 36px;
     z-index: 2;
     text-align: center;
-    pointer-events: none;
     @include fsz(36px);
     color: $color-neutral-100;
-    animation: 2s bounce infinite;
+    animation: 2s bounce 3;
+    i{
+      pointer-events: none;
+    }
   }
   &__wrap{
     padding: 32px;
@@ -330,12 +356,12 @@
 
 @keyframes bounce {
   0%{
-    transform: translateY(-10px);
+    transform: translateY(0);
   }
   50%{
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100%{
-    transform: translateY(-10px);
+    transform: translateY(0);
   }
 }
