@@ -4,6 +4,11 @@ portfolio_item:
   - address: 'Brooklyn, NY'
     name: Industry City
     picture: /assets/images/public/commercial.jpg
+    gallery_pictures:
+      - gallery_img: /assets/images/public/commercial.jpg
+      - gallery_img: /assets/images/public/Cohen_1087.jpg
+      - gallery_img: /assets/images/public/Cohen_1170.jpg
+      - gallery_img: /assets/images/public/Cohen_1152.jpg
     sub_item:
       - architect: Guido Capone
         area: '30,000 SF'
@@ -34,10 +39,11 @@ portfolio_item:
     name: YDE High School
     picture: /assets/images/public/Cohen_1083.jpg
     price: '$2,000,000'
+    gallery_pictures:
+      - gallery_img: /assets/images/public/Cohen_1138.jpg
+      - gallery_img: /assets/images/public/Cohen_1087.jpg
+      - gallery_img: /assets/images/public/Cohen_1170.jpg
+      - gallery_img: /assets/images/public/Cohen_1152.jpg
     sub_item:
-      - gallery_pictures:
-          - gallery_img: /assets/images/public/Cohen_1138.jpg
-          - gallery_img: /assets/images/public/Cohen_1087.jpg
-          - gallery_img: /assets/images/public/Cohen_1170.jpg
-          - gallery_img: /assets/images/public/Cohen_1152.jpg
+      - architect:
     type: Commercial Build out

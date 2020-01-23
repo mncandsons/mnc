@@ -264,6 +264,15 @@ collections:
                 widget: "string"
                 required: false
                 hint: "Leave free if project contains sub projects"
+              - label: "Image"
+                name: gallery_pictures
+                widget: "list"
+                required: false
+                hint: "Leave free if project contains sub projects"
+                fields:
+                  - label: "Gallery Image"
+                    name: "gallery_img"
+                    widget: "image"
               - label: "Portfolio Sub Item"
                 name: "sub_item"
                 widget: "list"
