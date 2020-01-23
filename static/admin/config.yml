@@ -239,77 +239,85 @@ collections:
               - label: "Address"
                 name: "address"
                 widget: "string"
-              - label: "Type"
-                name: "type"
-                widget: "string"
-                required: false
-                hint: "Leave free if project contains sub projects"
-              - label: "Area"
-                name: "area"
-                widget: "string"
-                required: false
-                hint: "Leave free if project contains sub projects"
-              - label: "Price"
-                name: "price"
-                widget: "string"
-                required: false
-                hint: "Leave free if project contains sub projects"
-              - label: "Architect"
-                name: "architect"
-                widget: "string"
-                required: false
-                hint: "Leave free if project contains sub projects"
-              - label: "Design"
-                name: "design"
-                widget: "string"
-                required: false
-                hint: "Leave free if project contains sub projects"
-              - label: "Portfolio Sub Item"
-                name: "sub_item"
-                widget: "list"
+              - label: "Additional fields"
+                name: "add_fields"
+                widget: "object"
                 fields:
-                  - label: "Sub Project Name"
-                    name: "name"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Main Image"
-                    name: "picture"
-                    widget: "image"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Type"
-                    name: "type"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Area"
-                    name: "area"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Price"
-                    name: "price"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Architect"
-                    name: "architect"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Design"
-                    name: "design"
-                    widget: "string"
-                    required: false
-                    hint: "Leave free if project doesn't contain sub projects"
-                  - label: "Image"
-                    name: gallery_pictures
-                    widget: "list"
-                    fields:
-                      - label: "Gallery Image"
-                        name: "gallery_img"
+                - label: "Type"
+                  name: "type"
+                  widget: "string"
+                  required: false
+                  hint: "Leave free if project contains sub projects"
+                - label: "Area"
+                  name: "area"
+                  widget: "string"
+                  required: false
+                  hint: "Leave free if project contains sub projects"
+                - label: "Price"
+                  name: "price"
+                  widget: "string"
+                  required: false
+                  hint: "Leave free if project contains sub projects"
+                - label: "Architect"
+                  name: "architect"
+                  widget: "string"
+                  required: false
+                  hint: "Leave free if project contains sub projects"
+                - label: "Design"
+                  name: "design"
+                  widget: "string"
+                  required: false
+                  hint: "Leave free if project contains sub projects"
+                - label: "Portfolio Sub Item"
+                  name: "sub_item"
+                  widget: "list"
+                  fields:
+                    - label: "Image"
+                      name: gallery_pictures
+                      widget: "list"
+                      fields:
+                        - label: "Gallery Image"
+                          name: "gallery_img"
+                          widget: "image"
+                    - label: "Sub Item fields"
+                      name: "add_fields"
+                      widget: "object"
+                      fields:
+                      - label: "Sub Project Name"
+                        name: "name"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Main Image"
+                        name: "picture"
                         widget: "image"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Type"
+                        name: "type"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Area"
+                        name: "area"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Price"
+                        name: "price"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Architect"
+                        name: "architect"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
+                      - label: "Design"
+                        name: "design"
+                        widget: "string"
+                        required: false
+                        hint: "Leave free if project doesn't contain sub projects"
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_commercial.yml"
