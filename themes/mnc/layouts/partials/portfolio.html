@@ -9,16 +9,18 @@
         <ol class="hashTabber-data portfolio-top__inner" data-hashtabber-id="portfolio">
           <li data-hashtabber-pair="residential">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_residential.main_img }}
               {{ $image_ext_res := path.Ext .Site.Data.portfolio_residential.main_img }}
-              <source type="image/webp" srcset="{{ replace .Site.Data.portfolio_residential.main_img $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive" srcset="{{ .Site.Data.portfolio_residential.main_img | relURL }}" alt="…">
+              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
             </picture>
           </li>
           <li data-hashtabber-pair="commercial">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_commercial.main_img }}
               {{ $image_ext_res := path.Ext .Site.Data.portfolio_commercial.main_img }}
-              <source type="image/webp" srcset="{{ replace .Site.Data.portfolio_commercial.main_img $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive" srcset="{{ .Site.Data.portfolio_commercial.main_img | relURL }}" alt="…">
+              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
             </picture>
           </li>
         </ol>
@@ -42,9 +44,10 @@
                   <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
                     <div class="p-block__inner">
                       <picture>
+                        {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
                         {{ $image_ext_res := path.Ext .picture }}
-                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                        <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                        <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                       </picture>
                       <div class="p-block__overlay d-flex align-items-center justify-content-center">
                         <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
@@ -80,9 +83,10 @@
                     <div class="p-block">
                       <div class="p-block__inner">
                         <picture>
+                          {{ $picture :=  replaceRE "(\\s)" "_" $portfolio_pic }}
                           {{ $image_ext_res := path.Ext $portfolio_pic }}
-                          <source type="image/webp" srcset="{{ replace $portfolio_pic $image_ext_res ".webp" | relURL }}">
-                          <img class="img-responsive" srcset="{{ $portfolio_pic | relURL }}" alt="…">
+                          <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                          <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                         </picture>
                         <div class="p-block__overlay commercial">
                           <div class="p-block__info">
@@ -108,9 +112,10 @@
                               <div class="p-block commercial">
                                 <div class="p-block__inner">
                                   <picture>
+                                    {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
                                     {{ $image_ext_res := path.Ext .picture }}
-                                    <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                                    <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                                    <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                                    <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                                   </picture>
                                   <div class="p-block__overlay commercial">
                                     <div class="p-block__info">
@@ -142,9 +147,10 @@
                   <div class="p-block commercial">
                     <div class="p-block__inner">
                       <picture>
+                        {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
                         {{ $image_ext_res := path.Ext .picture }}
-                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                        <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                        <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                       </picture>
                       <div class="p-block__overlay commercial">
                         <div class="p-block__info">

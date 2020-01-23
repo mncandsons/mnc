@@ -49,9 +49,10 @@
           {{ range .gallery_pictures }}
           <div class="slideshow-inside__item">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
               {{ $image_ext_res := path.Ext .gallery_img }}
-              <source type="image/webp" data-srcset="{{ replace .gallery_img $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive lazy" data-srcset="{{ .gallery_img | relURL }}" alt="…">
+              <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
             </picture>
           </div>
           {{ end }}
@@ -97,9 +98,10 @@
           {{ range .gallery_pictures }}
           <div class="slideshow-inside__item">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
               {{ $image_ext_res := path.Ext .gallery_img }}
-              <source type="image/webp" data-srcset="{{ replace .gallery_img $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive lazy" data-srcset="{{ .gallery_img | relURL }}" alt="…">
+              <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
             </picture>
           </div>
           {{ end }}

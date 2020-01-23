@@ -9,9 +9,10 @@
             <div class="about-photo__image">
               <div class="about-photo__image-inner">
                 <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.about_commercial.top.about_pic }}
                   {{ $image_ext_res := path.Ext .Site.Data.about_commercial.top.about_pic }}
-                  <source type="image/webp" srcset="{{ replace .Site.Data.about_commercial.top.about_pic $image_ext_res ".webp" | relURL }}">
-                  <img class="img-responsive" srcset="{{ .Site.Data.about_commercial.top.about_pic | relURL }}" alt="…">
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                 </picture>
               </div>
               <div class="about-badge"><span data-time="{{.Site.Data.about_commercial.top.year}}">14</span>years of<br> experience</div>
@@ -61,9 +62,10 @@
         <div class="row">
           <div class="col-12 col-sm-10">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.about_commercial.bottom.family_pic }}
               {{ $image_ext_res := path.Ext .Site.Data.about_commercial.bottom.family_pic }}
-              <source type="image/webp" srcset="{{ replace .Site.Data.about_commercial.bottom.family_pic $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive mt-32 mb-32 mt-64-sm mb-48-sm" srcset="{{ .Site.Data.about_commercial.bottom.family_pic | relURL }}" alt="…">
+              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive mt-32 mb-32 mt-64-sm mb-48-sm" srcset="{{ $picture | relURL }}" alt="…">
             </picture>
             {{ if in (string .Site.Data.about_commercial.bottom.right_column.text) "\n\n" }}
               {{ .Site.Data.about_commercial.bottom.right_column.text | markdownify }}

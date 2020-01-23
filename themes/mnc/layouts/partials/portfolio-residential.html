@@ -14,9 +14,10 @@
             <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
               <div class="p-block__inner">
                 <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
                   {{ $image_ext_res := path.Ext .picture }}
-                  <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                  <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                 </picture>
                 <div class="p-block__overlay d-flex align-items-center justify-content-center">
                   <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>

@@ -16,9 +16,10 @@
           <div class="p-block">
             <div class="p-block__inner">
               <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" $portfolio_pic }}
                 {{ $image_ext_res := path.Ext $portfolio_pic }}
-                <source type="image/webp" srcset="{{ replace $portfolio_pic $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive" srcset="{{ $portfolio_pic | relURL }}" alt="…">
+                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
               </picture>
               <div class="p-block__overlay commercial">
                 <div class="p-block__info">
@@ -44,9 +45,10 @@
                     <div class="p-block commercial">
                       <div class="p-block__inner">
                         <picture>
+                          {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
                           {{ $image_ext_res := path.Ext .picture }}
-                          <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                          <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                          <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                          <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                         </picture>
                         <div class="p-block__overlay commercial">
                           <div class="p-block__info">
@@ -78,9 +80,10 @@
         <div class="p-block commercial">
           <div class="p-block__inner">
             <picture>
+              {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
               {{ $image_ext_res := path.Ext .picture }}
-              <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
             </picture>
             <div class="p-block__overlay commercial">
               <div class="p-block__info">
