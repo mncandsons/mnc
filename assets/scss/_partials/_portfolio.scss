@@ -7,6 +7,19 @@
   @include respond-to(sm){
     height: calc(100vh - 70px - 16px);
   }
+  &__icon{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 36px;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+    @include fsz(36px);
+    color: $color-neutral-100;
+    animation: 2s bounce infinite;
+  }
   &__wrap{
     padding: 32px;
     @include respond-to(sm){
@@ -312,5 +325,17 @@
         margin-bottom: 32px;
       }
     }
+  }
+}
+
+@keyframes bounce {
+  0%{
+    transform: translateY(-10px);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
   }
 }

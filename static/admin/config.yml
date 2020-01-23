@@ -129,7 +129,7 @@ collections:
               - label: "Main Image"
                 name: "picture"
                 widget: "image"
-              - label: "Image"
+              - label: "Images"
                 name: gallery_pictures
                 widget: "list"
                 fields:
@@ -264,7 +264,7 @@ collections:
                 widget: "string"
                 required: false
                 hint: "Ignored if project contains sub projects"
-              - label: "Image"
+              - label: "Images"
                 name: gallery_pictures
                 widget: "list"
                 required: false
@@ -305,7 +305,7 @@ collections:
                     name: "design"
                     widget: "string"
                     required: false
-                  - label: "Image"
+                  - label: "Images"
                     name: gallery_pictures
                     widget: "list"
                     fields:

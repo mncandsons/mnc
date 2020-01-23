@@ -1,6 +1,13 @@
 <header class="site-header">
+  {{ $slug := (.RelPermalink) }}
   {{ $picture :=  replaceRE "(\\s)" "_" .Site.Params.logo }}
+  {{ if eq $slug "/portfolio-commercial/"}}
+  <a class="site-header__logo" href="{{ .Site.BaseURL }}#portfolio=commercial"><img src="{{ $picture | relURL }}" alt="{{.Site.Title}}"></a>
+  {{ else if eq $slug "/portfolio-residential/"}}
+  <a class="site-header__logo" href="{{ .Site.BaseURL }}#portfolio=residential"><img src="{{ $picture | relURL }}" alt="{{.Site.Title}}"></a>
+  {{ else }}
   <a class="site-header__logo" href="{{ .Site.BaseURL }}"><img src="{{ $picture | relURL }}" alt="{{.Site.Title}}"></a>
+  {{ end }}
   <button class="toggle-menu d-none-sm" type="button">
     <span class="toggle-menu__inner"></span>
   </button>
