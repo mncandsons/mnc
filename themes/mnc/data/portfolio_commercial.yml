@@ -5,8 +5,8 @@ portfolio_item:
     name: Industry City
     picture: /assets/images/public/commercial.jpg
     sub_item:
-      - architect: Guido Capone
-        area: '30,000 SF'
+      - architect:
+        area: 
         design: Valerie Landon
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
@@ -39,15 +39,4 @@ portfolio_item:
     name: YDE High School
     picture: /assets/images/public/Cohen_1083.jpg
     price: '$2,000,000'
-    sub_item:
-      - architect: Test
-        area: 200000 SF
-        design: Test
-        gallery_pictures:
-          - gallery_img: /assets/images/public/company-sons.jpg
-          - gallery_img: /assets/images/public/Cohen_1111.jpg
-        name: Test
-        picture: /assets/images/public/Cohen_1186.jpg
-        price: '$30,000'
-        type: Test
     type: Commercial Build out
