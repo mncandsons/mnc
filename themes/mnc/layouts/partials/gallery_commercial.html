@@ -11,58 +11,8 @@
       {{ $portfolio_architect := (.architect) }}
       {{ $portfolio_design := (.design) }}
 
-      {{ $sub_list := (.sub_item) }}
-      {{ $sublist_len := (len $sub_list) }}
-
-      {{ if lt $sublist_len 2 }}
-        <div class="slideshow__item">
-          <div class="slideshow__info">
-            <h3>{{ $portfolio_name }} <i class="icon-angle-down"></i></h3>
-            <div class="slideshow__list">
-              <div class="slideshow__list-inner">
-                <ul>
-                  {{ with $portfolio_type }}
-                      <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with $portfolio_address }}
-                      <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                  {{ end }}
-                </ul>
-                <ul>
-                  {{ with $portfolio_area }}
-                      <li><i class="icon icon-size"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with $portfolio_price }}
-                      <li><i class="icon icon-money-1"></i>{{ . }}</li>
-                  {{ end }}
-                </ul>
-                <ul>
-                  {{ with $portfolio_architect }}
-                      <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
-                  {{ end }}
-                  {{ with $portfolio_design }}
-                      <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
-                  {{ end }}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="slideshow-inside">
-            {{ range .gallery_pictures }}
-            <div class="slideshow-inside__item">
-              <picture>
-                {{ $image_ext_res := path.Ext .gallery_img }}
-                <source type="image/webp" data-srcset="{{ replace .gallery_img $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive lazy" data-srcset="{{ .gallery_img | relURL }}" alt="…">
-              </picture>
-            </div>
-            {{ end }}
-          </div>
-        </div>
-
-      {{ else }}
-
-      {{ range .sub_item }}
+      {{ with .sub_item}}
+      {{ range . }}
       <div class="slideshow__item">
         <div class="slideshow__info">
           <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
@@ -108,6 +58,53 @@
         </div>
       </div>
       {{ end }}
+
+      {{ else }}
+
+      <div class="slideshow__item">
+        <div class="slideshow__info">
+          <h3>{{ $portfolio_name }} <i class="icon-angle-down"></i></h3>
+          <div class="slideshow__list">
+            <div class="slideshow__list-inner">
+              <ul>
+                {{ with $portfolio_type }}
+                    <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                {{ end }}
+                {{ with $portfolio_address }}
+                    <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                {{ end }}
+              </ul>
+              <ul>
+                {{ with $portfolio_area }}
+                    <li><i class="icon icon-size"></i>{{ . }}</li>
+                {{ end }}
+                {{ with $portfolio_price }}
+                    <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                {{ end }}
+              </ul>
+              <ul>
+                {{ with $portfolio_architect }}
+                    <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
+                {{ end }}
+                {{ with $portfolio_design }}
+                    <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slideshow-inside">
+          {{ range .gallery_pictures }}
+          <div class="slideshow-inside__item">
+            <picture>
+              {{ $image_ext_res := path.Ext .gallery_img }}
+              <source type="image/webp" data-srcset="{{ replace .gallery_img $image_ext_res ".webp" | relURL }}">
+              <img class="img-responsive lazy" data-srcset="{{ .gallery_img | relURL }}" alt="…">
+            </picture>
+          </div>
+          {{ end }}
+        </div>
+      </div>
 
       {{ end }}
       {{ end }}

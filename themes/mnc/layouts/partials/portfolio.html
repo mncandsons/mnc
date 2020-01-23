@@ -71,10 +71,72 @@
             <div class="row gutter-16">
 
             {{ range first 6 .Site.Data.portfolio_commercial.portfolio_item }}
-              {{ $sub_list := (.sub_item) }}
-              {{ $sublist_len := (len $sub_list) }}
+                {{ $portfolio_pic := (.picture) }}
+                {{ $portfolio_name := (.name) }}
+                {{ $portfolio_address := (.address) }}
+                {{ with .sub_item}}
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="p-block__outer">
+                    <div class="p-block">
+                      <div class="p-block__inner">
+                        <picture>
+                          {{ $image_ext_res := path.Ext $portfolio_pic }}
+                          <source type="image/webp" srcset="{{ replace $portfolio_pic $image_ext_res ".webp" | relURL }}">
+                          <img class="img-responsive" srcset="{{ $portfolio_pic | relURL }}" alt="…">
+                        </picture>
+                        <div class="p-block__overlay commercial">
+                          <div class="p-block__info">
+                            <h3>{{ $portfolio_name }}</h3>
+                            <ul>
+                              {{ with $portfolio_address }}
+                                  <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                              {{ end }}
+                            </ul>
+                          </div>
+                          <div class="p-block__btn"><span>View All</span><i class="icon icon-arrow-more"></i></div>
+                        </div>
+                      </div>
+                    </div>
 
-              {{ if lt $sublist_len 2 }}
+                    <div class="p-block__subblocks">
+                      <div class="portfolio-container">
+                        <h3 class="text-center mb-32">{{ $portfolio_name }} Projects</h3>
+                        <div class="row gutter-16">
+                          {{ range . }}
+                          <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                            <div class="p-block__outer">
+                              <div class="p-block commercial">
+                                <div class="p-block__inner">
+                                  <picture>
+                                    {{ $image_ext_res := path.Ext .picture }}
+                                    <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
+                                    <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
+                                  </picture>
+                                  <div class="p-block__overlay commercial">
+                                    <div class="p-block__info">
+                                      <h3>{{ .name }}</h3>
+                                      <ul>
+                                        {{ with .type }}
+                                            <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                                        {{ end }}
+                                        {{ with .area }}
+                                            <li><i class="icon icon-size"></i>{{ . }}</li>
+                                        {{ end }}
+                                      </ul>
+                                    </div>
+                                    <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        {{ end }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{ else }}
               <div class="col-12 col-sm-6 col-md-4">
                 <div class="p-block__outer">
                   <div class="p-block commercial">
@@ -105,69 +167,6 @@
                   </div>
                 </div>
               </div>
-
-              {{ else }}
-              <div class="col-12 col-sm-6 col-md-4">
-                <div class="p-block__outer">
-                  <div class="p-block">
-                    <div class="p-block__inner">
-                      <picture>
-                        {{ $image_ext_res := path.Ext .picture }}
-                        <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                        <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
-                      </picture>
-                      <div class="p-block__overlay commercial">
-                        <div class="p-block__info">
-                          <h3>{{ .name }}</h3>
-                          <ul>
-                            {{ with .address }}
-                                <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                            {{ end }}
-                          </ul>
-                        </div>
-                        <div class="p-block__btn"><span>View All</span><i class="icon icon-arrow-more"></i></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="p-block__subblocks">
-                    <div class="portfolio-container">
-                      <h3 class="text-center mb-32">{{ .name }} Projects</h3>
-                      <div class="row gutter-16">
-                        {{ range .sub_item }}
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                          <div class="p-block__outer">
-                            <div class="p-block commercial">
-                              <div class="p-block__inner">
-                                <picture>
-                                  {{ $image_ext_res := path.Ext .picture }}
-                                  <source type="image/webp" srcset="{{ replace .picture $image_ext_res ".webp" | relURL }}">
-                                  <img class="img-responsive" srcset="{{ .picture | relURL }}" alt="…">
-                                </picture>
-                                <div class="p-block__overlay commercial">
-                                  <div class="p-block__info">
-                                    <h3>{{ .name }}</h3>
-                                    <ul>
-                                      {{ with .type }}
-                                          <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                                      {{ end }}
-                                      {{ with .area }}
-                                          <li><i class="icon icon-size"></i>{{ . }}</li>
-                                      {{ end }}
-                                    </ul>
-                                  </div>
-                                  <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {{ end }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             {{ end }}
             {{ end }}
             </div>
