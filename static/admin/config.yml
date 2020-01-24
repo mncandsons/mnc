@@ -52,6 +52,7 @@ collections:
             - name: "description"
               label: "Description"
               widget: "text"
+              required: false
             - name: "images"
               label: "Meta Image"
               widget: "file"
@@ -59,6 +60,7 @@ collections:
             - name: "author"
               label: "Site Author"
               widget: "string"
+              required: false
             - name: "googleAnalitycsID"
               label: "Google Analytics Code"
               widget: "string"
@@ -114,6 +116,7 @@ collections:
           - label: "Description"
             name: "description"
             widget: "text"
+            required: false
       - label: "Portfolio"
         name: "portfolio"
         file: "themes/mnc/data/portfolio_residential.yml"
@@ -149,14 +152,14 @@ collections:
           - label: "Section Heading"
             name: "about_heading"
             widget: "string"
-          - label: "Top Info"
+          - label: "Top Section Info"
             name: "top"
             widget: "object"
             fields:
               - label: "Photo"
                 name: about_pic
                 widget: "image"
-              - label: "Date"
+              - label: "Start Date"
                 name: "year"
                 widget: "datetime"
                 dateFormat: "YYYY/MM/DD"
@@ -169,7 +172,7 @@ collections:
               - label: "Right column Paragraph"
                 name: "paragraph_2"
                 widget: "markdown"
-          - label: "Bottom Info"
+          - label: "Bottom Section Info"
             name: "bottom"
             widget: "object"
             fields:
@@ -222,6 +225,7 @@ collections:
           - label: "Description"
             name: "description"
             widget: "text"
+            required: false
       - label: "Portfolio"
         name: "portfolio"
         file: "themes/mnc/data/portfolio_commercial.yml"
@@ -325,14 +329,14 @@ collections:
           - label: "Section Heading"
             name: "about_heading"
             widget: "string"
-          - label: "Top Info"
+          - label: "Top Section Info"
             name: "top"
             widget: "object"
             fields:
               - label: "Photo"
                 name: about_pic
                 widget: "image"
-              - label: "Date"
+              - label: "Start Date"
                 name: "year"
                 widget: "datetime"
                 dateFormat: "YYYY/MM/DD"
@@ -345,7 +349,7 @@ collections:
               - label: "Right column Paragraph"
                 name: "paragraph_2"
                 widget: "markdown"
-          - label: "Bottom Info"
+          - label: "Bottom Section Info"
             name: "bottom"
             widget: "object"
             fields:
