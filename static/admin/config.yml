@@ -75,20 +75,6 @@ collections:
               label: "Robots.txt"
               widget: text
               required: false
-  - label: "Homepage"
-    name: "homepage"
-    files:
-    - label: "Contact Info"
-      name: "contact_info"
-      file: "content/_index.md"
-      fields:
-        - label: "Page Title"
-          name: "title"
-          widget: "string"
-        - label: "Description"
-          name: "description"
-          widget: "text"
-          required: false
   - label: "Contact"
     name: "contact"
     files:
