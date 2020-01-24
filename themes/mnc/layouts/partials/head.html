@@ -40,6 +40,6 @@
 {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
 <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
-<script src="https://www.google.com/recaptcha/api.js?render=6Leqb9EUAAAAANBVxAoiJhHl7kNiTv9_a8RZNWr9"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LecW9IUAAAAACcUkxAr6ttOCkVIGkZD3pyo1Dz1"></script>
 
 </head>

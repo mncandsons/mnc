@@ -336,7 +336,7 @@ if (formHandle) {
       btn.innerHTML = 'Sending...';
       btn.disabled = true;
       grecaptcha.ready(function() {
-        grecaptcha.execute('6Leqb9EUAAAAANBVxAoiJhHl7kNiTv9_a8RZNWr9', {action: 'homepage'}).then(function(token) {
+        grecaptcha.execute('6LecW9IUAAAAACcUkxAr6ttOCkVIGkZD3pyo1Dz1', {action: 'homepage'}).then(function(token) {
           var data = new FormData(form);
           data.append('g-recaptcha-response', token);
           var request = new XMLHttpRequest();
