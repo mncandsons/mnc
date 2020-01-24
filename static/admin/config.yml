@@ -48,7 +48,7 @@ collections:
           fields:
             - name: "logo"
               label: "Logo"
-              widget: "file"
+              widget: "image"
             - name: "description"
               label: "Description"
               widget: "text"
