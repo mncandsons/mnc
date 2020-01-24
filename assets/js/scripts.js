@@ -227,7 +227,23 @@ for(let i = 0; i < galleryBackBtn.length; i++){
 
 // Gallery Info Expand
 
+
 let galleryHeading = document.querySelectorAll('.slideshow__info h3');
+let slideshowListInnerAll = document.querySelectorAll('.slideshow__list-inner');
+
+let arrayLength = slideshowListInnerAll.length;
+let heights = [];
+for (let i = 0; i < arrayLength; i++) {
+    heights.push(slideshowListInnerAll[i].offsetHeight);
+}
+function getHighest() {
+  return Math.max(...heights);
+}
+let tallest = getHighest();
+for (let i = 0; i < slideshowListInnerAll.length; i++) {
+    slideshowListInnerAll[i].style.height = tallest + "px";
+}
+
 for(let i = 0; i < galleryHeading.length; i++){
   let elem = galleryHeading[i];
   let slideshowList = elem.parentNode.querySelector('.slideshow__list');
@@ -238,12 +254,16 @@ for(let i = 0; i < galleryHeading.length; i++){
   }
   elem.addEventListener('click',function(e) {
     if (elem.classList.contains('active')){
-      elem.classList.remove('active');
-      slideshowList.style.height = 0 + 'px';
+      for(let i = 0; i < galleryHeading.length; i++){
+        galleryHeading[i].classList.remove('active');
+        galleryHeading[i].parentNode.querySelector('.slideshow__list').style.height = 0 + 'px';
+      }
     }
     else{
-      elem.classList.add('active');
-      slideshowList.style.height = slideshowListHeight + 'px';
+      for(let i = 0; i < galleryHeading.length; i++){
+        galleryHeading[i].classList.add('active');
+        galleryHeading[i].parentNode.querySelector('.slideshow__list').style.height = slideshowListHeight + 'px';
+      }
     }
   });
 }
