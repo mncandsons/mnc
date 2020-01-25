@@ -180,6 +180,7 @@ collections:
               - label: "Photo"
                 name: "family_pic"
                 widget: "image"
+                required: false
               - label: "Left column Block"
                 name: "left_column"
                 widget: "list"
@@ -358,6 +359,7 @@ collections:
               - label: "Photo"
                 name: "family_pic"
                 widget: "image"
+                required: false
               - label: "Left column Block"
                 name: "left_column"
                 widget: "list"

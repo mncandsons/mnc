@@ -1,38 +1,40 @@
 <section class="portfolio">
     <div class="portfolio-top__wrap">
-      <div class="portfolio-top">
-        <ol class="hashTabber-nav portfolio-nav" data-hashtabber-id="portfolio" data-hashtabber-default="residential">
-          <li data-hashtabber-pair="residential"><a>Residential</a></li>
-          <li data-hashtabber-pair="commercial"><a>Commercial</a></li>
-        </ol>
+      <div class="container-fluid-max">
+        <div class="portfolio-top">
+          <ol class="hashTabber-nav portfolio-nav" data-hashtabber-id="portfolio" data-hashtabber-default="residential">
+            <li data-hashtabber-pair="residential"><a>Residential</a></li>
+            <li data-hashtabber-pair="commercial"><a>Commercial</a></li>
+          </ol>
 
-        <ol class="hashTabber-data portfolio-top__inner" data-hashtabber-id="portfolio">
-          <li data-hashtabber-pair="residential">
-            <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_residential.main_img }}
-              {{ $image_ext_res := path.Ext .Site.Data.portfolio_residential.main_img }}
-              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
-            </picture>
-          </li>
-          <li data-hashtabber-pair="commercial">
-            <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_commercial.main_img }}
-              {{ $image_ext_res := path.Ext .Site.Data.portfolio_commercial.main_img }}
-              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
-            </picture>
-          </li>
-        </ol>
-        <div class="portfolio-top__icon">
-          <a class="rel-link" href="#portfolio"><i class="icon icon-more"></i></a>
+          <ol class="hashTabber-data portfolio-top__inner" data-hashtabber-id="portfolio">
+            <li data-hashtabber-pair="residential">
+              <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_residential.main_img }}
+                {{ $image_ext_res := path.Ext .Site.Data.portfolio_residential.main_img }}
+                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+              </picture>
+            </li>
+            <li data-hashtabber-pair="commercial">
+              <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_commercial.main_img }}
+                {{ $image_ext_res := path.Ext .Site.Data.portfolio_commercial.main_img }}
+                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+              </picture>
+            </li>
+          </ol>
+          <div class="portfolio-top__icon">
+            <a class="rel-link" href="#portfolio"><i class="icon icon-more"></i></a>
+          </div>
         </div>
       </div>
     </div>
 
 
     <div class="portfolio-bottom" id="portfolio">
-      <div class="portfolio-container">
+      <div class="container-fluid-max">
         <ol class="hashTabber-data" data-hashtabber-id="portfolio">
 
           <li data-hashtabber-pair="residential">
@@ -106,7 +108,7 @@
                     </div>
 
                     <div class="p-block__subblocks">
-                      <div class="portfolio-container">
+                      <div class="container-fluid-max">
                         <h3 class="text-center mb-32">{{ $portfolio_name }} Projects</h3>
                         <div class="row gutter-16">
                           {{ range . }}

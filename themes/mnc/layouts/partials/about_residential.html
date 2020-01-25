@@ -56,17 +56,19 @@
 
       <div class="col-12 col-md-8 mt-56 mt-0-md">
         <h2>{{ .Site.Data.about_residential.bottom.right_column.heading }}</h2>
-        <div class="heading-text pr-40">
+        <div class="heading-text mb-32 mb-64-md pr-40">
           {{ .Site.Data.about_residential.bottom.right_column.subheading | markdownify }}
         </div>
         <div class="row">
           <div class="col-12 col-sm-10">
+            {{ with .Site.Data.about_residential.bottom.family_pic }}
             <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.about_residential.bottom.family_pic }}
-              {{ $image_ext_res := path.Ext .Site.Data.about_residential.bottom.family_pic }}
+              {{ $picture :=  replaceRE "(\\s)" "_" . }}
+              {{ $image_ext_res := path.Ext . }}
               <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive mt-32 mb-32 mt-64-sm mb-48-sm" srcset="{{ $picture | relURL }}" alt="…">
+              <img class="img-responsive mb-32 mb-48-sm" srcset="{{ $picture | relURL }}" alt="…">
             </picture>
+            {{ end }}
             {{ if in (string .Site.Data.about_residential.bottom.right_column.text) "\n\n" }}
               {{ .Site.Data.about_residential.bottom.right_column.text | markdownify }}
             {{ else }}

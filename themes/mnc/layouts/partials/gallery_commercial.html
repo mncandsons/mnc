@@ -1,6 +1,8 @@
 <aside id="commercial-gallery" class="gallery">
   <div class="gallery__inner">
-    <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
+    <div class="container-fluid-max">
+      <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
+    </div>
     <div class="slideshow">
       {{ range .Site.Data.portfolio_commercial.portfolio_item }}
       {{ $portfolio_name := (.name) }}
@@ -15,45 +17,49 @@
       {{ range . }}
       <div class="slideshow__item">
         <div class="slideshow__info">
-          <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
-          <div class="slideshow__list">
-            <div class="slideshow__list-inner">
-              <ul>
-                {{ with .type }}
-                    <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                {{ end }}
-                {{ with $portfolio_address }}
-                    <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                {{ end }}
-              </ul>
-              <ul>
-                {{ with .area }}
-                    <li><i class="icon icon-size"></i>{{ . }}</li>
-                {{ end }}
-                {{ with .price }}
-                    <li><i class="icon icon-money-1"></i>{{ . }}</li>
-                {{ end }}
-              </ul>
-              <ul>
-                {{ with .architect }}
-                    <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
-                {{ end }}
-                {{ with .design }}
-                    <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
-                {{ end }}
-              </ul>
+          <div class="container-fluid-max">
+            <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
+            <div class="slideshow__list">
+              <div class="slideshow__list-inner">
+                <ul>
+                  {{ with .type }}
+                      <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                  {{ end }}
+                  {{ with $portfolio_address }}
+                      <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                  {{ end }}
+                </ul>
+                <ul>
+                  {{ with .area }}
+                      <li><i class="icon icon-size"></i>{{ . }}</li>
+                  {{ end }}
+                  {{ with .price }}
+                      <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                  {{ end }}
+                </ul>
+                <ul>
+                  {{ with .architect }}
+                      <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
+                  {{ end }}
+                  {{ with .design }}
+                      <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="slideshow-inside">
           {{ range .gallery_pictures }}
           <div class="slideshow-inside__item">
-            <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
-              {{ $image_ext_res := path.Ext .gallery_img }}
-              <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
-            </picture>
+            <div class="container-fluid-max">
+              <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                {{ $image_ext_res := path.Ext .gallery_img }}
+                <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+              </picture>
+            </div>
           </div>
           {{ end }}
         </div>
@@ -64,45 +70,49 @@
 
       <div class="slideshow__item">
         <div class="slideshow__info">
-          <h3>{{ $portfolio_name }} <i class="icon-angle-down"></i></h3>
-          <div class="slideshow__list">
-            <div class="slideshow__list-inner">
-              <ul>
-                {{ with $portfolio_type }}
-                    <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                {{ end }}
-                {{ with $portfolio_address }}
-                    <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                {{ end }}
-              </ul>
-              <ul>
-                {{ with $portfolio_area }}
-                    <li><i class="icon icon-size"></i>{{ . }}</li>
-                {{ end }}
-                {{ with $portfolio_price }}
-                    <li><i class="icon icon-money-1"></i>{{ . }}</li>
-                {{ end }}
-              </ul>
-              <ul>
-                {{ with $portfolio_architect }}
-                    <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
-                {{ end }}
-                {{ with $portfolio_design }}
-                    <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
-                {{ end }}
-              </ul>
+          <div class="container-fluid-max">
+            <h3>{{ $portfolio_name }} <i class="icon-angle-down"></i></h3>
+            <div class="slideshow__list">
+              <div class="slideshow__list-inner">
+                <ul>
+                  {{ with $portfolio_type }}
+                      <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                  {{ end }}
+                  {{ with $portfolio_address }}
+                      <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                  {{ end }}
+                </ul>
+                <ul>
+                  {{ with $portfolio_area }}
+                      <li><i class="icon icon-size"></i>{{ . }}</li>
+                  {{ end }}
+                  {{ with $portfolio_price }}
+                      <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                  {{ end }}
+                </ul>
+                <ul>
+                  {{ with $portfolio_architect }}
+                      <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
+                  {{ end }}
+                  {{ with $portfolio_design }}
+                      <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="slideshow-inside">
           {{ range .gallery_pictures }}
           <div class="slideshow-inside__item">
-            <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
-              {{ $image_ext_res := path.Ext .gallery_img }}
-              <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
-            </picture>
+            <div class="container-fluid-max">
+              <picture>
+                {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                {{ $image_ext_res := path.Ext .gallery_img }}
+                <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+              </picture>
+            </div>
           </div>
           {{ end }}
         </div>

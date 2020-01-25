@@ -47,9 +47,11 @@
     }
   }
   &__wrap{
-    padding: 32px;
+    padding: 32px 0;
     @include respond-to(sm){
-      padding: 8px
+      padding: 8px 0;
+      margin-left: -8px;
+      margin-right: -8px;
     }
   }
 	&__inner {
@@ -170,16 +172,6 @@
         height: auto;
       }
     }
-  }
-}
-
-.portfolio-container{
-  max-width: map-get($container-media-list, lg);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px;
-  @include respond-to(sm){
-    padding: 0 16px;
   }
 }
 
@@ -313,7 +305,7 @@
     position: absolute;
     overflow: hidden;
     z-index: 10;
-    .portfolio-container{
+    .container-fluid-max{
       padding-top: 32px;
     }
     .p-block__outer{

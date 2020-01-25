@@ -1,5 +1,5 @@
 .site-header {
-  padding: 21px 80px;
+  padding: 21px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
     background: $color-neutral-100;
   }
   @include respond-to(sm){
-    padding: 16px 22px;
+    padding: 16px 0;
   }
 	&__logo {
     position: relative;

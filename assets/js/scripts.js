@@ -141,7 +141,7 @@ for(let i = 0; i < pbElem.length; i++){
   elem.addEventListener('click',function(e) {
     let pbBtn = elem.querySelector('.p-block__btn span');
     if (elemSubBlocks){
-      let elemSubBlocksHeight = elemSubBlocks.querySelector('.portfolio-container').offsetHeight;
+      let elemSubBlocksHeight = elemSubBlocks.querySelector('.container-fluid-max').offsetHeight;
       if (elemParent.classList.contains('active')){
         elemParent.style.height = elemParentHeight + 'px';
         elemParent.classList.remove('active');

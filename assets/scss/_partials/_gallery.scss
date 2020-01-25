@@ -20,14 +20,9 @@
   .btn-back {
     position: absolute;
     z-index: 2;
-    left: 48px;
     top: 20px;
     @include respond-to(md){
-      left: 16px;
       top: 22px;
-    }
-    @include respond-to(sm){
-      left: 8px;
     }
   }
   .tns-inner, .tns-outer{
@@ -35,14 +30,25 @@
   }
   .tns-controls{
     position: absolute;
+    max-width: map-get($container-media-list, lg);
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    pointer-events: none;
+    padding-left: $grid-gutter-width + px;
+    padding-right: $grid-gutter-width + px;
     z-index: 10;
-    right: 48px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     top: 29px;
     @include respond-to(md){
-      right: 16px;
       top: 28px;
+    }
+    @include respond-to(sm){
+      padding-left: ($grid-gutter-width / 2) + px;
+      padding-right: ($grid-gutter-width / 2) + px;
     }
     button{
       @include fsz(16px);
@@ -52,6 +58,7 @@
       justify-content: center;
       font-family: $font;
       margin-left: 32px;
+      pointer-events: auto;
       @include respond-to(md){
         margin-left: 16px;
         @include fsz(14px);
@@ -142,6 +149,13 @@
       }
       &.clickable{
         cursor: pointer;
+        @media screen and (min-height: 1040px){
+          cursor: default;
+          pointer-events: none;
+          i{
+            display: none;
+          }
+        }
       }
       &.active{
         i{
@@ -154,6 +168,9 @@
     height: 0;
     overflow: hidden;
     transition: 150ms;
+    @media screen and (min-height: 1040px){
+      height: auto !important;
+    }
     ul{
       margin: 0 24px;
       padding: 20px 0 0;
@@ -213,11 +230,19 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    .container-fluid-max{
+      height: 100%;
+      max-height: 780px;
+      @include center(both);
+      @media screen and (min-height: 1040px){
+        top: calc(50% - 20px);
+      }
+    }
     img{
       position: absolute;
       height: 100%;
-      left: 48px;
-      width: calc(100% - 96px);
+      left: 32px;
+      width: calc(100% - 64px);
       object-fit: cover;
       object-position: center;
       font-family: 'object-fit: cover; object-position: center;';
@@ -229,6 +254,7 @@
         left: 8px;
         width: calc(100% - 16px);
       }
+
     }
 	}
 

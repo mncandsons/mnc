@@ -30,6 +30,19 @@
     }
 }
 
+.container-fluid-max{
+  max-width: map-get($container-media-list, lg);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $grid-gutter-width + px;
+  padding-right: $grid-gutter-width + px;
+  position: relative;
+  @include respond-to(sm){
+    padding-left: ($grid-gutter-width / 2) + px;
+    padding-right: ($grid-gutter-width / 2) + px;
+  }
+}
+
 .row {
   margin-left: (-$grid-gutter-width) + px;
   margin-right: (-$grid-gutter-width) + px;
