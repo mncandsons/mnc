@@ -86,17 +86,20 @@
     }
   }
   .tns-nav{
+    max-width: map-get($container-media-list, lg);
     position: absolute;
     display: flex;
     z-index: 3;
     left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 48px;
-    left: 80px;
-    right: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
     @include respond-to(md){
-      left: 48px;
-      right: 48px;
       bottom: 32px;
+      padding-left: 32px;
+      padding-right: 32px;
     }
     button{
       flex: 1 1 auto;
