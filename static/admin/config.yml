@@ -153,6 +153,8 @@ collections:
                     media_library:
                       config:
                         multiple: true
+                      settings:
+                        defaultOperations: '/resize/1200/'
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_residential.yml"
