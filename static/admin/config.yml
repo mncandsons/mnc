@@ -140,11 +140,9 @@ collections:
                 widget: "image"
               - label: "Images"
                 name: gallery_pictures
-                widget: "list"
-                fields:
-                  - label: "Gallery Image"
-                    name: "gallery_img"
-                    widget: "image"
+                media_library:
+                  config:
+                    multiple: true
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_residential.yml"
