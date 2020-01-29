@@ -8,7 +8,7 @@ public_folder: "/assets/images/public/"
 media_library:
   name: uploadcare
   config:
-    publicKey: demopublickey # replace with your Public API key or use for testing env only
+    publicKey: fa50265ed2e7f0739f3f
 
 collections:
   - label: "General"
