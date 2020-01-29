@@ -5,6 +5,11 @@ backend:
 media_folder: "static/assets/images/"
 public_folder: "/assets/images/public/"
 
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey # replace with your Public API key or use for testing env only
+
 collections:
   - label: "General"
     name: "general"
@@ -140,10 +145,11 @@ collections:
                 widget: "image"
               - label: "Images"
                 name: gallery_pictures
-                widget: "image"
-                media_library:
-                  config:
-                    multiple: true
+                widget: "list"
+                fields:
+                  - label: "Gallery Image"
+                    name: "gallery_img"
+                    widget: "image"
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_residential.yml"
