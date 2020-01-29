@@ -6,6 +6,7 @@
     <div class="slideshow">
       {{ range .Site.Data.portfolio_residential.portfolio_item }}
       <div class="slideshow__item">
+        {{ if or .type .address .area .price .architect .design }}
         <div class="slideshow__info">
           <div class="container-fluid-max">
             <h3>Project details <i class="icon-angle-down"></i></h3>
@@ -39,6 +40,7 @@
             </div>
           </div>
         </div>
+        {{ end }}
         <div class="slideshow-inside">
           {{ range .gallery_pictures }}
           <div class="slideshow-inside__item">

@@ -18,6 +18,7 @@
       <div class="slideshow__item">
         <div class="slideshow__info">
           <div class="container-fluid-max">
+            {{ if or .type $portfolio_address .area .price .architect .design }}
             <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
             <div class="slideshow__list">
               <div class="slideshow__list-inner">
@@ -47,6 +48,9 @@
                 </ul>
               </div>
             </div>
+            {{ else }}
+            <h3>{{ $portfolio_name }}</h3>
+            {{ end }}
           </div>
         </div>
         <div class="slideshow-inside">
@@ -71,6 +75,7 @@
       <div class="slideshow__item">
         <div class="slideshow__info">
           <div class="container-fluid-max">
+            {{ if or $portfolio_type $portfolio_address $portfolio_area $portfolio_price $portfolio_architect $portfolio_design }}
             <h3>{{ $portfolio_name }} <i class="icon-angle-down"></i></h3>
             <div class="slideshow__list">
               <div class="slideshow__list-inner">
@@ -100,6 +105,9 @@
                 </ul>
               </div>
             </div>
+            {{ else }}
+            <h3>{{ $portfolio_name }}</h3>
+            {{ end }}
           </div>
         </div>
         <div class="slideshow-inside">

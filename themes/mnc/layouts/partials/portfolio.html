@@ -58,6 +58,7 @@
                         <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
                         <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                       </picture>
+                      {{ if or .type .address .area }}
                       <div class="p-block__overlay commercial">
                         <div class="p-block__info">
                           <h3>Project details</h3>
@@ -75,6 +76,11 @@
                         </div>
                         <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
                       </div>
+                      {{ else }}
+                      <div class="p-block__overlay d-flex align-items-center justify-content-center">
+                        <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
+                      </div>
+                      {{ end }}
                     </div>
                   </div>
                 </div>

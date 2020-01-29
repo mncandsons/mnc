@@ -4,7 +4,7 @@ portfolio_item:
     picture: /assets/images/public/Bildirici_Shoot 0282.jpg
     sub_item:
       - architect: Guido Capone
-        area: '30,000 SF'
+        area:
         design: Valerie Landon
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
@@ -25,10 +25,10 @@ portfolio_item:
         picture: /assets/images/public/Cohen_1170.jpg
         price: '$500,000'
         type: Some Build out
-  - address: 'Brooklyn, NY'
-    architect: Denis Alessio
-    area: '122,000 SF'
-    design: Felicia Sans
+  - address:
+    architect:
+    area:
+    design:
     gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1138.jpg
       - gallery_img: /assets/images/public/Cohen_1087.jpg
@@ -36,5 +36,5 @@ portfolio_item:
       - gallery_img: /assets/images/public/Cohen_1152.jpg
     name: YDE High School
     picture: /assets/images/public/Cohen_1083.jpg
-    price: '$2,000,000'
-    type: Commercial Build out
+    price:
+    type:
