@@ -140,6 +140,7 @@ collections:
                 widget: "image"
               - label: "Images"
                 name: gallery_pictures
+                widget: "image"
                 media_library:
                   config:
                     multiple: true
