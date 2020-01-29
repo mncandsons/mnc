@@ -3,7 +3,7 @@
     <div class="container-fluid-max">
       <div class="portfolio-inside__header">
         <a href="{{ .Site.BaseURL }}#portfolio=residential" class="btn btn-bordered"><i class="icon icon-arrow-left-sm mr-8"></i><span>Back to Homepage</span></a>
-        <h1>{{ .Site.Data.portfolio_residential.heading }}</h1>
+        <h1>{{ .Params.heading }}</h1>
       </div>
       <div class="row gutter-16">
         {{ $.Scratch.Set "counter" -1 }}

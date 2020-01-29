@@ -10,18 +10,22 @@
           <ol class="hashTabber-data portfolio-top__inner" data-hashtabber-id="portfolio">
             <li data-hashtabber-pair="residential">
               <picture>
-                {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_residential.main_img }}
-                {{ $image_ext_res := path.Ext .Site.Data.portfolio_residential.main_img }}
-                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                {{with .GetPage "/portfolio-residential"}}
+                  {{ $picture :=  replaceRE "(\\s)" "_" .Params.main_img }}
+                  {{ $image_ext_res := path.Ext .Params.main_img }}
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                {{end}}
               </picture>
             </li>
             <li data-hashtabber-pair="commercial">
               <picture>
-                {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.portfolio_commercial.main_img }}
-                {{ $image_ext_res := path.Ext .Site.Data.portfolio_commercial.main_img }}
-                <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                {{with .GetPage "/portfolio-commercial"}}
+                  {{ $picture :=  replaceRE "(\\s)" "_" .Params.main_img }}
+                  {{ $image_ext_res := path.Ext .Params.main_img }}
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                {{end}}
               </picture>
             </li>
           </ol>
@@ -39,7 +43,7 @@
 
           <li data-hashtabber-pair="residential">
             <div class="subheading">Our work</div>
-            <h1>{{ .Site.Data.portfolio_residential.heading }}</h1>
+            <h1>{{with .GetPage "/portfolio-residential"}}{{ .Params.heading }}{{end}}</h1>
             <div class="row gutter-16">
               {{ $.Scratch.Set "counter" -1 }}
               {{ range first 6 .Site.Data.portfolio_residential.portfolio_item }}
@@ -89,7 +93,7 @@
 
           <li data-hashtabber-pair="commercial">
             <div class="subheading">Our work</div>
-            <h1>{{ .Site.Data.portfolio_commercial.heading }}</h1>
+            <h1>{{with .GetPage "/portfolio-commercial"}}{{ .Params.heading }}{{end}}</h1>
             <div class="row gutter-16">
 
             {{ range first 6 .Site.Data.portfolio_commercial.portfolio_item }}
