@@ -1,15 +1,15 @@
 portfolio_item:
-  - gallery_pictures:
+  - address: 'Brooklyn, NY'
+    architect: Denis Alessio
+    area: '122,000 SF'
+    design: Felicia Sans
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
     picture: /assets/images/public/Cohen_7673.jpg
-    project_name: Project 1
-    address: 'Brooklyn, NY'
-    architect: Denis Alessio
-    area: '122,000 SF'
-    design: Felicia Sans
     price: '$2,000,000'
+    project_name: Project 1
     type: Commercial Build out
   - gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
@@ -52,10 +52,16 @@ portfolio_item:
       - gallery_img: /assets/images/public/Cohen_7673.jpg
     picture: /assets/images/public/Cohen_1111.jpg
     project_name: Project 8
-  - gallery_pictures:
+  - address: 'New Jersey, NY'
+    architect: Mike Kirby
+    area: 300 SF
+    design: Selena Luiz
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1111.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_1087.jpg
     picture: /assets/images/public/Cohen_1083.jpg
+    price: '$300,000'
     project_name: Test project
+    type: Residential
