@@ -1,13 +1,16 @@
-main_img: /assets/images/public/residential.jpg
-heading: Extraordinary homes
 portfolio_item:
   - gallery_pictures:
-      - gallery_img: 'https://ucarecdn.com/0943f809-ba1a-413e-918c-cd0270d8aa21/'
+      - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
-    picture: >-
-      https://ucarecdn.com/c29abf9d-97c7-40d5-90f1-0dfddadb7228/-/crop/1142x851/329,247/-/preview/
+    picture: /assets/images/public/Cohen_7673.jpg
     project_name: Project 1
+    address: 'Brooklyn, NY'
+    architect: Denis Alessio
+    area: '122,000 SF'
+    design: Felicia Sans
+    price: '$2,000,000'
+    type: Commercial Build out
   - gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg

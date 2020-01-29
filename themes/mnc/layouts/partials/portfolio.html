@@ -54,8 +54,22 @@
                         <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
                         <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                       </picture>
-                      <div class="p-block__overlay d-flex align-items-center justify-content-center">
-                        <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
+                      <div class="p-block__overlay commercial">
+                        <div class="p-block__info">
+                          <h3>Project details</h3>
+                          <ul>
+                            {{ with .type }}
+                                <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .address }}
+                                <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .area }}
+                                <li><i class="icon icon-size"></i>{{ . }}</li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                        <div class="p-block__btn"><span>View All</span><i class="icon icon-arrow-more"></i></div>
                       </div>
                     </div>
                   </div>

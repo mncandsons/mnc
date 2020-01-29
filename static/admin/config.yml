@@ -122,16 +122,16 @@ collections:
             name: "description"
             widget: "text"
             required: false
-      - label: "Portfolio"
-        name: "portfolio"
-        file: "themes/mnc/data/portfolio_residential.yml"
-        fields:
           - label: "Hero Image"
             name: "main_img"
             widget: "image"
           - label: "Section Heading"
             name: "heading"
             widget: "string"
+      - label: "Portfolio"
+        name: "portfolio"
+        file: "themes/mnc/data/portfolio_residential.yml"
+        fields:
           - label: "Portfolio Item"
             name: "portfolio_item"
             widget: "list"
@@ -143,6 +143,30 @@ collections:
               - label: "Main Image"
                 name: "picture"
                 widget: "image"
+              - label: "Address"
+                name: "address"
+                widget: "string"
+                required: false
+              - label: "Type"
+                name: "type"
+                widget: "string"
+                required: false
+              - label: "Area"
+                name: "area"
+                widget: "string"
+                required: false
+              - label: "Price"
+                name: "price"
+                widget: "string"
+                required: false
+              - label: "Architect"
+                name: "architect"
+                widget: "string"
+                required: false
+              - label: "Design"
+                name: "design"
+                widget: "string"
+                required: false
               - label: "Images"
                 name: gallery_pictures
                 widget: "list"
@@ -153,7 +177,7 @@ collections:
                     media_library:
                       config:
                         multiple: true
-                      settings: 
+                      settings:
                         defaultOperations: '/resize/800x600/'
       - label: "About"
         name: "about"
@@ -238,16 +262,16 @@ collections:
             name: "description"
             widget: "text"
             required: false
-      - label: "Portfolio"
-        name: "portfolio"
-        file: "themes/mnc/data/portfolio_commercial.yml"
-        fields:
           - label: "Hero Image"
             name: "main_img"
             widget: "image"
           - label: "Section Heading"
             name: "heading"
             widget: "string"
+      - label: "Portfolio"
+        name: "portfolio"
+        file: "themes/mnc/data/portfolio_commercial.yml"
+        fields:
           - label: "Portfolio Item"
             name: "portfolio_item"
             widget: "list"
