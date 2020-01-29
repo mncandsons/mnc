@@ -2,9 +2,7 @@ main_img: /assets/images/public/residential.jpg
 heading: Extraordinary homes
 portfolio_item:
   - gallery_pictures:
-      - gallery_img:
-          - 'https://ucarecdn.com/0943f809-ba1a-413e-918c-cd0270d8aa21/'
-          - 'https://ucarecdn.com/403789c6-0b0a-4aa8-908d-5d67bb93f5ab/'
+      - gallery_img: 'https://ucarecdn.com/0943f809-ba1a-413e-918c-cd0270d8aa21/'
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
     picture: >-
