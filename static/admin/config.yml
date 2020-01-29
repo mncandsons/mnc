@@ -5,6 +5,11 @@ backend:
 media_folder: "static/assets/images/"
 public_folder: "/assets/images/public/"
 
+media_library:
+  name: uploadcare
+  config:
+    publicKey: fa50265ed2e7f0739f3f
+
 collections:
   - label: "General"
     name: "general"
@@ -146,12 +151,10 @@ collections:
                     name: "gallery_img"
                     widget: "image"
                     media_library:
-                      name: uploadcare
                       config:
-                        publicKey: fa50265ed2e7f0739f3f
                         multiple: true
-                      settings:
-                        defaultOperations: '/resize/1200/'
+                      settings: 
+                        defaultOperations: '/resize/800x600/'
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_residential.yml"
