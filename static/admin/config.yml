@@ -142,15 +142,15 @@ collections:
                 name: "address"
                 widget: "string"
                 required: false
-              - label: "Type"
+              - label: "Job Description"
                 name: "type"
                 widget: "string"
                 required: false
-              - label: "Area"
+              - label: "Square Feet"
                 name: "area"
                 widget: "string"
                 required: false
-              - label: "Price"
+              - label: "Approx. Cost"
                 name: "price"
                 widget: "string"
                 required: false
@@ -158,7 +158,7 @@ collections:
                 name: "architect"
                 widget: "string"
                 required: false
-              - label: "Design"
+              - label: "Designer"
                 name: "design"
                 widget: "string"
                 required: false
@@ -276,17 +276,17 @@ collections:
                 name: "address"
                 widget: "string"
                 required: false
-              - label: "Type"
+              - label: "Job Description"
                 name: "type"
                 widget: "string"
                 required: false
                 hint: "Ignored if project contains sub projects"
-              - label: "Area"
+              - label: "Square Feet"
                 name: "area"
                 widget: "string"
                 required: false
                 hint: "Ignored if project contains sub projects"
-              - label: "Price"
+              - label: "Approx. Cost"
                 name: "price"
                 widget: "string"
                 required: false
@@ -296,7 +296,7 @@ collections:
                 widget: "string"
                 required: false
                 hint: "Ignored if project contains sub projects"
-              - label: "Design"
+              - label: "Designer"
                 name: "design"
                 widget: "string"
                 required: false
