@@ -1,67 +1,93 @@
 portfolio_item:
-  - address: 
-    architect: Denis Alessio
-    area: '122,000 SF'
-    design: Felicia Sans
+  - address: 'Brooklyn, NY'
+    architect: ''
+    area: ''
+    design: Victoria Mendal Design
     gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
     picture: /assets/images/public/Cohen_7673.jpg
-    price: '$2,000,000'
-    project_name: Project 1
-    type: Commercial Build out
-  - gallery_pictures:
+    price: ''
+    project_name: Bildirici Residence
+    type: ''
+  - address: 'Brooklyn, NY'
+    design: Calder Interiors
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 2
-  - gallery_pictures:
+    project_name: Cohen Residence
+  - address: 'Brooklyn, NY'
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 3
-  - gallery_pictures:
+    project_name: Wahba Residence
+  - address: 'Brooklyn, NY'
+    design: Calder Interiors
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 4
-  - gallery_pictures:
+    project_name: E. Azrak
+  - address: 'Brooklyn, NY'
+    architect: Harry Baldinger Architects
+    design: Ovadia Design
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 5
-  - gallery_pictures:
+    project_name: I. Chehebar
+  - address: 'Brooklyn, NY'
+    architect: Andrew Wilkinson Architects and Interiors
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 6
-  - gallery_pictures:
+    project_name: Kassin
+  - address: 'Brooklyn, NY'
+    architect: Warren Meister Architects
+    design: JL Interiors
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1141.jpg
       - gallery_img: /assets/images/public/Cohen_1152.jpg
       - gallery_img: /assets/images/public/Cohen_7690.jpg
     picture: /assets/images/public/Cohen_1141.jpg
-    project_name: Project 7
-  - gallery_pictures:
+    project_name: Nakash
+  - address: 'Lakewood, NJ'
+    architect: Warren Meister Architects
+    design: Susan Strauss Design
+    gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1111.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
     picture: /assets/images/public/Cohen_1111.jpg
-    project_name: Project 8
-  - address: 'New Jersey, NY'
-    architect: Mike Kirby
-    area: 300 SF
-    design: Selena Luiz
+    project_name: Nachum
+  - address: 'Brooklyn, NY'
+    architect: Warren Meister Architects
+    area: ''
+    design: William McIntosh Design
     gallery_pictures:
       - gallery_img: /assets/images/public/Cohen_1111.jpg
       - gallery_img: /assets/images/public/Cohen_7714.jpg
       - gallery_img: /assets/images/public/Cohen_7673.jpg
       - gallery_img: /assets/images/public/Cohen_1087.jpg
     picture: /assets/images/public/Cohen_1083.jpg
-    price: '$300,000'
-    project_name: Test project
-    type: Residential
+    price: ''
+    project_name: Dana Residence
+    type: ''
+  - address: 'Deal, NJ'
+    architect: JLRA
+    design: JLRA
+    picture: /assets/images/public/Cohen_1087.jpg
+    project_name: S. Harari
+  - address: 'Deal, NJ'
+    architect: JLRA
+    design: JLRA
+    picture: /assets/images/public/Cohen_1138.jpg
+    project_name: A. Harari
