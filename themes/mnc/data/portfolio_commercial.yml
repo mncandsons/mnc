@@ -3,38 +3,24 @@ portfolio_item:
     name: Industry City
     picture: /assets/images/public/Azrak_7751.jpg
     sub_item:
-      - architect: Guido Capone
-        area:
-        design: Valerie Landon
+      - architect: Slab Architects
+        design: ''
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/Azrak_7751.jpg
           - gallery_img: /assets/images/public/Cohen_1083.jpg
           - gallery_img: /assets/images/public/Cohen_1138.jpg
-        name: 'Sub Industry #1'
+        name: IC Cafe
         picture: /assets/images/public/Cohen_1138.jpg
-        price: '$400,000'
-        type: Some Build out
-      - architect: Serena Green
-        area: '20,000 SF'
-        design: John Doherty
+        price: ''
+        type: ''
+      - architect: ''
+        area: ''
+        design: ''
         gallery_pictures:
           - gallery_img: /assets/images/public/commercial.jpg
           - gallery_img: /assets/images/public/Cohen_7714.jpg
-        name: 'Sub Industry #2'
+        name: Jamestown Office
         picture: /assets/images/public/Cohen_1170.jpg
-        price: '$500,000'
-        type: Some Build out
-  - address:
-    architect:
-    area:
-    design:
-    gallery_pictures:
-      - gallery_img: /assets/images/public/Cohen_1138.jpg
-      - gallery_img: /assets/images/public/Cohen_1087.jpg
-      - gallery_img: /assets/images/public/Cohen_1170.jpg
-      - gallery_img: /assets/images/public/Cohen_1152.jpg
-    name: YDE High School
-    picture: /assets/images/public/Cohen_1083.jpg
-    price:
-    type:
+        price: ''
+        type: ''
