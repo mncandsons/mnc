@@ -46,6 +46,16 @@ portfolio_item:
           - gallery_img: /assets/images/public/ICJT_08.jpg
           - gallery_img: /assets/images/public/ICJT_09.jpg
           - gallery_img: /assets/images/public/ICJT_10.jpg
+          - gallery_img: /assets/images/public/ICJT_12.jpg
+          - gallery_img: /assets/images/public/ICJT_13.jpg
+          - gallery_img: /assets/images/public/ICJT_14.jpg
+          - gallery_img: /assets/images/public/ICJT_15.jpg
+          - gallery_img: /assets/images/public/ICJT_16.jpg
+          - gallery_img: /assets/images/public/ICJT_17.jpg
+          - gallery_img: /assets/images/public/ICJT_18.jpg
+          - gallery_img: /assets/images/public/ICJT_19.jpg
+          - gallery_img: /assets/images/public/ICJT_20.jpg
+          - gallery_img: /assets/images/public/ICJT_21.jpg
         name: Jamestown Office
         picture: /assets/images/public/ICJT_11.jpg
         price: ''
