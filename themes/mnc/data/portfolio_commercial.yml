@@ -1,7 +1,7 @@
 portfolio_item:
   - address: 'Brooklyn, NY'
     name: Industry City
-    picture: /assets/images/public/Azrak_7751.jpg
+    picture: /assets/images/public/ICJT_11.jpg
     sub_item:
       - architect: Slab Architects
         design: ''
@@ -36,9 +36,9 @@ portfolio_item:
         area: ''
         design: ''
         gallery_pictures:
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/Cohen_7714.jpg
+          - gallery_img: /assets/images/public/ICJT_11.jpg
+          - gallery_img: /assets/images/public/ICJT_01.jpg
         name: Jamestown Office
-        picture: /assets/images/public/Cohen_1170.jpg
+        picture: /assets/images/public/ICJT_11.jpg
         price: ''
         type: ''
