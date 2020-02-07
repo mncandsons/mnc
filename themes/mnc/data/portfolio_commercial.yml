@@ -10,6 +10,12 @@ portfolio_item:
           - gallery_img: /assets/images/public/ICCA_02.jpg
           - gallery_img: /assets/images/public/ICCA_03.jpg
           - gallery_img: /assets/images/public/ICCA_04.jpg
+          - gallery_img: /assets/images/public/ICCA_05.jpg
+          - gallery_img: /assets/images/public/ICCA_06.jpg
+          - gallery_img: /assets/images/public/ICCA_07.jpg
+          - gallery_img: /assets/images/public/ICCA_08.jpg
+          - gallery_img: /assets/images/public/ICCA_09.jpg
+          - gallery_img: /assets/images/public/ICCA_10.jpg
         name: IC Cafe
         picture: /assets/images/public/ICCA_01.jpg
         price: ''
