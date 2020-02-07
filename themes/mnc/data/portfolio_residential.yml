@@ -168,6 +168,14 @@ portfolio_item:
     gallery_pictures:
       - gallery_img: /assets/images/public/NR_01.jpg
       - gallery_img: /assets/images/public/NR_02.jpg
+      - gallery_img: /assets/images/public/NR_06.jpg
+      - gallery_img: /assets/images/public/NR_08.jpg
+      - gallery_img: /assets/images/public/NR_10.jpg
+      - gallery_img: /assets/images/public/NR_11.jpg
+      - gallery_img: /assets/images/public/NR_12.jpg
+      - gallery_img: /assets/images/public/NR_13.jpg
+      - gallery_img: /assets/images/public/NR_14.jpg
+      - gallery_img: /assets/images/public/NR_15.jpg
     picture: /assets/images/public/NR_01.jpg
     project_name: Nachum
   - address: 'Brooklyn, NY'
