@@ -6,12 +6,12 @@ portfolio_item:
       - architect: Slab Architects
         design: ''
         gallery_pictures:
-          - gallery_img: /assets/images/public/commercial.jpg
-          - gallery_img: /assets/images/public/Azrak_7751.jpg
-          - gallery_img: /assets/images/public/Cohen_1083.jpg
-          - gallery_img: /assets/images/public/Cohen_1138.jpg
+          - gallery_img: /assets/images/public/ICCA_01.jpg
+          - gallery_img: /assets/images/public/ICCA_02.jpg
+          - gallery_img: /assets/images/public/ICCA_03.jpg
+          - gallery_img: /assets/images/public/ICCA_04.jpg
         name: IC Cafe
-        picture: /assets/images/public/Cohen_1138.jpg
+        picture: /assets/images/public/ICCA_01.jpg
         price: ''
         type: ''
       - architect: ''
