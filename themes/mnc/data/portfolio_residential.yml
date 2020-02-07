@@ -4,39 +4,38 @@ portfolio_item:
     area: ''
     design: Victoria Mendal Design
     gallery_pictures:
-      - gallery_img: /assets/images/public/Bildirici_Shoot0282.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0056.jpg
       - gallery_img: /assets/images/public/Bildirici_17&18_w_crop.jpg
       - gallery_img: /assets/images/public/Bildirici_33&35.jpg
       - gallery_img: /assets/images/public/Bildirici_406-407&405.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0056.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0064.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0074.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0097.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0102.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0122.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0142.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0150.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0161.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0188.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0216.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0226.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0242.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0251.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0260.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0272.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0282.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0300.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0318.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0326.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0344.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0361.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0372.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0381.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0389-2.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0399.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0392.jpg
-      - gallery_img: /assets/images/public/Bildirici_Shoot0423.jpg
-    picture: /assets/images/public/Bildirici_Shoot0282.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0064.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0074.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0097.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0102.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0122.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0142.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0150.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0161.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0188.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0216.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0226.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0242.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0251.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0260.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0272.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0282.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0300.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0318.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0326.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0344.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0361.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0372.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0381.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0389-2.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0392.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0399.jpg
+      - gallery_img: /assets/images/public/Bildirici_Shoot_0423.jpg
+    picture: /assets/images/public/Bildirici_Shoot_0282.jpg
     price: ''
     project_name: Bildirici Residence
     type: ''
