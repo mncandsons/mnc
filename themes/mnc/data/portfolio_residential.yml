@@ -126,6 +126,16 @@ portfolio_item:
       - gallery_img: /assets/images/public/19.050.007A.jpg
       - gallery_img: /assets/images/public/19.050.008A.jpg
       - gallery_img: /assets/images/public/19.050.009A.jpg
+      - gallery_img: /assets/images/public/19.050.010A.jpg
+      - gallery_img: /assets/images/public/19.050.011A.jpg
+      - gallery_img: /assets/images/public/19.050.012A.jpg
+      - gallery_img: /assets/images/public/19.050.013A.jpg
+      - gallery_img: /assets/images/public/19.050.014A.jpg
+      - gallery_img: /assets/images/public/19.050.015A.jpg
+      - gallery_img: /assets/images/public/19.050.016A.jpg
+      - gallery_img: /assets/images/public/19.050.017A.jpg
+      - gallery_img: /assets/images/public/19.050.018A.jpg
+      - gallery_img: /assets/images/public/19.050.019A.jpg
     picture: /assets/images/public/19.050.000A.jpg
     project_name: Kassin
   - address: 'Brooklyn, NY'
