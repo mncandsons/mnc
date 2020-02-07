@@ -16,6 +16,18 @@ portfolio_item:
           - gallery_img: /assets/images/public/ICCA_08.jpg
           - gallery_img: /assets/images/public/ICCA_09.jpg
           - gallery_img: /assets/images/public/ICCA_10.jpg
+          - gallery_img: /assets/images/public/ICCA_11.jpg
+          - gallery_img: /assets/images/public/ICCA_12.jpg
+          - gallery_img: /assets/images/public/ICCA_13.jpg
+          - gallery_img: /assets/images/public/ICCA_14.jpg
+          - gallery_img: /assets/images/public/ICCA_15.jpg
+          - gallery_img: /assets/images/public/ICCA_16.jpg
+          - gallery_img: /assets/images/public/ICCA_17.jpg
+          - gallery_img: /assets/images/public/ICCA_18.jpg
+          - gallery_img: /assets/images/public/ICCA_19.jpg
+          - gallery_img: /assets/images/public/ICCA_20.jpg
+          - gallery_img: /assets/images/public/ICCA_21.jpg
+          - gallery_img: /assets/images/public/ICCA_22.jpg
         name: IC Cafe
         picture: /assets/images/public/ICCA_01.jpg
         price: ''
