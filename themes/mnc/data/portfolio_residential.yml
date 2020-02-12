@@ -54,12 +54,10 @@ portfolio_item:
       - gallery_img: /assets/images/public/Azrak_1203_V1.jpg
       - gallery_img: /assets/images/public/Azrak_1240_V1.jpg
       - gallery_img: /assets/images/public/Azrak_1243.jpg
-      - gallery_img: /assets/images/public/Azrak_1267_V1.jpg
       - gallery_img: /assets/images/public/Azrak_7724_V1.jpg
       - gallery_img: /assets/images/public/Azrak_7745.jpg
       - gallery_img: /assets/images/public/Azrak_7749.jpg
       - gallery_img: /assets/images/public/Azrak_7751.jpg
-      - gallery_img: /assets/images/public/Azrak_7752.jpg
       - gallery_img: /assets/images/public/Azrak_7756.jpg
     picture: /assets/images/public/Azrak_1221-V1.jpg
     project_name: E. Azrak
@@ -77,7 +75,6 @@ portfolio_item:
       - gallery_img: /assets/images/public/2014FD54_417_HR.jpg
       - gallery_img: /assets/images/public/2014FD54_421_HR.jpg
       - gallery_img: /assets/images/public/2014FD54_426_HR.jpg
-      - gallery_img: /assets/images/public/2014FD54_427_HR.jpg
       - gallery_img: /assets/images/public/2014FD54_428_HR.jpg
       - gallery_img: /assets/images/public/2014FD54_429_HR.jpg
       - gallery_img: /assets/images/public/2014FD54_430_HR.jpg
@@ -107,29 +104,29 @@ portfolio_item:
       - gallery_img: /assets/images/public/19.050.004A.jpg
       - gallery_img: /assets/images/public/19.050.005A.jpg
       - gallery_img: /assets/images/public/19.050.006A.jpg
+      - gallery_img: /assets/images/public/19.050.010A.jpg
       - gallery_img: /assets/images/public/19.050.007A.jpg
       - gallery_img: /assets/images/public/19.050.008A.jpg
       - gallery_img: /assets/images/public/19.050.009A.jpg
-      - gallery_img: /assets/images/public/19.050.010A.jpg
       - gallery_img: /assets/images/public/19.050.011A.jpg
       - gallery_img: /assets/images/public/19.050.012A.jpg
       - gallery_img: /assets/images/public/19.050.013A.jpg
       - gallery_img: /assets/images/public/19.050.014A.jpg
-      - gallery_img: /assets/images/public/19.050.015A.jpg
-      - gallery_img: /assets/images/public/19.050.016A.jpg
       - gallery_img: /assets/images/public/19.050.017A.jpg
+      - gallery_img: /assets/images/public/19.050.015A.jpg
       - gallery_img: /assets/images/public/19.050.018A.jpg
+      - gallery_img: /assets/images/public/19.050.016A.jpg
+      - gallery_img: /assets/images/public/19.050.031A.jpg
       - gallery_img: /assets/images/public/19.050.019A.jpg
+      - gallery_img: /assets/images/public/19.050.026A.jpg
       - gallery_img: /assets/images/public/19.050.020A.jpg
       - gallery_img: /assets/images/public/19.050.023A.jpg
       - gallery_img: /assets/images/public/19.050.024A.jpg
       - gallery_img: /assets/images/public/19.050.025A.jpg
-      - gallery_img: /assets/images/public/19.050.026A.jpg
       - gallery_img: /assets/images/public/19.050.027A.jpg
       - gallery_img: /assets/images/public/19.050.028A.jpg
       - gallery_img: /assets/images/public/19.050.029A.jpg
       - gallery_img: /assets/images/public/19.050.030A.jpg
-      - gallery_img: /assets/images/public/19.050.031A.jpg
     picture: /assets/images/public/19.050.000A.jpg
     project_name: Kassin
   - address: 'Brooklyn, NY'
