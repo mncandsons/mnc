@@ -94,7 +94,8 @@ portfolio_item:
     picture: /assets/images/public/2014FD54_402_RT_HR.jpg
     project_name: I. Chehebar
   - address: 'Brooklyn, NY'
-    architect: Andrew Wilkinson Architects and Interiors
+    architect: Andrew Wilkinson Architects
+    design: Andrew Wilkinson Architects
     gallery_pictures:
       - gallery_img: /assets/images/public/19.050.000A.jpg
       - gallery_img: /assets/images/public/19.050.001A.jpg
