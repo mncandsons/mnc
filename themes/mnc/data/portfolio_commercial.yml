@@ -63,3 +63,14 @@ portfolio_item:
         picture: /assets/images/public/ICJT_11.jpg
         price: ''
         type: ''
+      - gallery_pictures:
+          - gallery_img: /assets/images/public/IMG-20200212-WA0064.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0065.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0062.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0063.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0066.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0069.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0067.jpg
+          - gallery_img: /assets/images/public/IMG-20200212-WA0070.jpg
+        name: The Shops
+        picture: /assets/images/public/IMG-20200212-WA0065.jpg
