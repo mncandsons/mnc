@@ -37,8 +37,23 @@ if (toggleButton){
 
 // Gallery
 
+// Check portrait/landscape
+function portrait() {
+  let galleryImg = document.querySelectorAll('.slideshow-inside__item img');
+  for(let i = 0; i < galleryImg.length; i++){
+    if (galleryImg[i].offsetWidth < galleryImg[i].offsetHeight){
+      galleryImg[i].classList.add('portrait');
+    }
+  }
+}
+
 let lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
+    elements_selector: ".lazy",
+    callback_loaded: function(el) {
+      if (el.naturalWidth < el.naturalHeight){
+        el.classList.add('portrait');
+      }
+    }
 });
 
 let forEach = function (array, callback, scope) {
@@ -62,7 +77,7 @@ if (galleryRes) {
     touch: false,
     loop: false,
     nested: 'outer',
-    swipeAngle: false
+    swipeAngle: false,
   });
 }
 
@@ -78,7 +93,7 @@ if (galleryComm) {
     touch: false,
     loop: false,
     nested: 'outer',
-    swipeAngle: false
+    swipeAngle: false,
   });
 }
 
@@ -88,15 +103,23 @@ if (innerGallery) {
     innerSlider = tns({
       container: value,
       mode: 'gallery',
-      nav: true,
-      controls: false,
+      nav: false,
+      controls: true,
+      controlsText: ['<i class="icon icon-arrow-left-sm"></i> ', '<i class="icon icon-arrow-right-sm"></i> '],
+      controlsContainer: value.parentNode.querySelector('.slideshow-inside__controls'),
       speed: 800,
       autoplayButtonOutput: false,
       touch: true,
       loop: false,
       nested: 'inner',
       mouseDrag: true,
-      swipeAngle: false
+      swipeAngle: false,
+      disable: true,
+      responsive: {
+        767: {
+          disable: false,
+        }
+      },
     });
   });
 }
@@ -218,6 +241,7 @@ let galleryAll = document.querySelectorAll('.gallery');
 for(let i = 0; i < galleryBackBtn.length; i++){
   galleryBackBtn[i].addEventListener('click',function(e) {
     for(let i = 0; i < galleryAll.length; i++){
+      galleryAll[i].scrollTop = 0;
       galleryAll[i].classList.remove('active');
       document.querySelector('.wrapper').classList.remove('active');
       document.querySelector('body').classList.remove('overflow-hidden');
@@ -225,8 +249,17 @@ for(let i = 0; i < galleryBackBtn.length; i++){
   });
 }
 
-// Gallery Info Expand
+let galleryButtons = document.querySelectorAll('.tns-controls button');
+for(let i = 0; i < galleryButtons.length; i++){
+  galleryButtons[i].addEventListener('click',function(e) {
+    for(let i = 0; i < galleryAll.length; i++){
+      galleryAll[i].scrollTop = 0;
+    }
+  });
+}
 
+
+// Gallery Info Expand
 
 let galleryHeading = document.querySelectorAll('.slideshow__info h3');
 let slideshowListInnerAll = document.querySelectorAll('.slideshow__list-inner');

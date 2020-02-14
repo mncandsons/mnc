@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 
 gulp.task('minify-js', () => {
     return gulp.src([
-      'node_modules/tiny-slider/dist/min/tiny-slider.js',
+      'assets/js/vendor/tiny-slider.js',
       'assets/js/vendor/hashTabber.js',
       'node_modules/vanilla-lazyload/dist/lazyload.min.js',
       'assets/js/vendor/js-form-validator.js'

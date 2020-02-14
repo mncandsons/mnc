@@ -16,6 +16,10 @@
   }
 	&__inner {
     height: 100%;
+    @include respond-to(sm){
+      height: auto;
+      overflow: hidden;
+    }
 	}
   .btn-back {
     position: absolute;
@@ -24,9 +28,15 @@
     @include respond-to(md){
       top: 22px;
     }
+    @include respond-to(sm){
+      position: fixed;
+    }
   }
   .tns-inner, .tns-outer{
     height: 100%;
+    @include respond-to(sm){
+      height: auto;
+    }
   }
   .tns-controls{
     position: absolute;
@@ -49,6 +59,7 @@
     @include respond-to(sm){
       padding-left: ($grid-gutter-width / 2) + px;
       padding-right: ($grid-gutter-width / 2) + px;
+      position: fixed;
     }
     button{
       @include fsz(16px);
@@ -124,8 +135,29 @@
 
 .slideshow {
   height: 100%;
+  @include respond-to(sm){
+    height: auto;
+  }
 	&__item {
     height: 100%;
+    @include respond-to(sm){
+      height: auto;
+    }
+    .tns-liveregion{
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      pointer-events: none;
+      z-index: 11;
+      bottom: 55px;
+      color: $color-white;
+      @include fsz(14px);
+      white-space: nowrap;
+      text-align: center;
+      @include respond-to(sm){
+        display: none;
+      }
+    }
 	}
 	&__info {
     position: absolute;
@@ -138,7 +170,9 @@
     padding: 24px 0;
     @include respond-to(sm){
       padding: 16px 0;
-      top: 50px;
+      top: 0;
+      padding-top: 74px;
+      position: fixed;
     }
     h3{
       display: inline-block;
@@ -228,19 +262,64 @@
     height: calc(100% - 89px);
   }
   @include respond-to(sm){
-    bottom: 8px;
-    height: calc(100% - 81px);
+    position: static;
+    height: auto;
+    padding-top: 104px;
+  }
+  &__controls{
+    position: absolute;
+    z-index: 10;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    width: 246px;
+    background: rgba($color-black, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond-to(sm){
+      display: none;
+    }
+    button{
+      padding: 0 16px;
+      height: 32px;
+      @include fsz(44px);
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i{
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        &:before{
+          line-height: 0;
+          display: block;
+        }
+      }
+    }
   }
 	&__item {
     height: 100%;
     position: relative;
     overflow: hidden;
+    @include respond-to(sm){
+      height: auto;
+      margin-bottom: 16px;
+    }
     .container-fluid-max{
       height: 100%;
       max-height: 780px;
       @include center(both);
       @media screen and (min-height: 1040px){
         top: calc(50% - 20px);
+      }
+      @include respond-to(sm){
+        position: static;
+        transform: none;
       }
     }
     img{
@@ -256,10 +335,23 @@
         width: calc(100% - 32px);
       }
       @include respond-to(sm){
-        left: 8px;
-        width: calc(100% - 16px);
+        width: 100%;
+        height: auto;
+        position: static;
+        min-height: 230px;
       }
-
+      &.portrait{
+        max-width: 35%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @include respond-to(md){
+          max-width: 50%;
+        }
+        @include respond-to(sm){
+          max-width: 70%;
+        }
+      }
     }
 	}
 

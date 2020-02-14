@@ -33,6 +33,15 @@
                       {{ with .area }}
                           <li><i class="icon icon-size"></i>{{ . }}</li>
                       {{ end }}
+                      {{ with .price }}
+                          <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                      {{ end }}
+                      {{ with .architect }}
+                          <li><i class="icon icon-compass"></i>{{ . }}</li>
+                      {{ end }}
+                      {{ with .design }}
+                          <li><i class="icon icon-palette"></i>{{ . }}</li>
+                      {{ end }}
                     </ul>
                   </div>
                   <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>

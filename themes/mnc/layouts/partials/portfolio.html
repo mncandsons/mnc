@@ -58,7 +58,7 @@
                         <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
                         <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                       </picture>
-                      {{ if or .type .address .area }}
+                      {{ if or .type .address .area .price .architect .design}}
                       <div class="p-block__overlay commercial">
                         <div class="p-block__info">
                           <h3>Project details</h3>
@@ -71,6 +71,15 @@
                             {{ end }}
                             {{ with .area }}
                                 <li><i class="icon icon-size"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .price }}
+                                <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .architect }}
+                                <li><i class="icon icon-compass"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .design }}
+                                <li><i class="icon icon-palette"></i>{{ . }}</li>
                             {{ end }}
                           </ul>
                         </div>
@@ -156,6 +165,15 @@
                                         {{ with .area }}
                                             <li><i class="icon icon-size"></i>{{ . }}</li>
                                         {{ end }}
+                                        {{ with .price }}
+                                            <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                                        {{ end }}
+                                        {{ with .architect }}
+                                            <li><i class="icon icon-compass"></i>{{ . }}</li>
+                                        {{ end }}
+                                        {{ with .design }}
+                                            <li><i class="icon icon-palette"></i>{{ . }}</li>
+                                        {{ end }}
                                       </ul>
                                     </div>
                                     <div class="p-block__btn"><span>View</span> <i class="icon icon-arrow-more"></i></div>
@@ -193,6 +211,15 @@
                             {{ end }}
                             {{ with .area }}
                                 <li><i class="icon icon-size"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .price }}
+                                <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .architect }}
+                                <li><i class="icon icon-compass"></i>{{ . }}</li>
+                            {{ end }}
+                            {{ with .design }}
+                                <li><i class="icon icon-palette"></i>{{ . }}</li>
                             {{ end }}
                           </ul>
                         </div>
