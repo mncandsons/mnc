@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const responsive = require('gulp-responsive');
 const rename = require('gulp-rename');
+const newer = require('gulp-newer');
 
 gulp.task('minify-js', () => {
     return gulp.src([
@@ -20,6 +21,7 @@ gulp.task('minify-js', () => {
 
 gulp.task('images', () => {
   return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+    .pipe(newer('./static/assets/images/public/'))
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
