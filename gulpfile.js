@@ -19,9 +19,11 @@ gulp.task('minify-js', () => {
     .pipe(gulp.dest('./assets/js'))
 })
 
+gulp.task('hugo-build', shell.task(['hugo']))
+
 gulp.task('images', () => {
-  return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-    .pipe(newer('static/assets/images/'))
+  return gulp.src('public/assets/images/*.{jpg,jpeg,png}')
+    .pipe(newer('public/assets/images/public/'))
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -42,10 +44,8 @@ gulp.task('images', () => {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest('./static/assets/images/public/'));
+    .pipe(gulp.dest('public/assets/images/public/'));
 });
-
-gulp.task('hugo-build', shell.task(['hugo']))
 
 gulp.task('minify-html', () => {
     return gulp.src('public/**/*.html')
@@ -59,4 +59,4 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 })
 
-gulp.task('build', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html'));
+gulp.task('build', gulp.series('minify-js', 'hugo-build', 'images', 'minify-html'));
