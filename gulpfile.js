@@ -46,7 +46,7 @@ gulp.task('images', () => {
 });
 
 gulp.task('images-prod', () => {
-  return gulp.src('/opt/build/cache/assets/images/*.{jpg,jpeg,png}')
+  return gulp.src('/opt/build/cache/**/*/*.{jpg,jpeg,png}')
     .pipe(newer('/assets/images/'))
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
