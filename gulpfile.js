@@ -46,8 +46,8 @@ gulp.task('images', () => {
 });
 
 gulp.task('images-prod', () => {
-  return gulp.src('opt/build/cache/assets/images/*.{jpg,jpeg,png}')
-    .pipe(newer('assets/images/public'))
+  return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+    .pipe(newer('./static/assets/images/public/''))
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -68,7 +68,7 @@ gulp.task('images-prod', () => {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest('assets/images/public/'));
+    .pipe(gulp.dest('./static/assets/images/public/'));
 });
 
 gulp.task('hugo-build', shell.task(['hugo']))
