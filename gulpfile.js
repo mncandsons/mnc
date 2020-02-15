@@ -46,8 +46,8 @@ gulp.task('images', () => {
 });
 
 gulp.task('images-prod', () => {
-  return gulp.src('/opt/build/cache/**/*/*.{jpg,jpeg,png}')
-    .pipe(newer('/assets/images/'))
+  return gulp.src('/opt/build/cache/assets/images/*.{jpg,jpeg,png}')
+    .pipe(newer('/assets/images/public'))
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -85,5 +85,5 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 })
 
-gulp.task('build', gulp.series('minify-js', 'images-prod', 'hugo-build', 'minify-html'));
+gulp.task('build', gulp.series('minify-js', 'hugo-build', 'images-prod', 'minify-html'));
 gulp.task('build-local', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html'));
