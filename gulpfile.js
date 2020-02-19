@@ -51,7 +51,7 @@ const cacheFolder = path.join('/opt/build/cache', 'storage');
 
 const contentsToCache = [
   {
-    contents: path.join(__dirname, 'public/static/assets/images'),
+    contents: path.join(__dirname, 'static/assets/images'),
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const updateCache = false // always restore cache
       return updateCache // Boolean
