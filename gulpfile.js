@@ -60,11 +60,7 @@ const contentsToCache = [
   }
 ]
 
-gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
-  console.log('====== Netlify cache restored! ======')
-  cacheInfo.forEach(info => {
-    console.log(info.cacheDir)
-  })
+function imageResponsive() {
   return gulp.src(cacheFolder + './static/assets/images/*.{jpg,jpeg,png}')
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
@@ -87,6 +83,14 @@ gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then
       return opt;
     }))
     .pipe(gulp.dest(cacheFolder + './static/assets/images/public/'));
+}
+
+gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+  console.log('====== Netlify cache restored! ======')
+  cacheInfo.forEach(info => {
+    console.log(info.cacheDir)
+  })
+  imageResponsive();
 }))
 
 gulp.task('hugo-build', shell.task(['hugo']))
