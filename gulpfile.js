@@ -57,14 +57,13 @@ const contentsToCache = [
       return updateCache // Boolean
     },
     handleCacheUpdate: () => {
-      console.log('Handled')
       imageResponsive()
     }
   }
 ]
 
 function imageResponsive() {
-  return gulp.src(cacheFolder + './static/assets/images/*.{jpg,jpeg,png}')
+  return gulp.src(cacheFolder + '**/*.{jpg,jpeg,png}')
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -85,7 +84,7 @@ function imageResponsive() {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest(cacheFolder + './static/assets/images/public/'));
+    .pipe(gulp.dest(cacheFolder + '/public/'));
 }
 
 gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
