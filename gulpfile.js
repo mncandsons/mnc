@@ -51,7 +51,7 @@ const cacheFolder = path.join('/opt/build/cache', 'storage');
 
 const contentsToCache = [
   {
-    contents: path.join(__dirname, './static/assets/images'),
+    contents: path.join(__dirname, 'public/static/assets/images'),
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const updateCache = false // always restore cache
       return updateCache // Boolean
@@ -63,7 +63,7 @@ const contentsToCache = [
 ]
 
 function imageResponsive() {
-  return gulp.src(cacheFolder + '**/*.{jpg,jpeg,png}')
+  return gulp.src('public/static/assets/images/**/*.{jpg,jpeg,png}')
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -84,7 +84,7 @@ function imageResponsive() {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest(cacheFolder + '/public/'));
+    .pipe(gulp.dest(cacheFolder + 'public/static/assets/images/public/'));
 }
 
 gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
