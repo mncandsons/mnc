@@ -21,78 +21,94 @@ gulp.task('minify-js', () => {
     .pipe(gulp.dest('./assets/js'))
 })
 
-gulp.task('images', () => {
-  return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-    .pipe(newer('./static/assets/images/public/'))
-    .pipe(responsive({
-      '**/*.{jpg,png,jpeg}': [{
-        width: 2000,
-        quality: 75,
-        compressionLevel: 7,
-      }, {
-        width: 2000,
-        quality: 75,
-        rename: {
-          extname: '.webp',
-        },
-      }],
-    }, {
-      errorOnEnlargement: false,
-      errorOnUnusedConfig: false
-    }))
-    .pipe(rename(function(opt) {
-      opt.basename = opt.basename.split(' ').join('_');
-      return opt;
-    }))
-    .pipe(gulp.dest('./static/assets/images/public/'));
+gulp.task('images', (done) => {
+  const cacheFolder = path.join('./cache');
+  const contentsToCache = [
+    {
+      contents: path.join('static/assets/images'),
+      handleCacheUpdate: () => {
+        console.log('Start');
+        return new Promise((resolve, reject) => {
+          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+            .pipe(newer('cache/static/assets/images/'))
+            .pipe(responsive({
+              '**/*.{jpg,png,jpeg}': [{
+                width: 2000,
+                quality: 75,
+                compressionLevel: 7,
+              }, {
+                width: 2000,
+                quality: 75,
+                rename: {
+                  extname: '.webp',
+                },
+              }],
+            }, {
+              errorOnEnlargement: false,
+              errorOnUnusedConfig: false
+            }))
+            .pipe(rename(function(opt) {
+              opt.basename = opt.basename.split(' ').join('_');
+              return opt;
+            }))
+            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+        });
+      }
+    }
+  ]
+  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+    console.log('====== Netlify cache restored! ======')
+    cacheInfo.forEach(info => {
+      console.log(info.cacheDir)
+    })
+    done();
+  })
 });
 
-const cacheFolder = path.join('/opt/build/cache', 'storage');
 
-const contentsToCache = [
-  {
-    contents: path.join(__dirname, 'static/assets/images'),
-    shouldCacheUpdate: async (cacheManifest, utils) => {
-      const updateCache = false // always restore cache
-      return updateCache // Boolean
-    },
-    handleCacheUpdate: () => {
-      imageResponsive()
+gulp.task('images-prod', (done) => {
+  const cacheFolder = path.join('/opt/build/cache');
+  const contentsToCache = [
+    {
+      contents: path.join('static/assets/images'),
+      handleCacheUpdate: () => {
+        console.log('Start');
+        return new Promise((resolve, reject) => {
+          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+            .pipe(newer('cache/static/assets/images/'))
+            .pipe(responsive({
+              '**/*.{jpg,png,jpeg}': [{
+                width: 2000,
+                quality: 75,
+                compressionLevel: 7,
+              }, {
+                width: 2000,
+                quality: 75,
+                rename: {
+                  extname: '.webp',
+                },
+              }],
+            }, {
+              errorOnEnlargement: false,
+              errorOnUnusedConfig: false
+            }))
+            .pipe(rename(function(opt) {
+              opt.basename = opt.basename.split(' ').join('_');
+              return opt;
+            }))
+            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+        });
+      }
     }
-  }
-]
-
-function imageResponsive() {
-  return gulp.src('public/static/assets/images/**/*.{jpg,jpeg,png}')
-    .pipe(responsive({
-      '**/*.{jpg,png,jpeg}': [{
-        width: 2000,
-        quality: 75,
-        compressionLevel: 7,
-      }, {
-        width: 2000,
-        quality: 75,
-        rename: {
-          extname: '.webp',
-        },
-      }],
-    }, {
-      errorOnEnlargement: false,
-      errorOnUnusedConfig: false
-    }))
-    .pipe(rename(function(opt) {
-      opt.basename = opt.basename.split(' ').join('_');
-      return opt;
-    }))
-    .pipe(gulp.dest(cacheFolder + 'public/static/assets/images/public/'));
-}
-
-gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
-  console.log('====== Netlify cache restored! ======')
-  cacheInfo.forEach(info => {
-    console.log(info.cacheDir)
+  ]
+  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+    console.log('====== Netlify cache restored! ======')
+    cacheInfo.forEach(info => {
+      console.log(info.cacheDir)
+    })
+    done();
   })
-}))
+});
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
