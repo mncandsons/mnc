@@ -57,6 +57,7 @@ const contentsToCache = [
       return updateCache // Boolean
     },
     handleCacheUpdate: () => {
+      console.log('Handled')
       imageResponsive()
     }
   }
