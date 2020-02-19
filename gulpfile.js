@@ -65,7 +65,7 @@ gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then
   cacheInfo.forEach(info => {
     console.log(info.cacheDir)
   })
-  return gulp.src('assets/images/*.{jpg,jpeg,png}')
+  return gulp.src(cacheFolder + '/assets/images/*.{jpg,jpeg,png}')
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -86,7 +86,7 @@ gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest('assets/images/public/'));
+    .pipe(gulp.dest(cacheFolder + '/assets/images/public/'));
 }))
 
 gulp.task('hugo-build', shell.task(['hugo']))
