@@ -52,11 +52,13 @@ const cacheFolder = path.join('/opt/build/cache', 'storage');
 const contentsToCache = [
   {
     contents: path.join(__dirname, './static/assets/images'),
-    handleCacheUpdate: '',
     shouldCacheUpdate: async (cacheManifest, utils) => {
       const updateCache = false // always restore cache
       return updateCache // Boolean
     },
+    handleCacheUpdate: () => {
+      imageResponsive()
+    }
   }
 ]
 
@@ -90,7 +92,6 @@ gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then
   cacheInfo.forEach(info => {
     console.log(info.cacheDir)
   })
-  imageResponsive();
 }))
 
 gulp.task('hugo-build', shell.task(['hugo']))
