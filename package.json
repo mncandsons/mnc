@@ -9,6 +9,7 @@
   "author": "modstud.io",
   "license": "ISC",
   "dependencies": {
+    "cache-me-outside": "0.0.10",
     "tiny-slider": "^2.9.2",
     "vanilla-lazyload": "^12.4.0"
   },

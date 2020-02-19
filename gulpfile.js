@@ -6,6 +6,8 @@ const concat = require('gulp-concat');
 const responsive = require('gulp-responsive');
 const rename = require('gulp-rename');
 const newer = require('gulp-newer');
+const path = require('path');
+const cacheMeOutside = require('cache-me-outside');
 
 gulp.task('minify-js', () => {
     return gulp.src([
@@ -45,9 +47,25 @@ gulp.task('images', () => {
     .pipe(gulp.dest('./static/assets/images/public/'));
 });
 
-gulp.task('images-prod', () => {
-  return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-    .pipe(newer('./static/assets/images/public/'))
+const cacheFolder = path.join('/opt/build/cache', 'storage');
+
+const contentsToCache = [
+  {
+    contents: path.join(__dirname, 'assets/images'),
+    handleCacheUpdate: '',
+    shouldCacheUpdate: async (cacheManifest, utils) => {
+      const updateCache = false // always restore cache
+      return updateCache // Boolean
+    },
+  }
+]
+
+gulp.task('images-prod', () => cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+  console.log('====== Netlify cache restored! ======')
+  cacheInfo.forEach(info => {
+    console.log(info.cacheDir)
+  })
+  return gulp.src('assets/images/*.{jpg,jpeg,png}')
     .pipe(responsive({
       '**/*.{jpg,png,jpeg}': [{
         width: 2000,
@@ -68,8 +86,8 @@ gulp.task('images-prod', () => {
       opt.basename = opt.basename.split(' ').join('_');
       return opt;
     }))
-    .pipe(gulp.dest('./static/assets/images/public/'));
-});
+    .pipe(gulp.dest('assets/images/public/'));
+}))
 
 gulp.task('hugo-build', shell.task(['hugo']))
 
