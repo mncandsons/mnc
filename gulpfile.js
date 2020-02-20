@@ -67,15 +67,15 @@ gulp.task('images', (done) => {
 
 
 gulp.task('images-prod', (done) => {
-  const cacheFolder = path.join('/opt/build/repo/cache');
+  const cacheFolder = path.join('/opt/build/cache','static/assets/images');
   const contentsToCache = [
     {
-      contents: path.join('static/assets/images'),
+      contents: path.join( __dirname, 'static/assets/images'),
       handleCacheUpdate: () => {
         console.log('Start');
         return new Promise((resolve, reject) => {
-          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer('cache/static/assets/images/'))
+          gulp.src('/opt/build/cache/static/assets/images/*.{jpg,jpeg,png}')
+            .pipe(newer('/opt/build/cache/static/assets/images/'))
             .pipe(responsive({
               '**/*.{jpg,png,jpeg}': [{
                 width: 2000,
@@ -96,7 +96,7 @@ gulp.task('images-prod', (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+            .pipe(gulp.dest('/opt/build/cache/static/assets/images/public')).on('end', resolve);
         });
       }
     }
