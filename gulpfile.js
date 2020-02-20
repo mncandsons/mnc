@@ -67,7 +67,7 @@ gulp.task('images', (done) => {
 
 
 gulp.task('images-prod', (done) => {
-  const cacheFolder = path.join('/opt/build/cache','static/assets/images');
+  const cacheFolder = path.join('/opt/build/cache','storage');
   const contentsToCache = [
     {
       contents: path.join( __dirname, 'static/assets/images'),
