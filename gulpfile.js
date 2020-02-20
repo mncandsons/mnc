@@ -67,7 +67,7 @@ gulp.task('images', (done) => {
 
 
 gulp.task('images-prod', (done) => {
-  const cacheFolder = path.join( __dirname ,'storage');
+  const cacheFolder = path.join('opt/build/repo/storage/opt/build/repo/static/assets/images');
   const contentsToCache = [
     {
       contents: path.join( __dirname, 'static/assets/images'),
@@ -75,7 +75,7 @@ gulp.task('images-prod', (done) => {
         console.log('Start');
         return new Promise((resolve, reject) => {
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer('/opt/build/cache/static/assets/images/'))
+            .pipe(newer('opt/build/repo/storage/opt/build/repo/static/assets/images'))
             .pipe(responsive({
               '**/*.{jpg,png,jpeg}': [{
                 width: 2000,
