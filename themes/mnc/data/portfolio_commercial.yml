@@ -112,3 +112,7 @@ portfolio_item:
       - gallery_img: /assets/images/public/TifertShaul-05.jpg
     name: Tifert Shaul
     picture: /assets/images/public/TifertShaul-03.jpg
+  - gallery_pictures:
+      - gallery_img: /assets/images/public/148W125th-01.jpeg
+    name: 148 West 125th
+    picture: /assets/images/public/148W125th-01.jpeg
