@@ -31,6 +31,7 @@ h2{
   font-weight: $weight-black;
   margin-bottom: 40px;
   @include respond-to(sm){
+    @include fsz(24px);
     margin-bottom: 24px;
   }
 }
@@ -67,7 +68,8 @@ h3{
       letter-spacing: -0.37px;
     }
     @include respond-to(sm){
-      @include fsz(20px);
+      @include fsz(16px);
+      line-height: 1.8;
     }
   }
 }
@@ -81,7 +83,8 @@ p{
     margin-bottom: 24px;
   }
   @include respond-to(sm){
-    @include fsz(14px);
+    @include fsz(16px);
+    line-height: 1.8;
   }
   &:last-child{
     margin-bottom: 0;

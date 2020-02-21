@@ -6,20 +6,22 @@ var tabber = new HashTabber();
 tabber.run();
 
 // Get Year
-let dateSelector = document.querySelector('.about-badge span');
+let dateSelector = document.querySelectorAll('.about-badge span');
 if (dateSelector){
-  let date = dateSelector.getAttribute('data-time');
-  function getAge(dateString) {
-      let today = new Date();
-      let birthDate = new Date(dateString);
-      let age = today.getFullYear() - birthDate.getFullYear();
-      let m = today.getMonth() - birthDate.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-          age--;
-      }
-      return age;
+  for(let i = 0; i < dateSelector.length; i++){
+    let date = dateSelector[i].getAttribute('data-time');
+    function getAge(dateString) {
+        let today = new Date();
+        let birthDate = new Date(dateString);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+    dateSelector[i].textContent = getAge(date);
   }
-  dateSelector.textContent = getAge(date);
 }
 
 
