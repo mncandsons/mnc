@@ -284,11 +284,8 @@ portfolio_item:
     picture: /assets/images/public/CHE_200220_03.jpg
     project_name: Chera
   - gallery_pictures:
-      - gallery_img: /assets/images/public/APT-12.jpeg
-      - gallery_img: /assets/images/public/APT-00.jpeg
       - gallery_img: /assets/images/public/APT-01.jpeg
       - gallery_img: /assets/images/public/APT-02.jpeg
-      - gallery_img: /assets/images/public/APT-03.jpeg
       - gallery_img: /assets/images/public/APT-04.jpeg
       - gallery_img: /assets/images/public/APT-05.jpeg
       - gallery_img: /assets/images/public/APT-06.jpeg
@@ -296,12 +293,12 @@ portfolio_item:
       - gallery_img: /assets/images/public/APT-08.jpeg
       - gallery_img: /assets/images/public/APT-09.jpeg
       - gallery_img: /assets/images/public/APT-10.jpeg
-      - gallery_img: /assets/images/public/APT-10.jpeg
-      - gallery_img: /assets/images/public/APT-11.jpeg
       - gallery_img: /assets/images/public/APT-13.jpeg
+      - gallery_img: /assets/images/public/APT-11.jpeg
       - gallery_img: /assets/images/public/APT-14.jpeg
       - gallery_img: /assets/images/public/APT-15.jpeg
-      - gallery_img: /assets/images/public/APT-16.jpeg
       - gallery_img: /assets/images/public/APT-17.jpeg
+      - gallery_img: /assets/images/public/APT-12.jpeg
+      - gallery_img: /assets/images/public/APT-16.jpeg
     picture: /assets/images/public/APT-12.jpeg
     project_name: Residential Apartment
