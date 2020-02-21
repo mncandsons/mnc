@@ -127,9 +127,10 @@ collections:
         name: "portfolio"
         file: "themes/mnc/data/portfolio_residential.yml"
         fields:
-          - label: "Portfolio Item"
+          - label: "Portfolio Items"
             name: "portfolio_item"
             widget: "list"
+            label_singular: "Portfolio Item"
             fields:
               - label: "Project Name"
                 name: "project_name"
@@ -165,6 +166,7 @@ collections:
               - label: "Images"
                 name: gallery_pictures
                 widget: "list"
+                label_singular: "Image"
                 fields:
                   - label: "Gallery Image"
                     name: "gallery_img"
@@ -205,9 +207,10 @@ collections:
                 name: "family_pic"
                 widget: "image"
                 required: false
-              - label: "Left column Block"
+              - label: "Left column Blocks"
                 name: "left_column"
                 widget: "list"
+                label_singular: "Left column Block"
                 fields:
                   - label: "Heading"
                     name: "heading"
@@ -228,9 +231,10 @@ collections:
                   - label: "Text"
                     name: "text"
                     widget: "markdown"
-                  - label: "Text Block"
+                  - label: "Text Blocks"
                     name: "block"
                     widget: "list"
+                    label_singular: "Text Block"
                     fields:
                       - label: "Heading"
                         name: "heading"
@@ -262,9 +266,10 @@ collections:
         name: "portfolio"
         file: "themes/mnc/data/portfolio_commercial.yml"
         fields:
-          - label: "Portfolio Item"
+          - label: "Portfolio Items"
             name: "portfolio_item"
             widget: "list"
+            label_singular: "Portfolio Item"
             fields:
               - label: "Project Name"
                 name: "name"
@@ -306,13 +311,15 @@ collections:
                 widget: "list"
                 required: false
                 hint: "Ignored if project contains sub projects"
+                label_singular: "Image"
                 fields:
                   - label: "Gallery Image"
                     name: "gallery_img"
                     widget: "image"
-              - label: "Portfolio Sub Item"
+              - label: "Portfolio Sub Items"
                 name: "sub_item"
                 widget: "list"
+                label_singular: "Portfolio Sub Item"
                 fields:
                   - label: "Sub Project Name"
                     name: "name"
@@ -345,6 +352,7 @@ collections:
                   - label: "Images"
                     name: gallery_pictures
                     widget: "list"
+                    label_singular: "Image"
                     fields:
                       - label: "Gallery Image"
                         name: "gallery_img"
@@ -385,9 +393,10 @@ collections:
                 name: "family_pic"
                 widget: "image"
                 required: false
-              - label: "Left column Block"
+              - label: "Left column Blocks"
                 name: "left_column"
                 widget: "list"
+                label_singular: "Left column Block"
                 fields:
                   - label: "Heading"
                     name: "heading"
@@ -408,9 +417,10 @@ collections:
                   - label: "Text"
                     name: "text"
                     widget: "markdown"
-                  - label: "Two column Block"
+                  - label: "Two column Blocks"
                     name: "two_column_block"
                     widget: "list"
+                    label_singular: "Two column Block"
                     fields:
                       - label: "Heading"
                         name: "heading"
@@ -418,9 +428,10 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
-                  - label: "Text Block"
+                  - label: "Text Blocks"
                     name: "block"
                     widget: "list"
+                    label_singular: "Text Block"
                     fields:
                       - label: "Heading"
                         name: "heading"
