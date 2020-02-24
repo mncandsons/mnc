@@ -300,6 +300,11 @@
           display: block;
         }
       }
+      &:disabled{
+        color: $color-neutral-300;
+        opacity: 0.7;
+        pointer-events: none;
+      }
     }
   }
 	&__item {
