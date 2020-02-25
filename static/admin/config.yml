@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: "static/assets/images/"
-public_folder: "/assets/images/public/"
+public_folder: "/assets/public-images/"
 
 collections:
   - label: "General"
