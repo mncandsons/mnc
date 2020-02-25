@@ -75,7 +75,7 @@ gulp.task('images-prod', (done) => {
         console.log('Start');
         return new Promise((resolve, reject) => {
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer(path.join(cacheFolder, 'static/assets/public-images')))
+            .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
             .pipe(responsive({
               '**/*.{jpg,png,jpeg}': [{
                 width: 2000,
