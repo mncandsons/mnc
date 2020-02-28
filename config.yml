@@ -21,7 +21,7 @@ params:
   author: modstud.io
   description: ''
   logo: /assets/images/logo.svg
-  no_found_bg: /assets/public-images/ICJT_01.jpg
+  no_found_bg: /assets/images/public/ICJT_01.jpg
   no_found_text: Page not found
   robotsTXTtext: |-
     User-agent: *

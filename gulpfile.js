@@ -51,7 +51,7 @@ gulp.task('images', (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
+            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
         });
       }
     }
@@ -96,7 +96,7 @@ gulp.task('images-prod', (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
+            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
         });
       }
     }
