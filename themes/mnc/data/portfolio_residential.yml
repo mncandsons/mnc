@@ -179,11 +179,7 @@ portfolio_item:
     picture: /assets/images/public/Cohen_7714.jpg
     project_name: Cohen Residence
     type: Brooklyn Residence 6
-  - address: 'Brooklyn, NY'
-    architect: ''
-    area: ''
-    design: Victoria Mendal Design
-    gallery_pictures:
+  - gallery_pictures:
       - gallery_img: /assets/images/public/Bildirici_Shoot_0272.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0326.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0260.jpg
@@ -198,10 +194,14 @@ portfolio_item:
       - gallery_img: /assets/images/public/Bildirici_Shoot_0372.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0389-2.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0161.jpg
-    picture: /assets/images/public/Bildirici_Shoot_0282.jpg
     price: ''
+    area: ''
     project_name: Bildirici Residence
+    address: 'Brooklyn, NY'
+    architect: ''
     type: Brooklyn Residence 7
+    picture: /assets/images/public/Bildirici_Shoot_0282.jpg
+    design: Victoria Mendal Design
   - address: 'Brooklyn, NY'
     gallery_pictures:
       - gallery_img: /assets/images/public/_MG_4616.jpg
@@ -323,3 +323,13 @@ portfolio_item:
     picture: /assets/images/public/APT-00.jpeg
     project_name: Residential Apartment
     type: NYC Apartment 2
+  - project_name: Cayre Residence
+    architect: Jlra
+    design: Grade
+    picture: /assets/images/public/cay-01.jpeg
+    gallery_pictures:
+      - gallery_img: /assets/images/public/cay-01.jpeg
+  - project_name: Elo Residence
+    picture: /assets/images/public/elo-01.jpeg
+    gallery_pictures:
+      - gallery_img: /assets/images/public/elo-01.jpeg
