@@ -132,3 +132,8 @@ portfolio_item:
     picture: /assets/public-images/club-100-01.jpeg
     gallery_pictures:
       - gallery_img: /assets/public-images/club-100-01.jpeg
+  - name: 55 Myrtle Avenue
+    picture: /assets/images/public/55-myrtle-01.jpeg
+    gallery_pictures:
+      - gallery_img: /assets/images/public/55-myrtle-01.jpeg
+      - gallery_img: /assets/images/public/55-myrtle-02.jpeg
