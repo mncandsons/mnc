@@ -99,15 +99,6 @@ gulp.task('images-prod', (done) => {
         });
       }
     },
-    {
-      contents: path.join('static/assets/public-images'),
-      handleCacheUpdate: () => {
-        return new Promise((resolve, reject) => {
-          gulp.src('static/assets/public-images/*.{jpg,jpeg,png}')
-            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
-        });
-      }
-    }
   ]
   cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
     console.log('====== Netlify cache restored! ======')
