@@ -51,7 +51,7 @@ gulp.task('images', (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
         });
       }
     }
@@ -72,7 +72,6 @@ gulp.task('images-prod', (done) => {
     {
       contents: path.join('static/assets/images'),
       handleCacheUpdate: () => {
-        console.log('Start');
         return new Promise((resolve, reject) => {
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
             .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
@@ -96,7 +95,16 @@ gulp.task('images-prod', (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
+        });
+      }
+    },
+    {
+      contents: path.join('static/assets/public-images'),
+      handleCacheUpdate: () => {
+        return new Promise((resolve, reject) => {
+          gulp.src('static/assets/public-images/*.{jpg,jpeg,png}')
+            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
         });
       }
     }
