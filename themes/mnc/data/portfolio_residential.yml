@@ -337,11 +337,7 @@ portfolio_item:
     picture: /assets/public-images/1035_e_8th_010320_05.jpg
     gallery_pictures:
       - gallery_img: /assets/public-images/1035_e_8th_010320_05.jpg
-      - gallery_img: /assets/public-images/1035_e_8th_010320_08.jpg
-      - gallery_img: /assets/public-images/1035_e_8th_010320_09.jpg
       - gallery_img: /assets/public-images/1035_e_8th_010320_49.jpg
-      - gallery_img: /assets/public-images/1035_e_8th_010320_14.jpg
-      - gallery_img: /assets/public-images/1035_e_8th_010320_24.jpg
       - gallery_img: /assets/public-images/1035_e_8th_010320_36.jpg
       - gallery_img: /assets/public-images/1035_e_8th_010320_10.jpg
       - gallery_img: /assets/public-images/1035_e_8th_010320_01.jpg
