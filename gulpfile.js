@@ -27,56 +27,7 @@ gulp.task('images', (done) => {
     {
       contents: path.join('static/assets/images'),
       handleCacheUpdate: () => {
-        console.log('Start');
         return new Promise((resolve, reject) => {
-          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer('cache/static/assets/images/'))
-            .pipe(responsive({
-              '**/*.{jpg,png,jpeg}': [{
-                width: 2000,
-                quality: 75,
-                compressionLevel: 7,
-              }, {
-                width: 2000,
-                quality: 75,
-                rename: {
-                  extname: '.webp',
-                },
-              }],
-            }, {
-              errorOnEnlargement: false,
-              errorOnUnusedConfig: false
-            }))
-            .pipe(rename(function(opt) {
-              opt.basename = opt.basename.split(' ').join('_');
-              return opt;
-            }))
-            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
-        });
-      }
-    }
-  ]
-  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
-    console.log('====== Netlify cache restored! ======')
-    cacheInfo.forEach(info => {
-      console.log(info.cacheDir)
-    })
-    done();
-  })
-});
-
-
-gulp.task('images-prod', (done) => {
-  const cacheFolder = path.join('/opt/build/cache','storage');
-  const contentsToCache = [
-    {
-      contents: path.join('static/assets/images'),
-      handleCacheUpdate: () => {
-        return new Promise((resolve, reject) => {
-          if (!shouldCacheUpdate && !firstRun) {
-            gulp.src('/opt/build/cache/storage/static/assets/public-images/*.{jpg,jpeg,png,webp}')
-            .pipe(gulp.dest('static/assets/public-images'))
-          }
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
             .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
             .pipe(responsive({
@@ -109,8 +60,60 @@ gulp.task('images-prod', (done) => {
     cacheInfo.forEach(info => {
       console.log(info.cacheDir)
     })
-    done();
   })
+});
+
+
+gulp.task('images-prod', (done) => {
+  const cacheFolder = path.join('/opt/build/cache','storage');
+  const contentsToCache = [
+    {
+      contents: path.join('static/assets/images'),
+      shouldCacheUpdate: async (cacheManifest, utils) => {
+        const imagesBefore = path.join('static/assets/images')
+        const imagesAfter = await utils.diff(imagesBefore)
+        console.log(imagesAfter);
+      },
+      handleCacheUpdate: () => {
+        return new Promise((resolve, reject) => {
+          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+            .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
+            .pipe(responsive({
+              '**/*.{jpg,png,jpeg}': [{
+                width: 2000,
+                quality: 75,
+                compressionLevel: 7,
+              }, {
+                width: 2000,
+                quality: 75,
+                rename: {
+                  extname: '.webp',
+                },
+              }],
+            }, {
+              errorOnEnlargement: false,
+              errorOnUnusedConfig: false
+            }))
+            .pipe(rename(function(opt) {
+              opt.basename = opt.basename.split(' ').join('_');
+              return opt;
+            }))
+            .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
+        });
+      }
+    },
+  ]
+  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+    console.log('====== Netlify cache restored! ======')
+    cacheInfo.forEach(info => {
+      console.log(info.cacheDir)
+    })
+  })
+  return new Promise((resolve, reject) => {
+    gulp.src(path.join(cacheFolder, 'static/assets/public-images'))
+    .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
+  });
+  done();
 });
 
 gulp.task('hugo-build', shell.task(['hugo']))
