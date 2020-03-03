@@ -108,9 +108,14 @@ gulp.task('images-prod', (done) => {
     cacheInfo.forEach(info => {
       console.log(info.cacheDir)
     })
+    done();
   })
+});
+
+gulp.task('images-prodcopy', (done) => {
+  const cacheFolder = path.join('/opt/build/cache','storage');
   return new Promise((resolve, reject) => {
-    gulp.src(path.join(cacheFolder, 'static/assets/public-images'))
+    gulp.src(path.join(cacheFolder, 'static/assets/public-images'), { allowEmpty: true })
     .pipe(gulp.dest('static/assets/public-images')).on('end', resolve);
   });
   done();
@@ -130,5 +135,5 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 })
 
-gulp.task('build', gulp.series('minify-js', 'images-prod', 'hugo-build', 'minify-html'));
+gulp.task('build', gulp.series('minify-js', 'images-prod', 'images-prodcopy', 'hugo-build', 'minify-html'));
 gulp.task('build-local', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html'));
