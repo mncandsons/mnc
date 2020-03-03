@@ -73,6 +73,10 @@ gulp.task('images-prod', (done) => {
       contents: path.join('static/assets/images'),
       handleCacheUpdate: () => {
         return new Promise((resolve, reject) => {
+          if (!shouldCacheUpdate && !firstRun) {
+            gulp.src('/opt/build/cache/storage/static/assets/public-images/*.{jpg,jpeg,png,webp}')
+            .pipe(gulp.dest('static/assets/public-images'))
+          }
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
             .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
             .pipe(responsive({
