@@ -69,11 +69,6 @@ gulp.task('images-prod', (done) => {
   const contentsToCache = [
     {
       contents: path.join('static/assets/images'),
-      shouldCacheUpdate: async (cacheManifest, utils) => {
-        const imagesBefore = path.join('static/assets/images')
-        const imagesAfter = await utils.diff(imagesBefore)
-        console.log(imagesAfter);
-      },
       handleCacheUpdate: () => {
         return new Promise((resolve, reject) => {
           gulp.src('static/assets/images/*.{jpg,jpeg,png}')
