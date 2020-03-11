@@ -8,6 +8,8 @@ const rename = require('gulp-rename');
 const newer = require('gulp-newer');
 const path = require('path');
 const cacheMeOutside = require('cache-me-outside');
+const { copyDirectory } = require('cache-me-outside/lib/utils/fs');
+const fs = require('fs');
 
 gulp.task('minify-js', () => {
     return gulp.src([
@@ -65,7 +67,7 @@ gulp.task('images', (done) => {
 });
 
 
-gulp.task('images-prod', (done) => {
+gulp.task('images-prod', async (done) => {
   const cacheFolder = path.join('/opt/build/cache','storage');
   const contentsToCache = [
     {
@@ -96,16 +98,26 @@ gulp.task('images-prod', (done) => {
             }))
             .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
         });
-      }
+      }   
     },
   ]
-  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
+  try {
+    const cachePubicFolder = path.join(cacheFolder, 'static/assets/images/public');
+    const assetsImagePublicPath = 'static/assets/images/public';
+    if (fs.existsSync(cachePubicFolder)) {
+      console.log(`0. copy public folder from ${cachePubicFolder} to ${assetsImagePublicPath}`);
+      if (!fs.existsSync(assetsImagePublicPath)) {
+        fs.mkdirSync(assetsImagePublicPath);
+      }
+      await copyDirectory(cachePubicFolder, assetsImagePublicPath);
+    }
+    await cacheMeOutside(cacheFolder, contentsToCache);
     console.log('====== Netlify cache restored! ======')
-    cacheInfo.forEach(info => {
-      console.log(info.cacheDir)
-    })
     done();
-  })
+  } catch (err) {
+    console.log('Error during process:', err);
+    done();
+  }
 });
 
 gulp.task('hugo-build', shell.task(['hugo']))
