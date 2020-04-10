@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const newer = require('gulp-newer');
 const path = require('path');
 const cacheMeOutside = require('cache-me-outside');
-const { copyDirectory } = require('cache-me-outside/lib/utils/fs');
+const { copyDirectory, removeDirectory } = require('cache-me-outside/lib/utils/fs');
 const fs = require('fs');
 
 gulp.task('minify-js', () => {
@@ -69,13 +69,15 @@ gulp.task('images', (done) => {
 
 gulp.task('images-prod', async (done) => {
   const cacheFolder = path.join('/opt/build/cache','storage');
+  const cacheNewerFolder = path.join(cacheFolder, 'static/assets/newer'); // folder for storing newer files
+  const srcImagesPath = 'static/assets/images';
   const contentsToCache = [
     {
-      contents: path.join('static/assets/images'),
+      contents: srcImagesPath,
       handleCacheUpdate: () => {
         return new Promise((resolve, reject) => {
-          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
+          gulp.src(`${cacheNewerFolder}/*.{jpg,jpeg,png}`)
+            // .pipe(newer(path.join(cacheFolder, srcImagesPath)))
             .pipe(responsive({
               '**/*.{jpg,png,jpeg}': [{
                 width: 2000,
@@ -96,16 +98,47 @@ gulp.task('images-prod', async (done) => {
               opt.basename = opt.basename.split(' ').join('_');
               return opt;
             }))
-            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
+            .pipe(gulp.dest(`${srcImagesPath}/public`)).on('end', resolve);
         });
-      }   
+      },
+      shouldCacheUpdate: async (cacheManifest, utils) => {
+        if (fs.existsSync(cacheNewerFolder)) {
+          await removeDirectory(cacheNewerFolder);
+        }
+        fs.mkdirSync(cacheNewerFolder);
+        const files = await new Promise((resolve, reject) => {
+          fs.readdir(srcImagesPath, function(err, files) {
+            if (err) return reject(err);
+            resolve(files);
+          });
+        });
+        let filesIsChanged = false;
+        for (const file of files) {
+          if (file === 'public') { // don't check public folder
+            continue;
+          }
+          const filePath = path.join(srcImagesPath, file);
+          let isChanged = false;
+          if (!cacheManifest.diffs || !cacheManifest.diffs[filePath]) {
+            isChanged = true;
+            await utils.diff(filePath);
+          } else {
+            isChanged = await utils.diff(filePath);
+          }
+          if (isChanged) {
+            fs.copyFileSync(filePath, path.join(cacheNewerFolder, file));
+          }
+          filesIsChanged = filesIsChanged || isChanged
+        }
+        return filesIsChanged;
+      },      
     },
   ]
   try {
     const cachePubicFolder = path.join(cacheFolder, 'static/assets/images/public');
     const assetsImagePublicPath = 'static/assets/images/public';
     if (fs.existsSync(cachePubicFolder)) {
-      console.log(`0. copy public folder from ${cachePubicFolder} to ${assetsImagePublicPath}`);
+      console.log(`0. copy cached public folder from ${cachePubicFolder} to ${assetsImagePublicPath}`);
       if (!fs.existsSync(assetsImagePublicPath)) {
         fs.mkdirSync(assetsImagePublicPath);
       }
