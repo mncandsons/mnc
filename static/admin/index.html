@@ -7,11 +7,16 @@
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@2.10.48/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms-app.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="stylesheet" href="/assets/css/admin_add.css">
 </body>
 </html>
+
+<!-- Initialize the CMS -->
+<script>
+  NetlifyCmsApp.init();
+</script>
 
 <script>
   if (window.netlifyIdentity) {
