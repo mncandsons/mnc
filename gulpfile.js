@@ -167,5 +167,5 @@ gulp.task('minify-html', () => {
         .pipe(gulp.dest('./public'))
 })
 
-gulp.task('build', gulp.series('minify-js', 'hugo-build', 'minify-html'));
+gulp.task('build', gulp.series('minify-js', 'images-prod', 'hugo-build', 'minify-html'));
 gulp.task('build-local', gulp.series('minify-js', 'images', 'hugo-build', 'minify-html'));
