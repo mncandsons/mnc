@@ -105,7 +105,7 @@ gulp.task('images-prod', async (done) => {
         if (fs.existsSync(cacheNewerFolder)) {
           await removeDirectory(cacheNewerFolder);
         }
-        fs.mkdirSync(cacheNewerFolder);
+        fs.mkdirSync(cacheNewerFolder, { recursive: true });
         const files = await new Promise((resolve, reject) => {
           fs.readdir(srcImagesPath, function(err, files) {
             if (err) return reject(err);
