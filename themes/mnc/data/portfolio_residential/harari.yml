@@ -1,7 +1,6 @@
-portfolio_item:
-  - address: Deal, NJ
-    architect: JLRA
-    design: JLRA
-    picture: /assets/images/public/S. Harari.jpg
-    project_name: S. Harari
-    type: Oceanfront Residence
+address: Deal, NJ
+architect: JLRA
+design: JLRA
+picture: /assets/images/public/S. Harari.jpg
+project_name: S. Harari
+type: Oceanfront Residence

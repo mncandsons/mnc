@@ -206,44 +206,41 @@ collections:
     identifier_field: project_name
     create: true
     fields:
-      - label: "Portfolio Item"
-        name: portfolio_item
+      - label: "Project Name"
+        name: "project_name"
+        widget: "string"
+        hint: "Not shown on the site. Added to simplify project administration"
+      - label: "Main Image"
+        name: "picture"
+        widget: "image"
+      - label: "Address"
+        name: "address"
+        widget: "string"
+        required: false
+      - label: "Job Description"
+        name: "type"
+        widget: "string"
+        required: false
+      - label: "Square Feet"
+        name: "area"
+        widget: "string"
+        required: false
+      - label: "Architect"
+        name: "architect"
+        widget: "string"
+        required: false
+      - label: "Designer"
+        name: "design"
+        widget: "string"
+        required: false
+      - label: "Images"
+        name: gallery_pictures
+        widget: "list"
+        label_singular: "Image"
         fields:
-          - label: "Project Name"
-            name: "project_name"
-            widget: "string"
-            hint: "Not shown on the site. Added to simplify project administration"
-          - label: "Main Image"
-            name: "picture"
+          - label: "Gallery Image"
+            name: "gallery_img"
             widget: "image"
-          - label: "Address"
-            name: "address"
-            widget: "string"
-            required: false
-          - label: "Job Description"
-            name: "type"
-            widget: "string"
-            required: false
-          - label: "Square Feet"
-            name: "area"
-            widget: "string"
-            required: false
-          - label: "Architect"
-            name: "architect"
-            widget: "string"
-            required: false
-          - label: "Designer"
-            name: "design"
-            widget: "string"
-            required: false
-          - label: "Images"
-            name: gallery_pictures
-            widget: "list"
-            label_singular: "Image"
-            fields:
-              - label: "Gallery Image"
-                name: "gallery_img"
-                widget: "image"
   - label: "Commercial"
     name: "commercial"
     files:

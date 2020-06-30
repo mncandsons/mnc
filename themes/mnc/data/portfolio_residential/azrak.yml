@@ -1,16 +1,15 @@
-portfolio_item:
-  - address: Brooklyn, NY
-    design: Calder Interiors
-    gallery_pictures:
-      - gallery_img: /assets/images/public/Azrak_1221-V1.jpg
-      - gallery_img: /assets/images/public/Azrak_1203_V1.jpg
-      - gallery_img: /assets/images/public/Azrak_1240_V1.jpg
-      - gallery_img: /assets/images/public/Azrak_1243.jpg
-      - gallery_img: /assets/images/public/Azrak_7724_V1.jpg
-      - gallery_img: /assets/images/public/Azrak_7745.jpg
-      - gallery_img: /assets/images/public/Azrak_7749.jpg
-      - gallery_img: /assets/images/public/Azrak_7751.jpg
-      - gallery_img: /assets/images/public/Azrak_7756.jpg
-    picture: /assets/images/public/Azrak_1221-V1.jpg
-    project_name: E. Azrak
-    type: "Brooklyn Residence 9 "
+address: Brooklyn, NY
+design: Calder Interiors
+gallery_pictures:
+  - gallery_img: /assets/images/public/Azrak_1221-V1.jpg
+  - gallery_img: /assets/images/public/Azrak_1203_V1.jpg
+  - gallery_img: /assets/images/public/Azrak_1240_V1.jpg
+  - gallery_img: /assets/images/public/Azrak_1243.jpg
+  - gallery_img: /assets/images/public/Azrak_7724_V1.jpg
+  - gallery_img: /assets/images/public/Azrak_7745.jpg
+  - gallery_img: /assets/images/public/Azrak_7749.jpg
+  - gallery_img: /assets/images/public/Azrak_7751.jpg
+  - gallery_img: /assets/images/public/Azrak_7756.jpg
+picture: /assets/images/public/Azrak_1221-V1.jpg
+project_name: E. Azrak
+type: "Brooklyn Residence 9 "

@@ -47,7 +47,6 @@
             <div class="row gutter-16">
               {{ $.Scratch.Set "counter" -1 }}
               {{ range first 6 (sort .Site.Data.portfolio_residential) }}
-              {{ range .portfolio_item}}
               {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
               <div class="col-12 col-sm-6 col-md-4">
                 <div class="p-block__outer">
@@ -95,7 +94,6 @@
                   </div>
                 </div>
               </div>
-              {{ end }}
               {{ end }}
             </div>
             {{ $range_len := (len .Site.Data.portfolio_residential) }}

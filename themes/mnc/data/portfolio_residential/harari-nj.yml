@@ -1,10 +1,9 @@
-portfolio_item:
-  - address: Deal, NJ
-    architect: JLRA
-    design: JLRA
-    gallery_pictures:
-      - gallery_img: /assets/images/public/A. Harari 2.jpg
-      - gallery_img: /assets/images/public/A. Harari 3.jpg
-    picture: /assets/images/public/A. Harari 1.jpg
-    project_name: A. Harari
-    type: NJ Residence 2
+address: Deal, NJ
+architect: JLRA
+design: JLRA
+gallery_pictures:
+  - gallery_img: /assets/images/public/A. Harari 2.jpg
+  - gallery_img: /assets/images/public/A. Harari 3.jpg
+picture: /assets/images/public/A. Harari 1.jpg
+project_name: A. Harari
+type: NJ Residence 2
