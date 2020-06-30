@@ -199,10 +199,10 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
-  - label: "Portfolio Residential"
+  - label: "Residential Portfolio"
     name: "portfolio-residential"
     folder: "themes/mnc/data/portfolio_residential"
-    label_singular: "Residential Portfolio Item"
+    label_singular: "Residential Item"
     identifier_field: project_name
     create: true
     extension: yml
