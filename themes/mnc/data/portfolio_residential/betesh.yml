@@ -1,4 +1,7 @@
+project_name: Betesh 1
+picture: /assets/images/public/BET_200220_07.jpg
 address: Brooklyn, NY
+type: Brooklyn Residence 2
 architect: Warren Meister Architects
 design: Calder Interiors
 gallery_pictures:
@@ -15,6 +18,3 @@ gallery_pictures:
   - gallery_img: /assets/images/public/BET_200220_06.jpg
   - gallery_img: /assets/images/public/BET_200220_08.jpg
   - gallery_img: /assets/images/public/BET_200220_10.jpg
-picture: /assets/images/public/BET_200220_07.jpg
-project_name: Betesh
-type: Brooklyn Residence 2
