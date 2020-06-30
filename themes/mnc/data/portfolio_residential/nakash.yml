@@ -1,0 +1,15 @@
+portfolio_item:
+  - address: Brooklyn, NY
+    architect: Warren Meister Architects
+    design: JL Interiors
+    gallery_pictures:
+      - gallery_img: /assets/images/public/_MG_4713.jpg
+      - gallery_img: /assets/images/public/_MG_4723.jpg
+      - gallery_img: /assets/images/public/_MG_4731.jpg
+      - gallery_img: /assets/images/public/_MG_4737.jpg
+      - gallery_img: /assets/images/public/_MG_4751.jpg
+      - gallery_img: /assets/images/public/_MG_4757.jpg
+      - gallery_img: /assets/images/public/_MG_4780.jpg
+    picture: /assets/images/public/_MG_4713.jpg
+    project_name: Nakash
+    type: Brooklyn Residence 10

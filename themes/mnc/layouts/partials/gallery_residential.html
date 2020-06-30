@@ -4,7 +4,8 @@
       <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
     </div>
     <div class="slideshow">
-      {{ range .Site.Data.portfolio_residential.portfolio_item }}
+      {{ range .Site.Data.portfolio_residential }}
+      {{ range .portfolio_item}}
       <div class="slideshow__item">
         {{ if or .type .address .area .price .architect .design }}
         <div class="slideshow__info">
@@ -53,6 +54,7 @@
           {{ end }}
         </div>
       </div>
+      {{ end }}
       {{ end }}
     </div>
   </div>

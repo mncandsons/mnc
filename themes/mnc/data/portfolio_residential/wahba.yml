@@ -1,0 +1,11 @@
+portfolio_item:
+  - address: Brooklyn, NY
+    gallery_pictures:
+      - gallery_img: /assets/images/public/_MG_4616.jpg
+      - gallery_img: /assets/images/public/_MG_4643.jpg
+      - gallery_img: /assets/images/public/_MG_4677.jpg
+      - gallery_img: /assets/images/public/_MG_4682-V1.jpg
+      - gallery_img: /assets/images/public/_MG_4699.jpg
+    picture: /assets/images/public/_MG_4798.jpg
+    project_name: Wahba Residence
+    type: Brooklyn Residence 8

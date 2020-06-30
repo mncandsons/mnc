@@ -46,7 +46,8 @@
             <h1>{{with .GetPage "/portfolio-residential"}}{{ .Params.heading }}{{end}}</h1>
             <div class="row gutter-16">
               {{ $.Scratch.Set "counter" -1 }}
-              {{ range first 6 .Site.Data.portfolio_residential.portfolio_item }}
+              {{ range first 6 (sort .Site.Data.portfolio_residential) }}
+              {{ range .portfolio_item}}
               {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
               <div class="col-12 col-sm-6 col-md-4">
                 <div class="p-block__outer">
@@ -95,8 +96,9 @@
                 </div>
               </div>
               {{ end }}
+              {{ end }}
             </div>
-            {{ $range_len := (len .Site.Data.portfolio_residential.portfolio_item) }}
+            {{ $range_len := (len .Site.Data.portfolio_residential) }}
             {{ with gt $range_len 6 }}
               <div class="d-flex align-items-center justify-content-center mt-16 mt-48-sm">
                 <a class="btn btn-default btn-lg" href="/portfolio-residential">View more</a>

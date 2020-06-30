@@ -1,0 +1,17 @@
+portfolio_item:
+  - address: Brooklyn, NY
+    design: Calder Interiors
+    gallery_pictures:
+      - gallery_img: /assets/images/public/Cohen_1083.jpg
+      - gallery_img: /assets/images/public/Cohen_1087.jpg
+      - gallery_img: /assets/images/public/Cohen_1111_V1.jpg
+      - gallery_img: /assets/images/public/Cohen_1138.jpg
+      - gallery_img: /assets/images/public/Cohen_1141.jpg
+      - gallery_img: /assets/images/public/Cohen_1170_V1.jpg
+      - gallery_img: /assets/images/public/Cohen_1186.jpg
+      - gallery_img: /assets/images/public/Cohen_7673.jpg
+      - gallery_img: /assets/images/public/Cohen_7685.jpg
+      - gallery_img: /assets/images/public/Cohen_7690.jpg
+    picture: /assets/images/public/Cohen_7714.jpg
+    project_name: Cohen Residence
+    type: Brooklyn Residence 6
