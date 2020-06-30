@@ -196,8 +196,8 @@ collections:
                         widget: "markdown"
   - label: "Portfolio Residential"
     name: "portfolio-residential"
-    folder: "themes/mnc/data/portfolio_residential/"
-    label_singular: "Portfolio Item"
+    folder: "themes/mnc/data/portfolio_residential"
+    label_singular: "Residential Portfolio Item"
     identifier_field: name
     create: true
     fields:
