@@ -199,6 +199,7 @@ collections:
     folder: "themes/mnc/data/portfolio_residential"
     label_singular: "Residential Portfolio Item"
     identifier_field: name
+    slug: {{title}}
     create: true
     fields:
       - label: "Project Name"
