@@ -136,7 +136,6 @@ portfolio_item:
       - gallery_img: /assets/images/public/JEM_200220_30.jpg
       - gallery_img: /assets/images/public/JEM_200220_31.jpg
     picture: /assets/images/public/JEM_200220_08.jpg
-    price: JLRA architect
     project_name: Joyce Jemal
     type: NYC Apartment 1
   - address: "Brooklyn, NY "
@@ -194,7 +193,6 @@ portfolio_item:
       - gallery_img: /assets/images/public/Bildirici_Shoot_0372.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0389-2.jpg
       - gallery_img: /assets/images/public/Bildirici_Shoot_0161.jpg
-    price: ""
     area: ""
     project_name: Bildirici Residence
     address: Brooklyn, NY

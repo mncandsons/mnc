@@ -123,54 +123,6 @@ collections:
           - label: "Section Heading"
             name: "heading"
             widget: "string"
-      - label: "Portfolio"
-        name: "portfolio"
-        file: "themes/mnc/data/portfolio_residential.yml"
-        fields:
-          - label: "Portfolio Items"
-            name: "portfolio_item"
-            widget: "list"
-            label_singular: "Portfolio Item"
-            fields:
-              - label: "Project Name"
-                name: "project_name"
-                widget: "string"
-                hint: "Not shown on the site. Added to simplify project administration"
-              - label: "Main Image"
-                name: "picture"
-                widget: "image"
-              - label: "Address"
-                name: "address"
-                widget: "string"
-                required: false
-              - label: "Job Description"
-                name: "type"
-                widget: "string"
-                required: false
-              - label: "Square Feet"
-                name: "area"
-                widget: "string"
-                required: false
-              - label: "Approx. Cost"
-                name: "price"
-                widget: "string"
-                required: false
-              - label: "Architect"
-                name: "architect"
-                widget: "string"
-                required: false
-              - label: "Designer"
-                name: "design"
-                widget: "string"
-                required: false
-              - label: "Images"
-                name: gallery_pictures
-                widget: "list"
-                label_singular: "Image"
-                fields:
-                  - label: "Gallery Image"
-                    name: "gallery_img"
-                    widget: "image"
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_residential.yml"
@@ -242,6 +194,50 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
+  - label: "Portfolio Residential"
+    name: "portfolio-residential"
+    file: "themes/mnc/data/portfolio_residential.yml"
+    fields:
+      - label: "Portfolio Items"
+        name: "portfolio_item"
+        widget: "list"
+        label_singular: "Portfolio Item"
+        fields:
+          - label: "Project Name"
+            name: "project_name"
+            widget: "string"
+            hint: "Not shown on the site. Added to simplify project administration"
+          - label: "Main Image"
+            name: "picture"
+            widget: "image"
+          - label: "Address"
+            name: "address"
+            widget: "string"
+            required: false
+          - label: "Job Description"
+            name: "type"
+            widget: "string"
+            required: false
+          - label: "Square Feet"
+            name: "area"
+            widget: "string"
+            required: false
+          - label: "Architect"
+            name: "architect"
+            widget: "string"
+            required: false
+          - label: "Designer"
+            name: "design"
+            widget: "string"
+            required: false
+          - label: "Images"
+            name: gallery_pictures
+            widget: "list"
+            label_singular: "Image"
+            fields:
+              - label: "Gallery Image"
+                name: "gallery_img"
+                widget: "image"
   - label: "Commercial"
     name: "commercial"
     files:

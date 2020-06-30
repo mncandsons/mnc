@@ -23,47 +23,30 @@ gulp.task('minify-js', () => {
     .pipe(gulp.dest('./assets/js'))
 })
 
-gulp.task('images', (done) => {
-  const cacheFolder = path.join('./cache');
-  const contentsToCache = [
-    {
-      contents: path.join('static/assets/images'),
-      handleCacheUpdate: () => {
-        return new Promise((resolve, reject) => {
-          gulp.src('static/assets/images/*.{jpg,jpeg,png}')
-            .pipe(newer(path.join(cacheFolder, 'static/assets/images')))
-            .pipe(responsive({
-              '**/*.{jpg,png,jpeg}': [{
-                width: 2000,
-                quality: 75,
-                compressionLevel: 7,
-              }, {
-                width: 2000,
-                quality: 75,
-                rename: {
-                  extname: '.webp',
-                },
-              }],
-            }, {
-              errorOnEnlargement: false,
-              errorOnUnusedConfig: false
-            }))
-            .pipe(rename(function(opt) {
-              opt.basename = opt.basename.split(' ').join('_');
-              return opt;
-            }))
-            .pipe(gulp.dest('static/assets/images/public')).on('end', resolve);
-        });
-      }
-    },
-  ]
-  cacheMeOutside(cacheFolder, contentsToCache).then(cacheInfo => {
-    console.log('====== Netlify cache restored! ======')
-    cacheInfo.forEach(info => {
-      console.log(info.cacheDir)
-    })
-    done();
-  })
+gulp.task('images', () => {
+  return gulp.src('static/assets/images/*.{jpg,jpeg,png}')
+    .pipe(newer('./static/assets/images/public/'))
+    .pipe(responsive({
+      '**/*.{jpg,png,jpeg}': [{
+        width: 2000,
+        quality: 75,
+        compressionLevel: 7,
+      }, {
+        width: 2000,
+        quality: 75,
+        rename: {
+          extname: '.webp',
+        },
+      }],
+    }, {
+      errorOnEnlargement: false,
+      errorOnUnusedConfig: false
+    }))
+    .pipe(rename(function(opt) {
+      opt.basename = opt.basename.split(' ').join('_');
+      return opt;
+    }))
+    .pipe(gulp.dest('./static/assets/images/public/'));
 });
 
 
