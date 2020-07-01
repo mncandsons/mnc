@@ -1,4 +1,8 @@
+favorite: 1
+project_name: E. Azrak
+picture: /assets/images/public/Azrak_1221-V1.jpg
 address: Brooklyn, NY
+type: "Brooklyn Residence 9 "
 design: Calder Interiors
 gallery_pictures:
   - gallery_img: /assets/images/public/Azrak_1221-V1.jpg
@@ -10,6 +14,3 @@ gallery_pictures:
   - gallery_img: /assets/images/public/Azrak_7749.jpg
   - gallery_img: /assets/images/public/Azrak_7751.jpg
   - gallery_img: /assets/images/public/Azrak_7756.jpg
-picture: /assets/images/public/Azrak_1221-V1.jpg
-project_name: E. Azrak
-type: "Brooklyn Residence 9 "
