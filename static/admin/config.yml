@@ -211,7 +211,7 @@ collections:
     view_filters:
       - label: Favorites
         field: favorite
-        pattern: ^(?=\d{5}$)1?2?3?4?5?6?7?8?9?0?$
+        pattern: ^(?=\d{1}$)1?2?3?4?5?6?7?8?9?0?$
     fields:
       - label: "Favorite Position"
         name: "favorite"
