@@ -228,7 +228,6 @@ collections:
           - { label: "Fifth", value: '5' }
           - { label: "Sixth", value: '6' }
         default: ['7']
-        required: false
       - label: "Project Name"
         name: "project_name"
         widget: "string"
