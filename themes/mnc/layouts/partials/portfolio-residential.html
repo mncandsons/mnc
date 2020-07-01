@@ -7,7 +7,7 @@
       </div>
       <div class="row gutter-16">
         {{ $.Scratch.Set "counter" -1 }}
-        {{ range .Site.Data.portfolio_residential }}
+        {{ range sort (sort .Site.Data.portfolio_residential "project_name") "favorite"}}
         {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
         <div class="col-12 col-sm-6 col-md-4">
           <div class="p-block__outer">

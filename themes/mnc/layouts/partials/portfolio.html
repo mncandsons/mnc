@@ -46,9 +46,10 @@
             <h1>{{with .GetPage "/portfolio-residential"}}{{ .Params.heading }}{{end}}</h1>
             <div class="row gutter-16">
               {{ $.Scratch.Set "counter" -1 }}
-              {{ range first 6 (sort .Site.Data.portfolio_residential) }}
+              {{ range first 6 (sort (sort .Site.Data.portfolio_residential "project_name") "favorite")}}
               {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
               <div class="col-12 col-sm-6 col-md-4">
+                <div>{{.favorite}}</div>
                 <div class="p-block__outer">
                   <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
                     <div class="p-block__inner">
