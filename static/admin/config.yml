@@ -218,6 +218,7 @@ collections:
         name: "favorite"
         widget: "select"
         multiple: false
+        required: true
         options:
           - { label: "Not Included", value: '7' }
           - { label: "First", value: '1' }
@@ -226,8 +227,7 @@ collections:
           - { label: "Fourth", value: '4' }
           - { label: "Fifth", value: '5' }
           - { label: "Sixth", value: '6' }
-        default:
-          - value: ['7']
+        default: ['7']
         required: false
       - label: "Project Name"
         name: "project_name"
