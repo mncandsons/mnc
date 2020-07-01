@@ -216,10 +216,17 @@ collections:
     fields:
       - label: "Favorite Position"
         name: "favorite"
-        widget: "number"
-        min: 1
-        max: 6
-        hint: "Please, select the position in Favorites. From '1' to '6'. Empty field excludes item from Favorites"
+        widget: "select"
+        multiple: false
+        options:
+          - { label: "Not Included", value: 7 }
+          - { label: "First", value: 1 }
+          - { label: "Second", value: 2 }
+          - { label: "Third", value: 3 }
+          - { label: "Fourth", value: 4 }
+          - { label: "Fifth", value: 5 }
+          - { label: "Sixth", value: 6 }
+        default: 7
         required: false
       - label: "Project Name"
         name: "project_name"
