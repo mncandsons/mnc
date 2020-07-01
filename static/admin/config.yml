@@ -209,7 +209,7 @@ collections:
     view_filters:
       - label: Favorites
         field: favorite
-        pattern: '[0-6]'
+        pattern: '[1-6]'
     fields:
       - label: "Favorite Position"
         name: "favorite"
