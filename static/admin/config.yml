@@ -208,6 +208,7 @@ collections:
     identifier_field: project_name
     create: true
     extension: yml
+    sortableFields: ['favorite']
     view_filters:
       - label: Favorites
         field: favorite
