@@ -208,7 +208,7 @@ collections:
     identifier_field: project_name
     create: true
     extension: yml
-    sortableFields: ['favorite']
+    sortableFields: ['favorite' , 'project_name']
     view_filters:
       - label: Favorites
         field: favorite
@@ -217,9 +217,9 @@ collections:
       - label: "Favorite Position"
         name: "favorite"
         widget: "number"
-        min: 0
+        min: 1
         max: 6
-        hint: "Please, select the position in Favorites. From '1' to '6'. '0' excludes item from Favorites"
+        hint: "Please, select the position in Favorites. From '1' to '6'. Empty field excludes item from Favorites"
         required: false
       - label: "Project Name"
         name: "project_name"
