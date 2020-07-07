@@ -4,35 +4,43 @@
       <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
     </div>
     <div class="slideshow">
-      {{ range sort (sort .Site.Data.portfolio_residential "project_name") "favorite"}}
-      <div class="slideshow__item">
-        {{ if or .type .address .area .price .architect .design }}
-        <div class="slideshow__info">
-          <div class="container-fluid-max">
-            <h3>Project details <i class="icon-angle-down"></i></h3>
-            <div class="slideshow__list">
-              <div class="slideshow__list-inner">
-                <ul>
-                  {{ with .type }}
-                      <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .address }}
-                      <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .area }}
-                      <li><i class="icon icon-size"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .architect }}
-                      <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
-                  {{ end }}
-                  {{ with .design }}
-                      <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
-                  {{ end }}
-                </ul>
+      {{ $favorites := slice }}
+      {{ range .Site.Data.portfolio_residential }}
+        {{ $favorites = $favorites | append .favorite }}
+      {{ end }}
+      {{ $favorites = $favorites | uniq | sort }}
+
+      {{/* Range over the sorted favorites, then range over a sorted subset of the data file. */}}
+      {{ range $favorites }}
+        {{ range where (sort $.Site.Data.portfolio_residential "project_name" "asc") "favorite" . }}
+        <div class="slideshow__item">
+          {{ if or .type .address .area .price .architect .design }}
+          <div class="slideshow__info">
+            <div class="container-fluid-max">
+              <h3>Project details <i class="icon-angle-down"></i></h3>
+              <div class="slideshow__list">
+                <div class="slideshow__list-inner">
+                  <ul>
+                    {{ with .type }}
+                        <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .address }}
+                        <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .area }}
+                        <li><i class="icon icon-size"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .architect }}
+                        <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
+                    {{ end }}
+                    {{ with .design }}
+                        <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
+                    {{ end }}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         {{ end }}
         <div class="slideshow-inside__controls">
           <button><i class="icon-arrow-left-lg"></i></button>
@@ -53,6 +61,7 @@
           {{ end }}
         </div>
       </div>
+      {{ end }}
       {{ end }}
     </div>
   </div>

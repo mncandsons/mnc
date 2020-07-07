@@ -7,51 +7,61 @@
       </div>
       <div class="row gutter-16">
         {{ $.Scratch.Set "counter" -1 }}
-        {{ range sort (sort .Site.Data.portfolio_residential "project_name") "favorite"}}
-        {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="p-block__outer">
-            <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
-              <div class="p-block__inner">
-                <picture>
-                  {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
-                  {{ $image_ext_res := path.Ext .picture }}
-                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
-                </picture>
-                {{ if or .type .address .area }}
-                <div class="p-block__overlay commercial">
-                  <div class="p-block__info">
-                    <h3>Project details</h3>
-                    <ul>
-                      {{ with .type }}
-                          <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                      {{ end }}
-                      {{ with .address }}
-                          <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                      {{ end }}
-                      {{ with .area }}
-                          <li><i class="icon icon-size"></i>{{ . }}</li>
-                      {{ end }}
-                      {{ with .architect }}
-                          <li><i class="icon icon-compass"></i>{{ . }}</li>
-                      {{ end }}
-                      {{ with .design }}
-                          <li><i class="icon icon-palette"></i>{{ . }}</li>
-                      {{ end }}
-                    </ul>
+
+        {{ $favorites := slice }}
+        {{ range .Site.Data.portfolio_residential }}
+          {{ $favorites = $favorites | append .favorite }}
+        {{ end }}
+        {{ $favorites = $favorites | uniq | sort }}
+
+        {{/* Range over the sorted favorites, then range over a sorted subset of the data file. */}}
+        {{ range $favorites }}
+          {{ range where (sort $.Site.Data.portfolio_residential "project_name" "asc") "favorite" . }}
+          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-block__outer">
+              <div class="p-block" data-index="{{$.Scratch.Get "counter"}}">
+                <div class="p-block__inner">
+                  <picture>
+                    {{ $picture :=  replaceRE "(\\s)" "_" .picture }}
+                    {{ $image_ext_res := path.Ext .picture }}
+                    <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                    <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                  </picture>
+                  {{ if or .type .address .area }}
+                  <div class="p-block__overlay commercial">
+                    <div class="p-block__info">
+                      <h3>Project details</h3>
+                      <ul>
+                        {{ with .type }}
+                            <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                        {{ end }}
+                        {{ with .address }}
+                            <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                        {{ end }}
+                        {{ with .area }}
+                            <li><i class="icon icon-size"></i>{{ . }}</li>
+                        {{ end }}
+                        {{ with .architect }}
+                            <li><i class="icon icon-compass"></i>{{ . }}</li>
+                        {{ end }}
+                        {{ with .design }}
+                            <li><i class="icon icon-palette"></i>{{ . }}</li>
+                        {{ end }}
+                      </ul>
+                    </div>
+                    <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
                   </div>
-                  <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
+                  {{ else }}
+                  <div class="p-block__overlay d-flex align-items-center justify-content-center">
+                    <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
+                  </div>
+                  {{ end }}
                 </div>
-                {{ else }}
-                <div class="p-block__overlay d-flex align-items-center justify-content-center">
-                  <div class="p-block__btn"><span>View</span><i class="icon icon-arrow-more"></i></div>
-                </div>
-                {{ end }}
               </div>
             </div>
           </div>
-        </div>
+          {{ end }}
         {{ end }}
       </div>
       <div class="d-flex align-items-center justify-content-center mt-16 mt-48-sm">

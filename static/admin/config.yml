@@ -283,101 +283,6 @@ collections:
           - label: "Section Heading"
             name: "heading"
             widget: "string"
-      - label: "Portfolio"
-        name: "portfolio"
-        file: "themes/mnc/data/portfolio_commercial.yml"
-        fields:
-          - label: "Portfolio Items"
-            name: "portfolio_item"
-            widget: "list"
-            label_singular: "Portfolio Item"
-            fields:
-              - label: "Project Name"
-                name: "name"
-                widget: "string"
-              - label: "Main Image"
-                name: "picture"
-                widget: "image"
-              - label: "Address"
-                name: "address"
-                widget: "string"
-                required: false
-              - label: "Job Description"
-                name: "type"
-                widget: "string"
-                required: false
-                hint: "Ignored if project contains sub projects"
-              - label: "Square Feet"
-                name: "area"
-                widget: "string"
-                required: false
-                hint: "Ignored if project contains sub projects"
-              - label: "Approx. Cost"
-                name: "price"
-                widget: "string"
-                required: false
-                hint: "Ignored if project contains sub projects"
-              - label: "Architect"
-                name: "architect"
-                widget: "string"
-                required: false
-                hint: "Ignored if project contains sub projects"
-              - label: "Designer"
-                name: "design"
-                widget: "string"
-                required: false
-                hint: "Ignored if project contains sub projects"
-              - label: "Images"
-                name: gallery_pictures
-                widget: "list"
-                required: false
-                hint: "Ignored if project contains sub projects"
-                label_singular: "Image"
-                fields:
-                  - label: "Gallery Image"
-                    name: "gallery_img"
-                    widget: "image"
-              - label: "Portfolio Sub Items"
-                name: "sub_item"
-                widget: "list"
-                label_singular: "Portfolio Sub Item"
-                fields:
-                  - label: "Sub Project Name"
-                    name: "name"
-                    widget: "string"
-                    required: false
-                  - label: "Main Image"
-                    name: "picture"
-                    widget: "image"
-                    required: false
-                  - label: "Type"
-                    name: "type"
-                    widget: "string"
-                    required: false
-                  - label: "Area"
-                    name: "area"
-                    widget: "string"
-                    required: false
-                  - label: "Price"
-                    name: "price"
-                    widget: "string"
-                    required: false
-                  - label: "Architect"
-                    name: "architect"
-                    widget: "string"
-                    required: false
-                  - label: "Design"
-                    name: "design"
-                    widget: "string"
-                    required: false
-                  - label: "Images"
-                    name: gallery_pictures
-                    widget: "list"
-                    label_singular: "Image"
-                    fields:
-                      - label: "Gallery Image"
-                        name: "gallery_img"
-                        widget: "image"
       - label: "About"
         name: "about"
         file: "themes/mnc/data/about_commercial.yml"
@@ -460,3 +365,116 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
+    - label: "Commercial Portfolio"
+      name: "portfolio-commercial"
+      folder: "themes/mnc/data/portfolio_commercial"
+      label_singular: "Commercial Item"
+      identifier_field: name
+      create: true
+      extension: yml
+      sortableFields: ['favorite' , 'name']
+      view_filters:
+        - label: Favorites
+          field: favorite
+          pattern: ^(?=\d{1}$)1?2?3?4?5?6?$
+      fields:
+        - label: "Favorite Position"
+          name: "favorite"
+          widget: "select"
+          multiple: false
+          required: true
+          options:
+            - { label: "Not Included", value: '7' }
+            - { label: "First", value: '1' }
+            - { label: "Second", value: '2' }
+            - { label: "Third", value: '3' }
+            - { label: "Fourth", value: '4' }
+            - { label: "Fifth", value: '5' }
+            - { label: "Sixth", value: '6' }
+          default: '7'
+        - label: "Project Name"
+          name: "name"
+          widget: "string"
+        - label: "Main Image"
+          name: "picture"
+          widget: "image"
+        - label: "Address"
+          name: "address"
+          widget: "string"
+          required: false
+        - label: "Job Description"
+          name: "type"
+          widget: "string"
+          required: false
+          hint: "Ignored if project contains sub projects"
+        - label: "Square Feet"
+          name: "area"
+          widget: "string"
+          required: false
+          hint: "Ignored if project contains sub projects"
+        - label: "Approx. Cost"
+          name: "price"
+          widget: "string"
+          required: false
+          hint: "Ignored if project contains sub projects"
+        - label: "Architect"
+          name: "architect"
+          widget: "string"
+          required: false
+          hint: "Ignored if project contains sub projects"
+        - label: "Designer"
+          name: "design"
+          widget: "string"
+          required: false
+          hint: "Ignored if project contains sub projects"
+        - label: "Images"
+          name: gallery_pictures
+          widget: "list"
+          required: false
+          hint: "Ignored if project contains sub projects"
+          label_singular: "Image"
+          fields:
+            - label: "Gallery Image"
+              name: "gallery_img"
+              widget: "image"
+        - label: "Portfolio Sub Items"
+          name: "sub_item"
+          widget: "list"
+          label_singular: "Portfolio Sub Item"
+          fields:
+            - label: "Sub Project Name"
+              name: "name"
+              widget: "string"
+              required: false
+            - label: "Main Image"
+              name: "picture"
+              widget: "image"
+              required: false
+            - label: "Type"
+              name: "type"
+              widget: "string"
+              required: false
+            - label: "Area"
+              name: "area"
+              widget: "string"
+              required: false
+            - label: "Price"
+              name: "price"
+              widget: "string"
+              required: false
+            - label: "Architect"
+              name: "architect"
+              widget: "string"
+              required: false
+            - label: "Design"
+              name: "design"
+              widget: "string"
+              required: false
+            - label: "Images"
+              name: gallery_pictures
+              widget: "list"
+              label_singular: "Image"
+              fields:
+                - label: "Gallery Image"
+                  name: "gallery_img"
+                  widget: "image"

@@ -216,7 +216,7 @@ for(let i = 0; i < pbElem.length; i++){
           pbElem[i].querySelector('.p-block__btn span').textContent = 'View';
         }
         pbElem[i].parentNode.classList.remove('active');
-        pbElem[i].parentNode.style.height = elemParentHeight + 'pxx';
+        pbElem[i].parentNode.style.height = elemParentHeight + 'px';
       }
     }
 

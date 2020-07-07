@@ -4,70 +4,79 @@
       <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
     </div>
     <div class="slideshow">
-      {{ range .Site.Data.portfolio_commercial.portfolio_item }}
-      {{ $portfolio_name := (.name) }}
-      {{ $portfolio_type := (.type) }}
-      {{ $portfolio_address := (.address) }}
-      {{ $portfolio_area := (.area) }}
-      {{ $portfolio_price := (.price) }}
-      {{ $portfolio_architect := (.architect) }}
-      {{ $portfolio_design := (.design) }}
+      {{ $favorites := slice }}
+      {{ range .Site.Data.portfolio_commercial }}
+        {{ $favorites = $favorites | append .favorite }}
+      {{ end }}
+      {{ $favorites = $favorites | uniq | sort }}
 
-      {{ with .sub_item}}
-      {{ range . }}
-      <div class="slideshow__item">
-        <div class="slideshow__info">
-          <div class="container-fluid-max">
-            {{ if or .type $portfolio_address .area .price .architect .design }}
-            <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
-            <div class="slideshow__list">
-              <div class="slideshow__list-inner">
-                <ul>
-                  {{ with .type }}
-                      <li><i class="icon icon-new-construction"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with $portfolio_address }}
-                      <li><i class="icon icon-location-sm"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .area }}
-                      <li><i class="icon icon-size"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .price }}
-                      <li><i class="icon icon-money-1"></i>{{ . }}</li>
-                  {{ end }}
-                  {{ with .architect }}
-                      <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
-                  {{ end }}
-                  {{ with .design }}
-                      <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
-                  {{ end }}
-                </ul>
+      {{/* Range over the sorted favorites, then range over a sorted subset of the data file. */}}
+      {{ range $favorites }}
+        {{ range where (sort $.Site.Data.portfolio_commercial "name" "asc") "favorite" . }}
+
+        {{ $portfolio_name := (.name) }}
+        {{ $portfolio_type := (.type) }}
+        {{ $portfolio_address := (.address) }}
+        {{ $portfolio_area := (.area) }}
+        {{ $portfolio_price := (.price) }}
+        {{ $portfolio_architect := (.architect) }}
+        {{ $portfolio_design := (.design) }}
+
+        {{ with .sub_item}}
+        {{ range . }}
+        <div class="slideshow__item">
+          <div class="slideshow__info">
+            <div class="container-fluid-max">
+              {{ if or .type $portfolio_address .area .price .architect .design }}
+              <h3>{{ .name }} <i class="icon-angle-down"></i></h3>
+              <div class="slideshow__list">
+                <div class="slideshow__list-inner">
+                  <ul>
+                    {{ with .type }}
+                        <li><i class="icon icon-new-construction"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with $portfolio_address }}
+                        <li><i class="icon icon-location-sm"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .area }}
+                        <li><i class="icon icon-size"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .price }}
+                        <li><i class="icon icon-money-1"></i>{{ . }}</li>
+                    {{ end }}
+                    {{ with .architect }}
+                        <li><i class="icon icon-compass"></i><span>Architect:</span> {{ . }}</li>
+                    {{ end }}
+                    {{ with .design }}
+                        <li><i class="icon icon-palette"></i><span>Interior Design:</span> {{ . }}</li>
+                    {{ end }}
+                  </ul>
+                </div>
+              </div>
+              {{ else }}
+              <h3>{{ $portfolio_name }}</h3>
+              {{ end }}
+            </div>
+          </div>
+          <div class="slideshow-inside__controls">
+            <button><i class="icon-arrow-left-lg"></i></button>
+            <button><i class="icon-arrow-right-lg"></i></button>
+          </div>
+          <div class="slideshow-inside">
+            {{ range .gallery_pictures }}
+            <div class="slideshow-inside__item">
+              <div class="container-fluid-max">
+                <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                  {{ $image_ext_res := path.Ext .gallery_img }}
+                  <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+                </picture>
               </div>
             </div>
-            {{ else }}
-            <h3>{{ $portfolio_name }}</h3>
             {{ end }}
           </div>
         </div>
-        <div class="slideshow-inside__controls">
-          <button><i class="icon-arrow-left-lg"></i></button>
-          <button><i class="icon-arrow-right-lg"></i></button>
-        </div>
-        <div class="slideshow-inside">
-          {{ range .gallery_pictures }}
-          <div class="slideshow-inside__item">
-            <div class="container-fluid-max">
-              <picture>
-                {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
-                {{ $image_ext_res := path.Ext .gallery_img }}
-                <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
-              </picture>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
       {{ end }}
 
       {{ else }}
@@ -126,6 +135,7 @@
         </div>
       </div>
 
+      {{ end }}
       {{ end }}
       {{ end }}
     </div>
