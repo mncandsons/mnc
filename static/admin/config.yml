@@ -208,7 +208,7 @@ collections:
     identifier_field: project_name
     create: true
     extension: yml
-    sortableFields: ['favorite' , 'project_name' , 'date']
+    sortableFields: ['commit_date', 'favorite', 'project_name']
     view_filters:
       - label: Favorites
         field: favorite
@@ -372,7 +372,7 @@ collections:
     identifier_field: name
     create: true
     extension: yml
-    sortableFields: ['favorite' , 'name', 'date']
+    sortableFields: ['commit_date', 'favorite', 'name']
     view_filters:
       - label: Favorites
         field: favorite
