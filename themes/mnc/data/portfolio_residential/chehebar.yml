@@ -1,10 +1,13 @@
 favorite: "4"
+project_name: I. Chehebar
+picture: /assets/images/public/2014FD54_402_RT_HR.jpg
 address: Brooklyn, NY
+type: Brooklyn Residence 4
 architect: Harry Baldinger Architects
 design: Ovadia Design
 exterior_pictures:
-interior_pictures:
   - gallery_img: /assets/images/public/2014FD54_402_RT_HR.jpg
+interior_pictures:
   - gallery_img: /assets/images/public/2014FD54_404_HR.jpg
   - gallery_img: /assets/images/public/2014FD54_405_HR.jpg
   - gallery_img: /assets/images/public/2014FD54_406_HR.jpg
@@ -31,6 +34,3 @@ interior_pictures:
   - gallery_img: /assets/images/public/2014FD54_442_HR.jpg
   - gallery_img: /assets/images/public/2014FD54_443_HR.jpg
   - gallery_img: /assets/images/public/2014FD54_444_HR.jpg
-picture: /assets/images/public/2014FD54_402_RT_HR.jpg
-project_name: I. Chehebar
-type: Brooklyn Residence 4
