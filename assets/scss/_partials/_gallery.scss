@@ -272,6 +272,9 @@
       opacity: 0;
       z-index: -2;
       pointer-events: none;
+      @include respond-to(sm){
+        display: none;
+      }
     }
   }
   &__sort{
@@ -287,6 +290,12 @@
     align-items: center;
     justify-content: center;
     padding: 4px;
+    @include respond-to(sm){
+      position: fixed;
+      bottom: 0;
+      padding: 12px;
+      width: auto;
+    }
     button{
       flex: 0 0 33.333%;
       max-width: 33.333%;

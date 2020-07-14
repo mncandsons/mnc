@@ -6,7 +6,6 @@ sub_item:
   - architect: Slab Architects
     design: ''
     exterior_pictures:
-      - gallery_img: /assets/images/public/ICCA_03.jpg
     interior_pictures:
       - gallery_img: /assets/images/public/ICCA_01.jpg
       - gallery_img: /assets/images/public/ICCA_02.jpg
