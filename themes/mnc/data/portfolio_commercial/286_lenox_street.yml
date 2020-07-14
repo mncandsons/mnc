@@ -1,6 +1,6 @@
 favorite: "7"
-exterior_pictures:
-interior_pictures:
-  - gallery_img: /assets/images/public/LenoxStreet-01.jpeg
 name: 286 Lenox Street
 picture: /assets/images/public/LenoxStreet-01.jpeg
+exterior_pictures:
+  - gallery_img: /assets/images/public/LenoxStreet-01.jpeg
+interior_pictures: []
