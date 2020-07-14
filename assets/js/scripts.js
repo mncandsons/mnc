@@ -102,7 +102,7 @@ if (galleryComm) {
 let innerGallery = document.querySelectorAll('.slideshow-inside');
 if (innerGallery) {
   forEach(innerGallery, function (index, value) {
-    innerSlider = tns({
+    let innerSlider = tns({
       container: value,
       mode: 'gallery',
       nav: false,
@@ -123,6 +123,63 @@ if (innerGallery) {
         }
       },
     });
+
+    let sortButton = document.querySelectorAll(".slideshow-inside__sort button");
+    for(var i = 0; i < sortButton.length; i++){
+      sortButton[i].addEventListener('click',function(e){
+        innerSlider.goTo('first');
+      });
+    }
+  });
+}
+
+
+let sortButton = document.querySelectorAll(".slideshow-inside__sort button");
+for(var i = 0; i < sortButton.length; i++){
+  sortButton[i].addEventListener('click',function(e){
+    for(var n = 0; n < sortButton.length; n++){
+      sortButton[n].classList.remove('active');
+    }
+
+    let slidesBlock = document.querySelectorAll('.slideshow-inside__wrap');
+    for(var i = 0; i < slidesBlock.length; i++){
+      if (slidesBlock[i].parentNode.querySelectorAll('.slideshow-inside__wrap').length > 1){
+        slidesBlock[i].classList.add('hidden');
+      }
+      else{
+        slidesBlock[i].parentNode.querySelector('.slideshow-inside__sort button').classList.add('active');
+      }
+    }
+    if (this.classList.contains('sort-all')){
+      let sortButtonAll = document.querySelectorAll('.sort-all');
+      for(var m = 0; m < sortButtonAll.length; m++){
+        sortButtonAll[m].classList.add('active');
+      }
+      let slidesAll = document.querySelectorAll('.slides-all');
+      for(var m = 0; m < slidesAll.length; m++){
+        slidesAll[m].classList.remove('hidden');
+      }
+    }
+    else if (this.classList.contains('sort-exterior')){
+      let sortButtonExt = document.querySelectorAll('.sort-exterior');
+      for(var m = 0; m < sortButtonExt.length; m++){
+        sortButtonExt[m].classList.add('active');
+      }
+      let slidesExt = document.querySelectorAll('.slides-exterior');
+      for(var m = 0; m < slidesExt.length; m++){
+        slidesExt[m].classList.remove('hidden');
+      }
+    }
+    else{
+      let sortButtonInt = document.querySelectorAll('.sort-interior');
+      for(var m = 0; m < sortButtonInt.length; m++){
+        sortButtonInt[m].classList.add('active');
+      }
+      let slidesInt = document.querySelectorAll('.slides-interior');
+      for(var m = 0; m < slidesInt.length; m++){
+        slidesInt[m].classList.remove('hidden');
+      }
+    }
   });
 }
 

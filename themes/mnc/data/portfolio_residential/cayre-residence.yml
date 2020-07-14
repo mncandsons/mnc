@@ -3,5 +3,6 @@ project_name: Cayre Residence
 picture: /assets/images/public/cay-01.jpeg
 architect: Jlra
 design: Grade
-gallery_pictures:
+exterior_pictures:
+interior_pictures:
   - gallery_img: /assets/images/public/cay-01.jpeg

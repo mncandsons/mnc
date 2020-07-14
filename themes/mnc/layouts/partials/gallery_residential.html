@@ -42,24 +42,104 @@
             </div>
           </div>
         {{ end }}
-        <div class="slideshow-inside__controls">
-          <button><i class="icon-arrow-left-lg"></i></button>
-          <button><i class="icon-arrow-right-lg"></i></button>
-        </div>
-        <div class="slideshow-inside">
-          {{ range .gallery_pictures }}
-          <div class="slideshow-inside__item">
-            <div class="container-fluid-max">
-              <picture>
-                {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
-                {{ $image_ext_res := path.Ext .gallery_img }}
-                <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-                <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
-              </picture>
-            </div>
-          </div>
+
+        {{ $interior_pictures := .interior_pictures}}
+        {{ $exterior_pictures := .exterior_pictures}}
+
+        <div class="slideshow-inside__sort">
+          {{ if and $interior_pictures $exterior_pictures }}
+          <button class="sort-all active">All</button>
+          {{ end }}
+          {{ with $exterior_pictures}}
+          <button class="sort-exterior {{ with $exterior_pictures }} {{ if not $interior_pictures}} active {{ end }}{{ end }}">Exterior</button>
+          {{ end }}
+          {{ with $interior_pictures}}
+          <button class="sort-interior {{ with $interior_pictures }} {{ if not $exterior_pictures}} active {{ end }}{{ end }}">Interior</button>
           {{ end }}
         </div>
+        {{ if and $interior_pictures $exterior_pictures }}
+        <div class="slideshow-inside__wrap slides-all">
+          <div class="slideshow-inside__controls">
+            <button><i class="icon-arrow-left-lg"></i></button>
+            <button><i class="icon-arrow-right-lg"></i></button>
+          </div>
+          <div class="slideshow-inside">
+
+            {{ range $exterior_pictures }}
+            <div class="slideshow-inside__item">
+              <div class="container-fluid-max">
+                <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                  {{ $image_ext_res := path.Ext .gallery_img }}
+                  <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+                </picture>
+              </div>
+            </div>
+            {{ end }}
+
+            {{ range $interior_pictures }}
+            <div class="slideshow-inside__item">
+              <div class="container-fluid-max">
+                <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                  {{ $image_ext_res := path.Ext .gallery_img }}
+                  <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+                </picture>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+        {{ with $exterior_pictures }}
+          <div class="slideshow-inside__wrap slides-exterior {{ if and $interior_pictures $exterior_pictures }} hidden {{ end }}">
+            <div class="slideshow-inside__controls">
+              <button><i class="icon-arrow-left-lg"></i></button>
+              <button><i class="icon-arrow-right-lg"></i></button>
+            </div>
+            <div class="slideshow-inside">
+              {{ range . }}
+              <div class="slideshow-inside__item">
+                <div class="container-fluid-max">
+                  <picture>
+                    {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                    {{ $image_ext_res := path.Ext .gallery_img }}
+                    <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                    <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+                  </picture>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+
+        {{ with $interior_pictures }}
+          <div class="slideshow-inside__wrap slides-interior {{ if and $interior_pictures $exterior_pictures }} hidden {{ end }}">
+            <div class="slideshow-inside__controls">
+              <button><i class="icon-arrow-left-lg"></i></button>
+              <button><i class="icon-arrow-right-lg"></i></button>
+            </div>
+              <div class="slideshow-inside">
+                {{ range . }}
+                <div class="slideshow-inside__item">
+                  <div class="container-fluid-max">
+                    <picture>
+                      {{ $picture :=  replaceRE "(\\s)" "_" .gallery_img }}
+                      {{ $image_ext_res := path.Ext .gallery_img }}
+                      <source type="image/webp" data-srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                      <img class="img-responsive lazy" data-srcset="{{ $picture | relURL }}" alt="…">
+                    </picture>
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+          </div>
+        {{ end }}
       </div>
       {{ end }}
       {{ end }}

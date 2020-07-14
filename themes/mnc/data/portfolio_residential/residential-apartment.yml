@@ -1,7 +1,8 @@
 favorite: "7"
 address: "NYC, NY "
 architect: JLRA
-gallery_pictures:
+exterior_pictures:
+interior_pictures:
   - gallery_img: /assets/images/public/APT-01.jpeg
   - gallery_img: /assets/images/public/APT-02.jpeg
   - gallery_img: /assets/images/public/APT-04.jpeg

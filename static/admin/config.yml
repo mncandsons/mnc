@@ -255,12 +255,20 @@ collections:
         name: "design"
         widget: "string"
         required: false
-      - label: "Images"
-        name: gallery_pictures
+      - label: "Exterior Images"
+        name: exterior_pictures
         widget: "list"
         label_singular: "Image"
         fields:
-          - label: "Gallery Image"
+          - label: "Exterior Image"
+            name: "gallery_img"
+            widget: "image"
+      - label: "Interior Images"
+        name: interior_pictures
+        widget: "list"
+        label_singular: "Image"
+        fields:
+          - label: "Interior Image"
             name: "gallery_img"
             widget: "image"
   - label: "Commercial"
