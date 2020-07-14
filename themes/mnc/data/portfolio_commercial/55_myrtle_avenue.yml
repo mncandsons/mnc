@@ -2,6 +2,6 @@ favorite: "7"
 name: 55 Myrtle Avenue
 picture: /assets/images/public/55-myrtle-01.jpeg
 exterior_pictures:
-interior_pictures:
-  - gallery_img: /assets/images/public/55-myrtle-01.jpeg
   - gallery_img: /assets/images/public/55-myrtle-02.jpeg
+  - gallery_img: /assets/images/public/55-myrtle-01.jpeg
+interior_pictures: []
