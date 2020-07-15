@@ -1,54 +1,36 @@
 about_heading: Company
 top:
   about_pic: /assets/images/public/ICJT_15.jpg
-  heading: >-
-    For over a decade, we at MNC+Sons have been helping extraordinary people
-    create **extraordinary homes.**
-
-
-    Our expertise has allowed countless New Yorkers to construct a bespoke
-    living space to stand the test of time.
-  paragraph_1: >-
-    Satisfied clients attest to our unshakeable commitment to efficiency,
-    reliability, interpersonal relationships and attention to detail.
-  paragraph_2: >-
-    Whether we’re preparing foundations, sanding floors, or working on those
-    finishing touches, we will work tirelessly to turn inspiration into
-    beautiful reality.
+  heading: We at MNC+Sons offer a range of services to help ensure that your
+    construction project runs smoothly, safely, and according to your budget and
+    schedule
+  paragraph_1: Satisfied clients attest to our unshakable commitment to
+    efficiency, reliability, interpersonal relationships and attention to
+    detail.
+  paragraph_2: Satisfied clients attest to our unshakable commitment to
+    efficiency, reliability, interpersonal relationships and attention to
+    detail.
   year: 2004-02-04T17:00:00.000Z
 bottom:
-  family_pic: ''
+  family_pic: ""
   left_column:
-    - heading: Industrial Building Construction Company in NY Metropolitan Area
+    - heading: Commercial Construction Company in NY Metropolitan Area
       text: >-
         When it comes to executing a large-scale construction project, you need
-        a commercial contractor you can trust. \
+        a commercial contractor you can trust.\
 
-        At MNC & Sons General Contractors, we pride ourselves in providing the
-        NY Metropolitan Area, with excellence in all aspects of commercial
-        construction services.
-    - heading: 'Knowledgeable, Reliable Contractors'
-      text: >-
-        If you're considering major construction for your business or commercial
+        At MNC & Sons General Contractors, we pride ourselves in providing the NY Metropolitan Area, with excellence in all aspects of commercial construction services.
+    - heading: Knowledgeable, Reliable Contractors
+      text: If you're considering major construction for your business or commercial
         space, MNC & Sons General Contractors, has the tools, knowledge, and
         experience to design and create the space you're looking for. We pride
         ourselves on our industry knowledge and passion for all that we do. And
         no matter the scope of your project, we pledge to complete in on time
         and within budget.
-    - heading: You’re in good hands
-      text: >-
-        Overseeing each crucial stage of construction can be an exhausting
-        process, but an MNC liaison will ensure that you can be fully involved
-        without putting your lives on hold. From framing to architectural
-        millwork, our dedicated team will ensure that someone will always be
-        on-hand to help you make any decision. We work closely with architects,
-        engineers, and interior designers about the of construction, freeing up
-        your attention for the things that matter most to you.
   right_column:
     block:
       - heading: Giving back
-        text: >-
-          A portion of the proceeds of all sales are contributed to charitable
+        text: A portion of the proceeds of all sales are contributed to charitable
           501(c)(3) organizations
     heading: Family matters
     subheading: >-
@@ -56,29 +38,23 @@ bottom:
       proud to be a family business.**
 
 
-      We take an active interest in getting to know our clients, their tastes,
-      and their vision, in order to create a perfect space.
-    text: >-
-      We have turned our passion into a profession, with our commitment to
+      We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect space.
+    text: We have turned our passion into a profession, with our commitment to
       excellence, earning us our deserved reputation as the leading custom home
       and Commercial contractors in the NY Metropolitan area.
     two_column_block:
-      - heading: Fulfilling Your Contracting Needs
+      - heading: Our Services
         text: >-
-          MNC & Sons General Contractors, broad range of services encompasses
-          all types of commercial contracting and renovation. Whether you need
-          commercial contracting for an existing structure or want to build a
-          new, MNC & Sons General Contractors, is eager to help you create a
-          lasting space that perfectly suits your unique construction needs.
+          Pre Construction 
+
+
+          Vital to a successful project are informed decisions made early during the planning stages regarding schedule, budget and scope of work. Our experienced team develops strategic cost analysis to establish a balance between budget and scope of work. Our project managers match and identify the best subcontractors for the job and research and procure long-lead equipment and materials. This coordination and organization effort guarantees an efficient start to a project.
       - heading: |-
           Excellence,\
           from the Ground Up
-        text: >-
-          We believe that our relationship with architects and interior
-          designers are as vital to our success as our relationship with
-          clients. No detail in your plans will be overlooked as our family
-          strives to meet your every expectation. We are privileged to have
-          access to a diverse network of highly qualified subcontractors and
-          suppliers in the NY Metropolitan area, making us uniquely capable of
-          accomplishing remarkable and ambitious projects with maximum
-          efficiency.
+        text: We believe that our relationship with architects and interior designers
+          are as vital to our success as our relationship with clients. Each
+          project regardless of size is assigned a dedicated team to schedule,
+          coordinate and assemble all aspects of the complex building process.
+          Our clients can rely on a seasoned group of specialists committed to
+          the highest standards in workmanship and client satisfaction.
