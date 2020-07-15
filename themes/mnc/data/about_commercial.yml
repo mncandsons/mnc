@@ -13,12 +13,10 @@ bottom:
   family_pic: ""
   left_column:
     - heading: General Contracting & Construction Management
-      text: >-
-        When it comes to executing a large-scale construction project, you need
-        a contractor you can trust.
-
-
-        We offer a range of services to help ensure that your construction project runs smoothly, safely, and according to your budget and schedule
+      text: When it comes to executing a large-scale construction project, you need a
+        contractor you can trust. We offer a range of services to help ensure
+        that your construction project runs smoothly, safely, and according to
+        your budget and schedule
     - heading: Knowledgeable, Reliable Contractors
       text: If you're considering major construction for your business or commercial
         space, MNC & Sons General Contractors, has the tools, knowledge, and
@@ -38,9 +36,7 @@ bottom:
 
 
       We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect space.
-    text: We have turned our passion into a profession, with our commitment to
-      excellence, earning us our deserved reputation as the leading Commercial
-      contractors in the NY Metropolitan area.
+    text: Blank
     two_column_block:
       - heading: Pre Construction
         text: Vital to a successful project are informed decisions made early during the
