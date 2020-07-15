@@ -7,23 +7,25 @@ top:
     properties in the NYC area
   paragraph_1: Our specialized team actively engages clients to schedule, operate,
     and assemble all phases of the intricate construction process.
-  paragraph_2: All project teams include a principal, project manager, field
-    supervisor, estimator, and administrative staff organized to provide each
-    job with personalized service and remarkable results.
+  paragraph_2: Blank
   year: 2004-02-04T17:00:00.000Z
 bottom:
   family_pic: ""
   left_column:
     - heading: General Contracting & Construction Management
-      text: When it comes to executing a large-scale construction project, you need a
-        commercial contractor you can trust.
+      text: >-
+        When it comes to executing a large-scale construction project, you need
+        a contractor you can trust.
+
+
+        We offer a range of services to help ensure that your construction project runs smoothly, safely, and according to your budget and schedule
     - heading: Knowledgeable, Reliable Contractors
       text: If you're considering major construction for your business or commercial
         space, MNC & Sons General Contractors, has the tools, knowledge, and
-        experience to design and create the space you're looking for. We pride
-        ourselves on our industry knowledge and passion for all that we do. And
-        no matter the scope of your project, we pledge to complete in on time
-        and within budget.
+        experience to design and create the space you're looking for. All
+        project teams include a principal, project manager, field supervisor,
+        estimator, and administrative staff organized to provide each job with
+        personalized service and remarkable results.
   right_column:
     block:
       - heading: Giving back
@@ -37,8 +39,8 @@ bottom:
 
       We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect space.
     text: We have turned our passion into a profession, with our commitment to
-      excellence, earning us our deserved reputation as the leading custom home
-      and Commercial contractors in the NY Metropolitan area.
+      excellence, earning us our deserved reputation as the leading Commercial
+      contractors in the NY Metropolitan area.
     two_column_block:
       - heading: Pre Construction
         text: Vital to a successful project are informed decisions made early during the
