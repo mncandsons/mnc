@@ -1,25 +1,22 @@
 about_heading: Company
 top:
   about_pic: /assets/images/public/ICJT_15.jpg
-  heading: We at MNC+Sons offer a range of services to help ensure that your
-    construction project runs smoothly, safely, and according to your budget and
-    schedule
-  paragraph_1: Satisfied clients attest to our unshakable commitment to
-    efficiency, reliability, interpersonal relationships and attention to
-    detail.
-  paragraph_2: Satisfied clients attest to our unshakable commitment to
-    efficiency, reliability, interpersonal relationships and attention to
-    detail.
+  heading: For over a decade, we at MNC+Sons have been helping extraordinary
+    people create **extraordinary spaces.** MNC+Sons has applied its unwavering
+    commitment to excellence while building some of the finest commercial
+    properties in the NYC area
+  paragraph_1: Our specialized team actively engages clients to schedule, operate,
+    and assemble all phases of the intricate construction process.
+  paragraph_2: All project teams include a principal, project manager, field
+    supervisor, estimator, and administrative staff organized to provide each
+    job with personalized service and remarkable results.
   year: 2004-02-04T17:00:00.000Z
 bottom:
   family_pic: ""
   left_column:
-    - heading: Commercial Construction Company in NY Metropolitan Area
-      text: >-
-        When it comes to executing a large-scale construction project, you need
-        a commercial contractor you can trust.\
-
-        At MNC & Sons General Contractors, we pride ourselves in providing the NY Metropolitan Area, with excellence in all aspects of commercial construction services.
+    - heading: General Contracting & Construction Management
+      text: When it comes to executing a large-scale construction project, you need a
+        commercial contractor you can trust.
     - heading: Knowledgeable, Reliable Contractors
       text: If you're considering major construction for your business or commercial
         space, MNC & Sons General Contractors, has the tools, knowledge, and
@@ -43,15 +40,15 @@ bottom:
       excellence, earning us our deserved reputation as the leading custom home
       and Commercial contractors in the NY Metropolitan area.
     two_column_block:
-      - heading: Our Services
-        text: >-
-          Pre Construction 
-
-
-          Vital to a successful project are informed decisions made early during the planning stages regarding schedule, budget and scope of work. Our experienced team develops strategic cost analysis to establish a balance between budget and scope of work. Our project managers match and identify the best subcontractors for the job and research and procure long-lead equipment and materials. This coordination and organization effort guarantees an efficient start to a project.
-      - heading: |-
-          Excellence,\
-          from the Ground Up
+      - heading: Pre Construction
+        text: Vital to a successful project are informed decisions made early during the
+          planning stages regarding schedule, budget and scope of work. Our
+          experienced team develops strategic cost analysis to establish a
+          balance between budget and scope of work. Our project managers match
+          and identify the best subcontractors for the job and research and
+          procure long-lead equipment and materials. This coordination and
+          organization effort guarantees an efficient start to a project.
+      - heading: Under Construction
         text: We believe that our relationship with architects and interior designers
           are as vital to our success as our relationship with clients. Each
           project regardless of size is assigned a dedicated team to schedule,
