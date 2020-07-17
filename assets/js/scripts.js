@@ -5,25 +5,13 @@ objectFitImages();
 var tabber = new HashTabber();
 tabber.run();
 
-// Get Year
-let dateSelector = document.querySelectorAll('.about-badge span');
-if (dateSelector){
-  for(let i = 0; i < dateSelector.length; i++){
-    let date = dateSelector[i].getAttribute('data-time');
-    function getAge(dateString) {
-        let today = new Date();
-        let birthDate = new Date(dateString);
-        let age = today.getFullYear() - birthDate.getFullYear();
-        let m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        return age;
-    }
-    dateSelector[i].textContent = getAge(date);
+let portfolioNavItem = document.querySelectorAll('.portfolio-nav li');
+for(let i = 0; i < portfolioNavItem.length; i++){
+  let hash = window.location.hash;
+  if (!hash){
+    portfolioNavItem[i].classList.remove('active');
   }
 }
-
 
 // Menu Toggle
 
@@ -397,19 +385,7 @@ for(let i = 0; i < scrollElems.length; i++){
 })
 }
 
-// Add animation to Scroll arrow
-let tabLink = document.querySelectorAll('.portfolio-nav li a');
-let arrow = document.querySelector('.portfolio-top__icon')
-for(let i = 0; i < tabLink.length; i++){
-  tabLink[i].addEventListener('click',function(e) {
-    arrow.style.animation = 'none';
-    arrow.offsetHeight;
-    arrow.style.animation = null;
-  })
-}
-
 // Form Validation
-
 
 let formHandle = document.querySelector('form[name="contact-form"]');
 if (formHandle) {
