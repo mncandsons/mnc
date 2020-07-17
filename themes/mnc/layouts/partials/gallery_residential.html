@@ -1,7 +1,10 @@
 <aside id="residential-gallery" class="gallery">
   <div class="gallery__inner">
     <div class="container-fluid-max">
-      <button class="btn btn-bordered btn-back btn-sm"><i class="icon icon-arrow-left-sm mr-0 mr-8-sm"></i><span class="d-none d-block-sm">Back to Portfolio</span></button>
+      <button class="btn btn-hover-bordered btn-back btn-lg"><i class="icon icon-arrow-left-sm mr-0 mr-16-sm"></i>
+        {{ $picture :=  replaceRE "(\\s)" "_" .Site.Params.logo }}
+        <img class="d-none d-block-sm" src="{{ $picture | relURL }}" alt="{{.Site.Title}}">
+      </button>
     </div>
     <div class="slideshow">
       {{ $favorites := slice }}

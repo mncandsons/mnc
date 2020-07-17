@@ -24,12 +24,14 @@
   .btn-back {
     position: absolute;
     z-index: 2;
-    top: 20px;
-    @include respond-to(md){
-      top: 22px;
+    top: 10px;
+    img{
+      width: 150px;
+      height: 40px;
     }
     @include respond-to(sm){
       position: fixed;
+      top: 14px;
     }
   }
   .tns-inner, .tns-outer{

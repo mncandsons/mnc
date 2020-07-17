@@ -3,14 +3,14 @@
   width: 100%;
 }
 
-.gallery img {
+.slideshow img {
 	opacity: 0;
 }
-.gallery img:not(.initial) {
+.slideshow img:not(.initial) {
 	transition: opacity 1s;
 }
-.gallery img.initial,
-.gallery img.loaded,
-.gallery img.error {
+.slideshow img.initial,
+.slideshow img.loaded,
+.slideshow img.error {
 	opacity: 1;
 }

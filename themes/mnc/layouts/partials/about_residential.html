@@ -26,7 +26,7 @@
             <div class="about-top-paragraph">
               <img src="{{.Site.Data.about_residential.top.badge | relURL}}" alt="">
               <div>
-                {{ if in (string .Site.Data.about_commercial.top.paragraph) "\n\n" }}
+                {{ if in (string .Site.Data.about_residential.top.paragraph) "\n\n" }}
                   {{ .Site.Data.about_residential.top.paragraph | markdownify }}
                 {{ else }}
                   <p>{{ .Site.Data.about_residential.top.paragraph | markdownify}}</p>
@@ -44,7 +44,6 @@
               <p>{{ .Site.Data.about_residential.bottom.subheading | markdownify }}</p>
             </div>
             <div>
-              {{ .Site.Data.about_residential.bottom.text | markdownify}}
               {{ if in (string .Site.Data.about_residential.bottom.text) "\n\n" }}
                 {{ .Site.Data.about_residential.bottom.text | markdownify }}
               {{ else }}
