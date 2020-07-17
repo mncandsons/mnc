@@ -84,6 +84,9 @@
     @include respond-to(md){
       @include fsz(14px);
     }
+    @include respond-to(sm){
+      border: 1px solid $color-primary-500;
+    }
     &:hover{
       border-color: $color-primary-500;
     }

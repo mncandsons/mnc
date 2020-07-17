@@ -31,7 +31,8 @@
     }
     @include respond-to(sm){
       position: fixed;
-      top: 14px;
+      height: 32px;
+      top: 22px;
     }
   }
   .tns-inner, .tns-outer{
