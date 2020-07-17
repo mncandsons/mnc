@@ -41,23 +41,44 @@ h3{
   font-weight: $weight-black;
 }
 
+h4{
+  @include fsz(40px);
+  font-weight: $weight-black;
+  position: relative;
+  @include respond-to(sm){
+    @include fsz(24px);
+  }
+  &:before{
+    content: "+";
+    color: $color-primary-500;
+    font-weight: $weight-regular;
+  }
+  &.left-aligned{
+    padding-left: 26px;
+    &:before{
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
 .subheading{
-  @include fsz(14px);
-  letter-spacing: 6.37px;
-  color: $color-neutral-500;
-  margin-bottom: 32px;
+  @include fsz(22px);
+  letter-spacing: 12px;
+  color: $color-neutral-300;
+  margin-bottom: 24px;
   text-align: center;
   @include respond-to(sm){
-    @include fsz(10px);
-    letter-spacing: 4.55;
+    @include fsz(16px);
+    letter-spacing: 4px;
     margin-bottom: 8px;
   }
 }
 
 .heading-text{
   p{
-    @include fsz(32px);
-    line-height: 1.44;
+    @include fsz(30px);
+    line-height: 1.36;
     letter-spacing: -0.59px;
     color: $color-black;
     font-weight: $weight-medium;
@@ -75,16 +96,11 @@ h3{
 }
 
 p{
-  @include fsz(15px);
-  line-height: 2;
-  letter-spacing: -0.32px;
-  margin-bottom: 32px;
-  @include respond-to(md){
-    margin-bottom: 24px;
-  }
+  @include fsz(18px);
+  line-height: 1.36;
+  margin-bottom: 12px;
   @include respond-to(sm){
     @include fsz(16px);
-    line-height: 1.8;
   }
   &:last-child{
     margin-bottom: 0;

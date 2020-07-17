@@ -3,46 +3,49 @@ top:
   about_pic: /assets/images/public/Cohen_1087.jpg
   heading: For over a decade, we at MNC+Sons have been helping extraordinary
     people create **extraordinary homes.**
-  paragraph_1: Satisfied clients attest to our unshakeable commitment to
+  paragraph: >-
+    Satisfied clients attest to our unshakeable commitment to
     efficiency, reliability, interpersonal relationships and attention to
     detail.
-  paragraph_2: Whether we’re preparing foundations, sanding floors, or working on
+
+
+    Whether we’re preparing foundations, sanding floors, or working on
     those finishing touches, our family will work tirelessly to turn inspiration
     into beautiful reality.
-  year: 2004-02-04T17:00:00.000Z
+  badge: /assets/images/experience-badge.svg
 bottom:
-  family_pic: ""
-  left_column:
-    - heading: You’re in good hands
-      text: >-
-        Overseeing each crucial stage of construction can be an exhausting
-        process, but a MNC liaison will ensure that you can be fully involved
-        without putting your lives on hold.
+  heading: Family matters
+  matters_pic: /assets/images/public/matters-pic.jpg
+  subheading: >-
+    Owned and operated by Moshe Nachum and his four sons, **MNC & Sons is proud to be a family business.**
 
 
-        From framing to architectural millwork, our dedicated team will ensure that someone will always be on-hand to help you make any decision. We work closely with architects, interior designers, and landscape architects about the particulars of construction, freeing up your attention for the things that matter most to you.
-    - heading: Giving back
-      text: A portion of the proceeds of all sales are contributed to charitable
-        501(c)(3) organizations
-  right_column:
-    block:
-      - heading: |-
-          Excellence,
-          from the Ground Up
-        text: We believe that our relationship with architects and interior designers
-          are as vital to our success as our relationship with clients. No
-          detail in your plans will be overlooked as our family strives to meet
-          your every expectation. We are privileged to have access to a diverse
-          network of highly qualified subcontractors and suppliers in the NY
-          Metropolitan area, making us uniquely capable of accomplishing
-          remarkable and ambitious projects with maximum efficiency.
-    heading: Family matters
-    subheading: >-
-      Owned and operated by Moshe Nachum and his four sons, **MNC & Sons is
-      proud to be a family business.**
-
-
-      We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect living space.
-    text: We have turned our passion into a profession, with our commitment to
+    We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect living space.
+  text: >-
+    We have turned our passion into a profession, with our commitment to
       excellence earning us our deserved reputation as the leading custom home
       contractors in the NY Metropolitan area.
+
+
+    Overseeing each crucial stage of construction can be an exhausting
+    process, but a MNC liaison will ensure that you can be fully involved
+    without putting your lives on hold.
+
+
+    From framing to architectural millwork, our dedicated team will ensure that someone will always be on-hand to help you make any decision. We work closely with architects, interior designers, and landscape architects about the particulars of construction, freeing up your attention for the things that matter most to you.
+
+
+    We believe that our relationship with architects and interior designers
+      are as vital to our success as our relationship with clients. No
+      detail in your plans will be overlooked as our family strives to meet
+      your every expectation. We are privileged to have access to a diverse
+      network of highly qualified subcontractors and suppliers in the NY
+      Metropolitan area, making us uniquely capable of accomplishing
+      remarkable and ambitious projects with maximum efficiency.
+
+  giving_back:
+    heading: Giving back
+    text: A portion of the proceeds of all sales are  \
+
+          contributed to charitable
+          501(c)(3) organizations

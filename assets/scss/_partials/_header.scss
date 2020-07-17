@@ -12,7 +12,6 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: $color-neutral-100;
   }
   @include respond-to(sm){
     padding: 16px 0;
@@ -88,7 +87,7 @@
     left: 0;
     z-index: -1;
     display: flex;
-    transform: translateY(-100%);
+    transform: translateY(-110%);
     transition: 300ms;
     background: $color-white;
     border-bottom: 2px solid $color-neutral-100;
@@ -115,10 +114,13 @@
 	}
 
 	&__link {
-    font-weight: $weight-medium;
     color: $color-black;
-    @include fsz(14px);
+    @include fsz(16px);
     &:hover{
+      color: $color-primary-500;
+    }
+    &:before{
+      content: '+';
       color: $color-primary-500;
     }
 	}

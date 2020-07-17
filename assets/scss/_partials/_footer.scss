@@ -33,10 +33,10 @@
       color: $color-primary-500;
       @include fsz(32px);
       left: 0;
-      top: -6px;
+      top: -8px;
       @include respond-to(sm){
-        @include fsz(20px);
-        top: -4px;
+        @include fsz(22px);
+        top: -6px;
       }
     }
 	}

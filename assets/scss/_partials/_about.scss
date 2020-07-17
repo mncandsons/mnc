@@ -1,7 +1,8 @@
 .about {
-  padding: 120px 0 176px;
+  padding: 64px 0 0;
+  background: $color-neutral-100;
   @include respond-to(sm){
-    padding: 72px 0;
+    padding: 72px 0 0;
   }
 }
 
@@ -10,45 +11,18 @@
   justify-content: flex-end;
   margin-top: 16px;
   position: relative;
-  &:before{
-    content: '';
-    width: calc(100% + 60px);
-    height: 0;
-    padding-bottom: 80%;
-    background: $color-neutral-100;
-    position: absolute;
-    right: -60px;
-    bottom: -86px;
-    @include respond-to(xl){
-      right: -48px;
-    }
-    @include respond-to(sm){
-      width: calc(100% + 96px);
-    }
-  }
   &__image{
-    max-width: 394px;
+    margin-left: -140px;
     flex: 1 1 auto;
     position: relative;
-    &:before{
-      content: '';
-      width: 192px;
-      height: 4px;
-      position: absolute;
-      background: $color-neutral-300;
-      right: -112px;
-      top: 88px;
-      z-index: 2;
-      @include respond-to(xl){
-        width: 104px;
-        right: -24px;
-      }
+    @include respond-to(md){
+      margin-left: 0;
     }
   }
   &__image-inner{
     height: 0;
     position: relative;
-    padding-bottom: 149%;
+    padding-bottom: 60%;
     img{
       position: absolute;
       width: 100%;
@@ -60,40 +34,31 @@
   }
 }
 
-
-.about-badge {
-  @include fsz(16px);
-  color: $color-white;
-  line-height: 1.33;
-  width: 154px;
-  height: 196px;
-  font-weight: $weight-medium;
-  background: $color-primary-500;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 28px;
-  position: absolute;
-  transform: translateY(-50%);
-  left: 64px;
-  @include respond-to(sm){
-    transform: scale(0.8) translateY(-80%);
+.about-top-paragraph{
+  padding: 20px;
+  background: $color-neutral-100;
+  margin-left: -180px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 56px;
+  @include respond-to(md){
+    margin-left: 0;
+    padding: 0;
   }
-  span{
-    display: block;
-    @include fsz(76px);
-    letter-spacing: 0.7px;
-    font-weight: $weight-black;
-    line-height: 0.9;
-  }
-  &:after{
-    content: '';
-    width: 24px;
-    height: 4px;
-    background: inherit;
-    position: absolute;
-    bottom: -4px;
+  img{
+    float: right;
+    shape-outside: circle();
+    width: 132px;
+    height: 132px;
+    margin-top: -80px;
+    transform: translateX(40px);
+    @include respond-to(sm){
+      transform: none;
+      width: 100px;
+      height: 100px;
+      margin-top: -20px;
+      padding-left: 16px;
+    }
   }
 }
 
@@ -105,6 +70,37 @@
     }
     @include respond-to(sm){
       margin-bottom: 56px;
+    }
+  }
+}
+
+.matters-photo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  position: relative;
+  height: 100%;
+  &--sm{
+    .matters-photo__image-inner{
+      padding-bottom: 102%;
+    }
+  }
+  &__image{
+    flex: 1 1 auto;
+    position: relative;
+  }
+  &__image-inner{
+    height: 0;
+    position: relative;
+    padding-bottom: 120%;
+    min-height: 100%;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      font-family: 'object-fit: cover; object-position: center;';
     }
   }
 }

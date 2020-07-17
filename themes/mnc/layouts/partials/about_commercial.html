@@ -1,10 +1,10 @@
 <div class="about" id="about-comm">
-  <div class="container pb-56 pb-120-sm pl-0 pr-0">
+  <div class="container container--sm pb-56 pl-0 pr-0">
     <div class="pl-0 pr-0 pl-24-lg pr-24-lg">
       <div class="subheading">About us</div>
       <h1>{{ .Site.Data.about_commercial.about_heading }}</h1>
-      <div class="row">
-        <div class="col-12 col-sm-6">
+      <div class="row gutter-16">
+        <div class="col-12 col-md-6">
           <div class="about-photo">
             <div class="about-photo__image">
               <div class="about-photo__image-inner">
@@ -15,93 +15,104 @@
                   <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
                 </picture>
               </div>
-              <div class="about-badge"><span data-time="{{.Site.Data.about_commercial.top.year}}">14</span>years of<br> experience</div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-6 mt-128 mt-0-sm">
-          <div class="heading-text mb-24 mb-64-md pl-112-xl pr-24-xl">
-            {{ .Site.Data.about_commercial.top.heading | markdownify}}
-          </div>
-          <div class="pl-112-xl">
-            <div class="row">
-              <div class="col-12 col-xl-5 mb-24 mb-32-md mb-0-xl">
-                <p>{{ .Site.Data.about_commercial.top.paragraph_1}}</p>
-              </div>
-              <div class="col-12 col-xl-7">
-                <p>{{ .Site.Data.about_commercial.top.paragraph_2}}</p>
+        <div class="col-12 col-md-6 mt-0-sm">
+          <div class="pl-16 pr-16 pl-0-sm pr-24-sm pt-24 pt-8-md">
+            <div class="heading-text mb-48 mb-32-md">
+              <p>{{ .Site.Data.about_commercial.top.heading | markdownify}}</p>
+            </div>
+            <div class="about-top-paragraph">
+              <img src="{{.Site.Data.about_commercial.top.badge | relURL}}" alt="">
+              <div>
+                {{ if in (string .Site.Data.about_commercial.top.paragraph) "\n\n" }}
+                  {{ .Site.Data.about_commercial.top.paragraph | markdownify }}
+                {{ else }}
+                  <p>{{ .Site.Data.about_commercial.top.paragraph | markdownify}}</p>
+                {{ end }}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container container--sm pt-48-sm pt-160-md pl-0 pr-0">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        {{ range .Site.Data.about_commercial.bottom.left_column }}
-        <div class="about-info-block pr-0 pr-64-lg">
-          <h3 class="mb-24 mb-40-md">{{ .heading | markdownify}}</h3>
-          <div>
-            {{ if in (string .text) "\n\n" }}
-              {{ .text | markdownify }}
-            {{ else }}
-              <p>{{ .text | markdownify}}</p>
-            {{ end }}
-          </div>
-        </div>
-        {{ end }}
-      </div>
 
-      <div class="col-12 col-md-8 mt-56 mt-0-md">
-        <h2>{{ .Site.Data.about_commercial.bottom.right_column.heading }}</h2>
-        <div class="heading-text mb-32 mb-64-md pr-40">
-          {{ .Site.Data.about_commercial.bottom.right_column.subheading | markdownify }}
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-10">
-            {{ with .Site.Data.about_commercial.bottom.family_pic }}
-            <picture>
-              {{ $picture :=  replaceRE "(\\s)" "_" . }}
-              {{ $image_ext_res := path.Ext . }}
-              <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
-              <img class="img-responsive mb-32 mb-48-sm" srcset="{{ $picture | relURL }}" alt="…">
-            </picture>
-            {{ end }}
-            {{ if in (string .Site.Data.about_commercial.bottom.right_column.text) "\n\n" }}
-              {{ .Site.Data.about_commercial.bottom.right_column.text | markdownify }}
-            {{ else }}
-              <p>{{.Site.Data.about_commercial.bottom.right_column.text | markdownify}}</p>
-            {{ end }}
+      <div class="row gutter-16 pt-48">
+        <div class="col-12 col-md-6 text-right">
+          <div class="pl-16 pr-16 pl-0-sm pr-0-sm">
+            <h4 class="mb-24 pt-8">{{ .Site.Data.about_commercial.bottom.heading | markdownify}}</h4>
+            <div class="heading-text mb-24">
+              <p>{{ .Site.Data.about_commercial.bottom.subheading | markdownify }}</p>
+            </div>
+            <div>{{ .Site.Data.about_commercial.bottom.text | markdownify}}</div>
+
+            <h4 class="mb-24 pt-8">{{ .Site.Data.about_commercial.bottom.heading_bottom | markdownify}}</h4>
+            <div class="heading-text mb-24">
+              <p>{{ .Site.Data.about_commercial.bottom.subheading_bottom | markdownify }}</p>
+            </div>
+            <div>{{ .Site.Data.about_commercial.bottom.text_bottom | markdownify}}</div>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          {{ range .Site.Data.about_commercial.bottom.right_column.two_column_block }}
-          <div class="col-12 col-sm-6 mb-56 mb-64-sm">
-            <div class="about-info-block pr-40-xl">
-              <h3 class="mb-24 mb-40-md">{{ .heading | markdownify }}</h3>
-              {{ if in (string .text) "\n\n" }}
-                {{ .text | markdownify }}
-              {{ else }}
-                <p>{{ .text | markdownify}}</p>
-              {{ end }}
+        <div class="col-12 col-md-6">
+          <div class="matters-photo">
+            <div class="matters-photo__image">
+              <div class="matters-photo__image-inner">
+                <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .Site.Data.about_commercial.bottom.matters_pic }}
+                  {{ $image_ext_res := path.Ext .Site.Data.about_commercial.bottom.matters_pic }}
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                </picture>
+              </div>
             </div>
           </div>
-          {{ end }}
         </div>
+      </div>
 
-        {{ range .Site.Data.about_commercial.bottom.right_column.block }}
-        <div class="about-info-block">
-          <h3 class="mb-24">{{ .heading }}</h3>
-          {{ if in (string .text) "\n\n" }}
-            {{ .text | markdownify }}
-          {{ else }}
-            <p>{{ .text | markdownify}}</p>
-          {{ end }}
+      {{ range $i,$p := .Site.Data.about_commercial.bottom.block }}
+      <div class="row gutter-16 pt-48 {{if (modBool $i 2)}} flex-row-reverse-md{{end}}">
+        <div class="col-12 col-md-6 {{if (modBool $i 2)}} text-left{{else}}text-right{{end}}">
+          <div class="pl-16 pr-16 pl-0-sm pr-0-sm">
+            {{ range .textblock}}
+              <h4 class="mb-24 pt-8 {{if (modBool $i 2)}} left-aligned{{end}}">{{ .heading | markdownify}}</h4>
+              <div class="mb-40">
+                {{ if in (string .text) "\n\n" }}
+                  {{ .text | markdownify }}
+                {{ else }}
+                  <p>{{ .text | markdownify}}</p>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
         </div>
-        {{ end }}
+        <div class="col-12 col-md-6">
+          <div class="matters-photo matters-photo--sm">
+            <div class="matters-photo__image">
+              <div class="matters-photo__image-inner">
+                <picture>
+                  {{ $picture :=  replaceRE "(\\s)" "_" .image }}
+                  {{ $image_ext_res := path.Ext .image }}
+                  <source type="image/webp" srcset="{{ replace $picture $image_ext_res ".webp" | relURL }}">
+                  <img class="img-responsive" srcset="{{ $picture | relURL }}" alt="…">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="row gutter-16">
+        <div class="col-12 col-md-5 text-right ml-auto mt-48">
+          <div class="about-info-block pl-16 pr-16 pl-0-sm pr-0-sm">
+            <h4>{{ .Site.Data.about_commercial.bottom.giving_back.heading }}</h4>
+            {{ if in (string .Site.Data.about_commercial.bottom.giving_back.text) "\n\n" }}
+              {{ .Site.Data.about_commercial.bottom.giving_back.text | markdownify }}
+            {{ else }}
+              <p>{{ .Site.Data.about_commercial.bottom.giving_back.text | markdownify}}</p>
+            {{ end }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

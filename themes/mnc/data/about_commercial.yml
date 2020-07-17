@@ -1,55 +1,65 @@
 about_heading: Company
 top:
-  about_pic: /assets/images/public/ICJT_15.jpg
+  about_pic: /assets/images/public/ICJT_24.jpg
   heading: For over a decade, we at MNC+Sons have been helping extraordinary
     people create **extraordinary spaces.** MNC+Sons has applied its unwavering
     commitment to excellence while building some of the finest commercial
     properties in the NYC area
-  paragraph_1: Our specialized team actively engages clients to schedule, operate,
+  paragraph: Our specialized team actively engages clients to schedule, operate,
     and assemble all phases of the intricate construction process.
-  paragraph_2: Blank
-  year: 2004-02-04T17:00:00.000Z
+  badge: /assets/images/experience-badge.svg
 bottom:
-  family_pic: ""
-  left_column:
-    - heading: General Contracting & Construction Management
-      text: When it comes to executing a large-scale construction project, you need a
-        contractor you can trust. We offer a range of services to help ensure
-        that your construction project runs smoothly, safely, and according to
-        your budget and schedule
-    - heading: Knowledgeable, Reliable Contractors
-      text: If you're considering major construction for your business or commercial
-        space, MNC & Sons General Contractors, has the tools, knowledge, and
-        experience to design and create the space you're looking for. All
-        project teams include a principal, project manager, field supervisor,
-        estimator, and administrative staff organized to provide each job with
-        personalized service and remarkable results.
-  right_column:
-    block:
-      - heading: Giving back
-        text: A portion of the proceeds of all sales are contributed to charitable
+  matters_pic: /assets/images/public/DeKalb.jpeg
+  heading: Family matters
+  subheading: >-
+    Owned and operated by Moshe Nachum and his four sons, **MNC & Sons is
+    proud to be a family business.**
+
+
+    We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect space.
+  heading_bottom: General Contracting & Construction Management
+  subheading_bottom: When it comes to executing a large-scale construction project, you need a
+    contractor you can trust. We offer a range of services to help ensure
+    that your construction project runs smoothly, safely, and according to
+    your budget and schedule
+  block:
+    - image: /assets/images/public/ICJT_06.jpg
+      textblock:
+        - heading:
+            Knowledgeable,  \
+
+            Reliable Contractors
+          text: If you're considering major construction for your business or commercial
+            space, MNC & Sons General Contractors, has the tools, knowledge, and
+            experience to design and create the space you're looking for. All
+            project teams include a principal, project manager, field supervisor,
+            estimator, and administrative staff organized to provide each job with
+            personalized service and remarkable results.
+        - heading:
+            Fulfilling Your  \
+
+            Contracting Needs
+          text: MNC & Sons General Contractors, broad range of services encompasses all types of commercial contracting and renovation. Whether you need commercial contracting for an existing structure or want to build a new, MNC & Sons General Contractors, is eager to help you create a lasting space that perfectly suits your unique construction needs.
+    - image: /assets/images/public/ICJT_05.jpg
+      textblock:
+        - heading: Pre Construction
+          text: Vital to a successful project are informed decisions made early during the
+            planning stages regarding schedule, budget and scope of work. Our
+            experienced team develops strategic cost analysis to establish a
+            balance between budget and scope of work. Our project managers match
+            and identify the best subcontractors for the job and research and
+            procure long-lead equipment and materials. This coordination and
+            organization effort guarantees an efficient start to a project.
+        - heading: Under Construction
+          text: We believe that our relationship with architects and interior designers
+            are as vital to our success as our relationship with clients. Each
+            project regardless of size is assigned a dedicated team to schedule,
+            coordinate and assemble all aspects of the complex building process.
+            Our clients can rely on a seasoned group of specialists committed to
+            the highest standards in workmanship and client satisfaction.
+  giving_back:
+    heading: Giving back
+    text: A portion of the proceeds of all sales are  \
+
+          contributed to charitable
           501(c)(3) organizations
-    heading: Family matters
-    subheading: >-
-      Owned and operated by Moshe Nachum and his four sons, **MNC & Sons is
-      proud to be a family business.**
-
-
-      We take an active interest in getting to know our clients, their tastes, and their vision, in order to create a perfect space.
-    text: Blank
-    two_column_block:
-      - heading: Pre Construction
-        text: Vital to a successful project are informed decisions made early during the
-          planning stages regarding schedule, budget and scope of work. Our
-          experienced team develops strategic cost analysis to establish a
-          balance between budget and scope of work. Our project managers match
-          and identify the best subcontractors for the job and research and
-          procure long-lead equipment and materials. This coordination and
-          organization effort guarantees an efficient start to a project.
-      - heading: Under Construction
-        text: We believe that our relationship with architects and interior designers
-          are as vital to our success as our relationship with clients. Each
-          project regardless of size is assigned a dedicated team to schedule,
-          coordinate and assemble all aspects of the complex building process.
-          Our clients can rely on a seasoned group of specialists committed to
-          the highest standards in workmanship and client satisfaction.

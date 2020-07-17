@@ -22,12 +22,13 @@
   }
   &.btn-default{
     @include fsz(20px);
-    font-weight: $weight-black;
+    letter-spacing: 6px;
     color: $color-white;
     background: $color-primary-500;
     padding: 0 24px;
     min-width: 232px;
     border: 2px solid transparent;
+    text-transform: uppercase;
     &:hover{
       border-color: $color-primary-500;
       background: none;
