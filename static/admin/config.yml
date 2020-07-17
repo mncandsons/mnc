@@ -318,7 +318,7 @@ collections:
                     widget: "image"
                   - label: "Text Block"
                     name: "textblock"
-                    widget: "object"
+                    widget: "list"
                     fields:
                       - label: "Heading"
                         name: "heading"
