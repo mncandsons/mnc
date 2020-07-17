@@ -319,7 +319,6 @@ collections:
                   - label: "Text Blocks"
                     name: "textblock"
                     label_singular: "Text Block"
-                    summary: '{{fields.heading}}'
                     widget: "list"
                     fields:
                       - label: "Heading"
