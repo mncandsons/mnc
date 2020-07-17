@@ -281,7 +281,7 @@ collections:
             widget: "object"
             fields:
               - label: "Photo"
-                name: about_pic
+                name: "about_pic"
                 widget: "image"
               - label: "Heading"
                 name: "heading"
@@ -309,7 +309,7 @@ collections:
                 name: "subheading_bottom"
                 widget: "markdown"
               - label: "Info Block"
-                name: block
+                name: "block"
                 widget: "object"
                 fields:
                   - label: "Image"
@@ -325,16 +325,16 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
-          - label: "Additional Info"
-            name: giving_back
-            widget: "object"
-            fields:
-              - label: "Heading"
-                widget: "string"
-                name: "heading"
-              - label: "Text"
-                widget: "markdown"
-                name: "text"
+              - label: "Additional Info"
+                name: "giving_back"
+                widget: "object"
+                fields:
+                  - label: "Heading"
+                    widget: "string"
+                    name: "heading"
+                  - label: "Text"
+                    widget: "markdown"
+                    name: "text"
   - label: "Commercial Portfolio"
     name: "portfolio-commercial"
     folder: "themes/mnc/data/portfolio_commercial"
