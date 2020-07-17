@@ -316,8 +316,10 @@ collections:
                   - label: "Image"
                     name: "image"
                     widget: "image"
-                  - label: "Text Block"
+                  - label: "Text Blocks"
                     name: "textblock"
+                    label_singular: "Text Block"
+                    summary: '{{fields.heading}}'
                     widget: "list"
                     fields:
                       - label: "Heading"
