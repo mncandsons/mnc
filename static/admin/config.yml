@@ -325,7 +325,6 @@ collections:
                       - label: "Text"
                         name: "text"
                         widget: "markdown"
-
           - label: "Additional Info"
             name: giving_back
             widget: "object"
@@ -336,7 +335,6 @@ collections:
               - label: "Text"
                 widget: "markdown"
                 name: "text"
-
   - label: "Commercial Portfolio"
     name: "portfolio-commercial"
     folder: "themes/mnc/data/portfolio_commercial"
