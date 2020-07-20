@@ -357,13 +357,13 @@ const scrollElems = document.querySelectorAll('.rel-link');
 for(let i = 0; i < scrollElems.length; i++){
   const elem = scrollElems[i];
   elem.addEventListener('click',function(e) {
-   e.preventDefault();
-
+    if (elem.classList.contains('site-nav__link')){
+      e.preventDefault();
+    }
    menu.classList.remove('active');
    toggleButton.classList.remove('is-pushed');
 
-
-   let scrollElemId = e.target.href.split('#')[1];
+   let scrollElemId = this.getAttribute('data-href').split('#')[1];
    let hash = window.location.hash;
 
    if (hash === '#portfolio=commercial' && scrollElemId === 'about-res'){

@@ -1,5 +1,5 @@
 <header class="site-header">
-  <div class="container-fluid-max d-flex justify-content-between align-items-center pl-24 pr-24 pl-80-sm pr-80-sm">
+  <div class="w-100 d-flex justify-content-between align-items-center pl-24 pr-24 pl-80-sm pr-80-sm">
   {{ $slug := (.RelPermalink) }}
   {{ $picture :=  replaceRE "(\\s)" "_" .Site.Params.logo }}
   {{ if eq $slug "/portfolio-commercial/"}}
@@ -17,11 +17,11 @@
       {{ range $index, $element := .Site.Menus.main }}
         {{ if eq $.Kind "home" }}
           <li class="site-nav__item">
-            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}" data-href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ else }}
           <li class="site-nav__item {{ if (eq $index 1) }}d-none{{ end }}">
-            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            <a class="site-nav__link rel-link" href="{{ .URL | relURL }}" data-href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}

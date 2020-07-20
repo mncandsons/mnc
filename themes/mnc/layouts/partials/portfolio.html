@@ -3,7 +3,7 @@
       <div class="portfolio-top">
         <ol class="hashTabber-nav portfolio-nav" data-hashtabber-id="portfolio" data-hashtabber-default="residential">
           <li data-hashtabber-pair="residential">
-            <a href="#" class="portfolio-top__item">
+            <a href="#" class="portfolio-top__item rel-link" data-href="#portfolio">
               <picture>
                 {{with .GetPage "/portfolio-residential"}}
                   {{ $picture :=  replaceRE "(\\s)" "_" .Params.main_img }}
@@ -21,7 +21,7 @@
 
           </li>
           <li data-hashtabber-pair="commercial">
-            <a href="#" class="portfolio-top__item">
+            <a href="#" class="portfolio-top__item rel-link" data-href="#portfolio">
               <picture>
                 {{with .GetPage "/portfolio-commercial"}}
                   {{ $picture :=  replaceRE "(\\s)" "_" .Params.main_img }}
