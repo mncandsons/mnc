@@ -7,9 +7,10 @@ area: ""
 architect: ""
 design: Victoria Mendal Design
 exterior_pictures:
+  - gallery_img: /assets/images/public/Bildirici_Shoot_0344.jpg
+  - gallery_img: /assets/images/public/Bildirici_Shoot_0361.jpg
 interior_pictures:
   - gallery_img: /assets/images/public/Bildirici_Shoot_0272.jpg
-  - gallery_img: /assets/images/public/Bildirici_Shoot_0326.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0260.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0216.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0282.jpg
@@ -17,8 +18,6 @@ interior_pictures:
   - gallery_img: /assets/images/public/Bildirici_Shoot_0300.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0226.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0251.jpg
-  - gallery_img: /assets/images/public/Bildirici_Shoot_0344.jpg
-  - gallery_img: /assets/images/public/Bildirici_Shoot_0361.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0372.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0389-2.jpg
   - gallery_img: /assets/images/public/Bildirici_Shoot_0161.jpg
