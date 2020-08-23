@@ -9,6 +9,7 @@ exterior_pictures:
   - gallery_img: /assets/images/public/CHE_200220_03.jpg
   - gallery_img: /assets/images/public/CHE_200220_08.jpg
   - gallery_img: /assets/images/public/CHE_200220_01.jpg
+  - gallery_img: /assets/images/public/CHE_200220_09.jpg
 interior_pictures:
   - gallery_img: /assets/images/public/CHE_200220_05.jpg
   - gallery_img: /assets/images/public/CHE_200220_04.jpg
@@ -16,4 +17,3 @@ interior_pictures:
   - gallery_img: /assets/images/public/CHE_200220_02.jpg
   - gallery_img: /assets/images/public/CHE_200220_06.jpg
   - gallery_img: /assets/images/public/CHE_200220_10.jpg
-  - gallery_img: /assets/images/public/CHE_200220_09.jpg
