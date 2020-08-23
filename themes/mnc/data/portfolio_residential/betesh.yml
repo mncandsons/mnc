@@ -5,17 +5,14 @@ address: Brooklyn, NY
 type: Brooklyn Residence 2
 architect: Warren Meister Architects
 design: Calder Interiors
-exterior_pictures:
+exterior_pictures: null
 interior_pictures:
   - gallery_img: /assets/images/public/BET_200220_02.jpg
-  - gallery_img: /assets/images/public/BET_200220_03.jpg
-  - gallery_img: /assets/images/public/BET_200220_09.jpg
   - gallery_img: /assets/images/public/BET_200220_04.jpg
+  - gallery_img: /assets/images/public/BET_200220_09.jpg
   - gallery_img: /assets/images/public/BET_200220_14.jpg
   - gallery_img: /assets/images/public/BET_200220_15.jpg
-  - gallery_img: /assets/images/public/BET_200220_01.jpg
   - gallery_img: /assets/images/public/BET_200220_12.jpg
-  - gallery_img: /assets/images/public/BET_200220_11.jpg
   - gallery_img: /assets/images/public/BET_200220_13.jpg
   - gallery_img: /assets/images/public/BET_200220_06.jpg
   - gallery_img: /assets/images/public/BET_200220_08.jpg
