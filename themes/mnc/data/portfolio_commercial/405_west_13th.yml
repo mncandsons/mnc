@@ -1,6 +1,9 @@
 favorite: "5"
 name: 405 West 13th
 picture: /assets/images/public/West-13th.jpeg
+address: In progress
+type: Gut demo of 3 floors with 3 floor addition
+area: 60,000 square feet
 exterior_pictures:
   - gallery_img: /assets/images/public/West-13th.jpeg
 interior_pictures: []
