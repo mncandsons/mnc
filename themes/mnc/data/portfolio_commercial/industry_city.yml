@@ -67,10 +67,8 @@ sub_item:
   - name: Common Spaces
     picture: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am-2-.jpeg
     interior_pictures:
-      - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.01.58-am.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am-2-.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am-4-.jpeg
-      - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am-1-.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am-5-.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-10.08.36-am-4-.jpeg
@@ -79,4 +77,3 @@ sub_item:
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am-3-.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am-2-.jpeg
-  - {}
