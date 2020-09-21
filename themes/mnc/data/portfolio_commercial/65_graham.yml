@@ -1,6 +1,7 @@
 favorite: "2"
 name: 65 Graham
 picture: /assets/images/public/Graham-02.jpeg
+type: Mixed use 7 story building
 exterior_pictures:
   - gallery_img: /assets/images/public/Graham-02.jpeg
   - gallery_img: /assets/images/public/graham.jpeg
