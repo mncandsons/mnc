@@ -1,6 +1,7 @@
 favorite: "4"
 name: 647 DeKalb
 picture: /assets/images/public/DeKalb.jpeg
+address: In progress
 exterior_pictures:
   - gallery_img: /assets/images/public/DeKalb.jpeg
 interior_pictures: []
