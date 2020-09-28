@@ -200,6 +200,39 @@ const scrollToElem = (startTime, currentTime, duration, scrollEndElemTop, startS
 // Portfolio blocks
 
 let pbElem = document.querySelectorAll('.p-block');
+let slideshowSortButtons = document.querySelectorAll('.slideshow-inside__sort');
+let slideshowControls = document.querySelectorAll('.slideshow-inside__controls');
+let slideshowCount = document.querySelectorAll('.tns-liveregion');
+let galleryImg = document.querySelectorAll('.slideshow-inside__item img');
+
+function galleryImgOver() {
+  for(let i = 0; i < slideshowSortButtons.length; i++){
+    slideshowSortButtons[i].classList.remove('invisible');
+  }
+
+  for(let i = 0; i < slideshowControls.length; i++){
+    slideshowControls[i].classList.remove('invisible');
+  }
+
+  for(let i = 0; i < slideshowCount.length; i++){
+    slideshowCount[i].classList.remove('invisible');
+  }
+}
+
+function galleryImgLeave() {
+  for(let i = 0; i < slideshowSortButtons.length; i++){
+    slideshowSortButtons[i].classList.add('invisible');
+  }
+
+  for(let i = 0; i < slideshowControls.length; i++){
+    slideshowControls[i].classList.add('invisible');
+  }
+
+  for(let i = 0; i < slideshowCount.length; i++){
+    slideshowCount[i].classList.add('invisible');
+  }
+}
+
 for(let i = 0; i < pbElem.length; i++){
   const elem = pbElem[i];
   let elemParent = elem.parentNode;
@@ -265,6 +298,10 @@ for(let i = 0; i < pbElem.length; i++){
       }
     }
 
+    setTimeout(function () {
+      galleryImgLeave();
+    }, 3000);
+
     if (! elemSubBlocks && elem.classList.contains('commercial')){
       let elemIndex = elem.getAttribute('data-index');
       commSlider.goTo(elemIndex);
@@ -283,11 +320,57 @@ for(let i = 0; i < pbElem.length; i++){
   })
 }
 
+
+// for(let i = 0; i < galleryImg.length; i++){
+//   if (galleryImg[i].matches(':hover')){
+//     galleryImgOver();
+//     console.log(1);
+//   }
+//   else{
+//     galleryImgLeave();
+//     console.log(2);
+//   }
+// }
+
+window.onmousemove = function(e){
+  for(let i = 0; i < galleryImg.length; i++){
+    if (galleryImg[i].matches(":hover")){
+      galleryImgOver();
+      console.log(2);
+    }
+  }
+}
+
+for(let i = 0; i < galleryImg.length; i++){
+  galleryImg[i].addEventListener("mouseleave", function(event){
+    galleryImgLeave()
+  }, false);
+}
+
+for(let i = 0; i < slideshowSortButtons.length; i++){
+  slideshowSortButtons[i].addEventListener("mouseover", function(event){
+    galleryImgOver()
+  }, false);
+}
+
+for(let i = 0; i < slideshowControls.length; i++){
+  slideshowControls[i].addEventListener("mouseover", function(event){
+    galleryImgOver()
+  }, false);
+}
+
+for(let i = 0; i < slideshowCount.length; i++){
+  slideshowCount[i].addEventListener("mouseover", function(event){
+    galleryImgOver()
+  }, false);
+}
+
 let galleryBackBtn = document.querySelectorAll('.gallery .btn-back');
 let galleryAll = document.querySelectorAll('.gallery');
 for(let i = 0; i < galleryBackBtn.length; i++){
   galleryBackBtn[i].addEventListener('click',function(e) {
     for(let i = 0; i < galleryAll.length; i++){
+      galleryImgOver();
       galleryAll[i].scrollTop = 0;
       galleryAll[i].classList.remove('active');
       document.querySelector('.wrapper').classList.remove('active');

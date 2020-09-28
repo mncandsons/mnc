@@ -157,6 +157,12 @@
       @include fsz(14px);
       white-space: nowrap;
       text-align: center;
+      opacity: 1;
+      pointer-events: none;
+      transition: 500ms;
+      &.invisible{
+        opacity: 0;
+      }
       @include respond-to(sm){
         display: none;
       }
@@ -293,6 +299,15 @@
     align-items: center;
     justify-content: center;
     padding: 4px;
+    transition: 500ms;
+    &.invisible{
+      opacity: 0;
+      pointer-events: none;
+      @include respond-to(sm){
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
     @include respond-to(sm){
       position: fixed;
       bottom: 0;
@@ -323,6 +338,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 500ms;
+    &.invisible{
+      opacity: 0;
+      pointer-events: none;
+    }
     @include respond-to(sm){
       display: none;
     }
