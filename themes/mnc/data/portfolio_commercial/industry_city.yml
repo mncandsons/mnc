@@ -81,15 +81,16 @@ sub_item:
     picture: /assets/images/public/sahadis-3.jpg
     interior_pictures:
       - gallery_img: /assets/images/public/sahadis-31.jpg
+      - gallery_img: /assets/images/public/sahadis-6.jpg
+      - gallery_img: /assets/images/public/mezze-service-w-crowd_courtesy-of-sahadis.jpg
+      - gallery_img: /assets/images/public/sahadis-1.jpg
+      - gallery_img: /assets/images/public/dsc_6271.jpg
+      - gallery_img: /assets/images/public/sahadis-2.jpg
+      - gallery_img: /assets/images/public/dsc_6278.jpg
+      - gallery_img: /assets/images/public/dsc_6269.jpg
+      - gallery_img: /assets/images/public/dsc_6282.jpg
+      - gallery_img: /assets/images/public/dsc_6252.jpg
+      - gallery_img: /assets/images/public/dsc_6253.jpg
+      - gallery_img: /assets/images/public/mezze-mid1_courtesy-of-sahadis.jpg
       - gallery_img: /assets/images/public/sahadis-7.jpg
       - gallery_img: /assets/images/public/sahadis.jpg
-      - gallery_img: /assets/images/public/sahadis-6.jpg
-      - gallery_img: /assets/images/public/sahadis-1.jpg
-      - gallery_img: /assets/images/public/sahadis-2.jpg
-      - gallery_img: /assets/images/public/mezze-mid1_courtesy-of-sahadis.jpg
-      - gallery_img: /assets/images/public/mezze-service-w-crowd_courtesy-of-sahadis.jpg
-      - gallery_img: /assets/images/public/dsc_6252.jpg
-      - gallery_img: /assets/images/public/dsc_6269.jpg
-      - gallery_img: /assets/images/public/dsc_6278.jpg
-      - gallery_img: /assets/images/public/dsc_6282.jpg
-      - gallery_img: /assets/images/public/dsc_6253.jpg
