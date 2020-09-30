@@ -80,9 +80,11 @@ sub_item:
   - name: Sahadis
     picture: /assets/images/public/sahadis-3.jpg
     interior_pictures:
+      - gallery_img: /assets/images/public/sahadis-31.jpg
       - gallery_img: /assets/images/public/sahadis-7.jpg
       - gallery_img: /assets/images/public/sahadis.jpg
       - gallery_img: /assets/images/public/sahadis-6.jpg
       - gallery_img: /assets/images/public/sahadis-1.jpg
       - gallery_img: /assets/images/public/sahadis-2.jpg
-      - gallery_img: /assets/images/public/sahadis-31.jpg
+      - gallery_img: /assets/images/public/mezze-mid1_courtesy-of-sahadis.jpg
+      - gallery_img: /assets/images/public/mezze-service-w-crowd_courtesy-of-sahadis.jpg
