@@ -1,5 +1,5 @@
 title: MNC+Sons Contractors
-baseURL: 'https://mnc.netlify.com'
+baseURL: https://mnc.netlify.com
 languageCode: en-us
 theme: mnc
 enableRobotsTXT: true
@@ -8,21 +8,21 @@ disableKinds:
   - taxonomyTerm
 menu:
   main:
-    - URL: '#portfolio'
+    - URL: "#portfolio"
       name: Portfolio
       weight: 1
-    - URL: '#about-res'
+    - URL: "#about-res"
       name: About us
       weight: 2
-    - URL: '#contact'
+    - URL: "#contact"
       name: Contact
       weight: 3
 params:
   author: modstud.io
-  description: ''
+  description: ""
   logo: /assets/images/logo.svg
   no_found_bg: /assets/images/public/ICJT_01.jpg
   no_found_text: Page not found
   robotsTXTtext: |-
     User-agent: *
-    Disallow: /
+    Disallow:
