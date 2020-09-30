@@ -77,7 +77,7 @@ sub_item:
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am-3-.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am.jpeg
       - gallery_img: /assets/images/public/whatsapp-image-2020-03-01-at-9.57.04-am-2-.jpeg
-  - name: Sahadis
+  - name: Sahadi's
     picture: /assets/images/public/sahadis-3.jpg
     interior_pictures:
       - gallery_img: /assets/images/public/sahadis-31.jpg
@@ -92,3 +92,4 @@ sub_item:
       - gallery_img: /assets/images/public/dsc_6269.jpg
       - gallery_img: /assets/images/public/dsc_6278.jpg
       - gallery_img: /assets/images/public/dsc_6282.jpg
+      - gallery_img: /assets/images/public/dsc_6253.jpg
