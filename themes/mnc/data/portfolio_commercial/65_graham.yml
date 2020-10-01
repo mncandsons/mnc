@@ -6,13 +6,16 @@ type: Mixed use 7 story building
 exterior_pictures:
   - gallery_img: /assets/images/public/Graham-02.jpeg
   - gallery_img: /assets/images/public/65-graham-14.jpg
+  - gallery_img: /assets/images/public/65-graham-11.jpg
 interior_pictures:
   - gallery_img: /assets/images/public/65-graham-1.jpg
+  - gallery_img: /assets/images/public/65-graham-9.jpg
   - gallery_img: /assets/images/public/65-graham-5.jpg
+  - gallery_img: /assets/images/public/65-graham-16.jpg
   - gallery_img: /assets/images/public/65-graham-2.jpg
   - gallery_img: /assets/images/public/65-graham-6.jpg
   - gallery_img: /assets/images/public/65-graham-8.jpg
-  - gallery_img: /assets/images/public/65-graham-9.jpg
+  - gallery_img: /assets/images/public/65-graham-13.jpg
+  - gallery_img: /assets/images/public/65-graham-20.jpg
   - gallery_img: /assets/images/public/65-graham-10.jpg
-  - gallery_img: /assets/images/public/65-graham-16.jpg
   - gallery_img: /assets/images/public/65-graham-19.jpg
