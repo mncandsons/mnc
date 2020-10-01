@@ -5,5 +5,7 @@ address: In progress
 type: Mixed use 7 story building
 exterior_pictures:
   - gallery_img: /assets/images/public/Graham-02.jpeg
-  - gallery_img: /assets/images/public/graham.jpeg
-interior_pictures: []
+  - gallery_img: /assets/images/public/65-graham-14.jpg
+interior_pictures:
+  - gallery_img: /assets/images/public/65-graham-1.jpg
+  - gallery_img: /assets/images/public/65-graham-2.jpg
