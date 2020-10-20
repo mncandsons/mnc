@@ -4,7 +4,11 @@ picture: /assets/images/public/gnd_040520_35.jpg
 address: Brooklyn Residence 4
 architect: "JLRA "
 design: William McIntosh Design
-exterior_pictures: null
+exterior_pictures:
+  - gallery_img: /assets/images/public/dsc_3332-edit.jpg
+  - gallery_img: /assets/images/public/dsc_3288-edit.jpg
+  - gallery_img: /assets/images/public/dsc_3275-edit.jpg
+  - gallery_img: /assets/images/public/dsc_3303-edit.jpg
 interior_pictures:
   - gallery_img: /assets/images/public/gnd_040520_02.jpg
   - gallery_img: /assets/images/public/gnd_040520_57.jpg
