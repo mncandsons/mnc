@@ -6,7 +6,8 @@ type: Ground up mixed use 6 story building
 area: 10,000 Square feet
 exterior_pictures:
   - gallery_img: /assets/images/public/Graham-02.jpeg
-  - gallery_img: /assets/images/public/65-graham-14.jpg
+  - gallery_img: /assets/images/public/img-20201015-wa0089.jpg
+  - gallery_img: /assets/images/public/img-20201015-wa0088.jpg
   - gallery_img: /assets/images/public/65-graham-11.jpg
 interior_pictures:
   - gallery_img: /assets/images/public/65-graham-1.jpg
