@@ -1,6 +1,6 @@
 favorite: "2"
 project_name: Betesh
-picture: /assets/images/public/BET_200220_07.jpg
+picture: /assets/images/public/dsc_3367-edit.jpg
 address: ""
 type: Brooklyn Residence 2
 architect: Warren Meister Architects
@@ -9,6 +9,7 @@ exterior_pictures:
   - gallery_img: /assets/images/public/dsc_3353-edit.jpg
   - gallery_img: /assets/images/public/dsc_3367-edit.jpg
 interior_pictures:
+  - gallery_img: /assets/images/public/BET_200220_07.jpg
   - gallery_img: /assets/images/public/BET_200220_02.jpg
   - gallery_img: /assets/images/public/BET_200220_04.jpg
   - gallery_img: /assets/images/public/BET_200220_09.jpg
