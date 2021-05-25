@@ -162,6 +162,9 @@
       transition: 500ms;
       &.invisible{
         opacity: 0;
+        @media (min-height: 920px){
+          opacity: 1;
+        }
       }
       @include respond-to(sm){
         display: none;
@@ -303,6 +306,10 @@
     &.invisible{
       opacity: 0;
       pointer-events: none;
+      @media (min-height: 920px){
+        opacity: 1;
+        pointer-events: auto;
+      }
       @include respond-to(sm){
         opacity: 1;
         pointer-events: auto;
@@ -342,6 +349,10 @@
     &.invisible{
       opacity: 0;
       pointer-events: none;
+      @media (min-height: 920px){
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
     @include respond-to(sm){
       display: none;

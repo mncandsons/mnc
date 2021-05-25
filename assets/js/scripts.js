@@ -320,18 +320,6 @@ for(let i = 0; i < pbElem.length; i++){
   })
 }
 
-
-// for(let i = 0; i < galleryImg.length; i++){
-//   if (galleryImg[i].matches(':hover')){
-//     galleryImgOver();
-//     console.log(1);
-//   }
-//   else{
-//     galleryImgLeave();
-//     console.log(2);
-//   }
-// }
-
 window.onmousemove = function(e){
   for(let i = 0; i < galleryImg.length; i++){
     if (galleryImg[i].matches(":hover")){
