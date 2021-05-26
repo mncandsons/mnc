@@ -57,12 +57,6 @@ function portrait() {
 
 portrait();
 
-// if (window.matchMedia("(max-width: 768px)").matches) {
-//   let lazyLoadInstance = new LazyLoad({
-//       elements_selector: ".lazy",
-//   });
-// }
-
 
 let forEach = function (array, callback, scope) {
   for (let i = 0; i < array.length; i++) {

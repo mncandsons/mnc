@@ -15,7 +15,6 @@ gulp.task('minify-js', () => {
     return gulp.src([
       'assets/js/vendor/tiny-slider.js',
       'assets/js/vendor/hashTabber.js',
-      'node_modules/vanilla-lazyload/dist/lazyload.min.js',
       'assets/js/vendor/js-form-validator.js'
     ])
     .pipe(uglify())
