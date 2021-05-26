@@ -29,22 +29,40 @@ if (toggleButton){
 
 // Check portrait/landscape
 function portrait() {
-  let galleryImg = document.querySelectorAll('.slideshow-inside__item img');
+  let galleryImg = document.querySelectorAll('.slideshow-inside__item picture');
   for(let i = 0; i < galleryImg.length; i++){
-    if (galleryImg[i].offsetWidth < galleryImg[i].offsetHeight){
-      galleryImg[i].classList.add('portrait');
+    let galleryWebp = galleryImg[i].querySelector('source');
+    let galleryJpeg = galleryImg[i].querySelector('img');
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      let srcJpg = galleryJpeg.getAttribute('data-srcset')
+      let srcWebp = galleryWebp.getAttribute('data-srcset')
+
+      galleryJpeg.setAttribute('loading', 'lazy');
+      galleryJpeg.setAttribute('src', srcJpg);
+      galleryJpeg.style.opacity = '1';
+
+      galleryWebp.setAttribute('loading', 'lazy');
+      galleryWebp.setAttribute('srcset', srcWebp);
+      galleryWebp.style.opacity = '1';
     }
+
+    galleryImg[i].addEventListener("load", event => {
+      if (galleryImg[i].naturalWidth < galleryImg[i].naturalHeight){
+        galleryImg[i].classList.add('portrait');
+      }
+    });
   }
 }
 
-let lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy",
-    callback_loaded: function(el) {
-      if (el.naturalWidth < el.naturalHeight){
-        el.classList.add('portrait');
-      }
-    }
-});
+portrait();
+
+// if (window.matchMedia("(max-width: 768px)").matches) {
+//   let lazyLoadInstance = new LazyLoad({
+//       elements_selector: ".lazy",
+//   });
+// }
+
 
 let forEach = function (array, callback, scope) {
   for (let i = 0; i < array.length; i++) {
@@ -105,6 +123,8 @@ if (innerGallery) {
       mouseDrag: true,
       swipeAngle: false,
       disable: true,
+      lazyload: true,
+      lazyloadSelector: '.slideshow-inside__item img',
       responsive: {
         767: {
           disable: false,
@@ -324,7 +344,6 @@ window.onmousemove = function(e){
   for(let i = 0; i < galleryImg.length; i++){
     if (galleryImg[i].matches(":hover")){
       galleryImgOver();
-      console.log(2);
     }
   }
 }
