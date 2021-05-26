@@ -31,7 +31,6 @@ if (toggleButton){
 function portrait() {
   let galleryImg = document.querySelectorAll('.slideshow-inside__item picture');
   for(let i = 0; i < galleryImg.length; i++){
-    let galleryWebp = galleryImg[i].querySelector('source');
     let galleryJpeg = galleryImg[i].querySelector('img');
 
     galleryJpeg.addEventListener("load", event => {
@@ -41,16 +40,9 @@ function portrait() {
     });
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      let srcJpg = galleryJpeg.getAttribute('data-srcset')
-      let srcWebp = galleryWebp.getAttribute('data-srcset')
-
-      galleryJpeg.setAttribute('loading', 'lazy');
-      galleryJpeg.setAttribute('src', srcJpg);
-      galleryJpeg.style.opacity = '1';
-
-      galleryWebp.setAttribute('loading', 'lazy');
-      galleryWebp.setAttribute('srcset', srcWebp);
-      galleryWebp.style.opacity = '1';
+      let lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+      });
     }
   }
 }
