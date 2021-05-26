@@ -34,6 +34,12 @@ function portrait() {
     let galleryWebp = galleryImg[i].querySelector('source');
     let galleryJpeg = galleryImg[i].querySelector('img');
 
+    galleryJpeg.addEventListener("load", event => {
+      if (galleryJpeg.naturalWidth < galleryJpeg.naturalHeight){
+        galleryJpeg.classList.add('portrait');
+      }
+    });
+
     if (window.matchMedia("(max-width: 768px)").matches) {
       let srcJpg = galleryJpeg.getAttribute('data-srcset')
       let srcWebp = galleryWebp.getAttribute('data-srcset')
@@ -46,12 +52,6 @@ function portrait() {
       galleryWebp.setAttribute('srcset', srcWebp);
       galleryWebp.style.opacity = '1';
     }
-
-    galleryImg[i].addEventListener("load", event => {
-      if (galleryImg[i].naturalWidth < galleryImg[i].naturalHeight){
-        galleryImg[i].classList.add('portrait');
-      }
-    });
   }
 }
 
