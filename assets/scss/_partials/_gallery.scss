@@ -16,9 +16,9 @@
   }
 	&__inner {
     height: 100%;
+    overflow: hidden;
     @include respond-to(sm){
       height: auto;
-      overflow: hidden;
     }
 	}
   .btn-back {
@@ -143,8 +143,10 @@
   }
 	&__item {
     height: 100%;
+    left: 120% !important;
     @include respond-to(sm){
       height: auto;
+      left: auto !important;
     }
     .tns-liveregion{
       left: 0;
@@ -387,9 +389,11 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    left: 120% !important;
     @include respond-to(sm){
       height: auto;
       margin-bottom: 16px;
+      left: auto !important;
     }
     .container-fluid-max{
       height: 100%;

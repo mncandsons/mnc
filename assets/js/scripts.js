@@ -27,28 +27,14 @@ if (toggleButton){
 
 // Gallery
 
-// Check portrait/landscape
-function portrait() {
-  let galleryImg = document.querySelectorAll('.slideshow-inside__item picture');
-  for(let i = 0; i < galleryImg.length; i++){
-    let galleryJpeg = galleryImg[i].querySelector('img');
-
-    galleryJpeg.addEventListener("load", event => {
-      if (galleryJpeg.naturalWidth < galleryJpeg.naturalHeight){
-        galleryJpeg.classList.add('portrait');
+let lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy",
+    callback_loaded: function(el) {
+      if (el.naturalWidth < el.naturalHeight){
+        el.classList.add('portrait');
       }
-    });
-
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      let lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy",
-      });
     }
-  }
-}
-
-portrait();
-
+});
 
 let forEach = function (array, callback, scope) {
   for (let i = 0; i < array.length; i++) {
@@ -109,8 +95,6 @@ if (innerGallery) {
       mouseDrag: true,
       swipeAngle: false,
       disable: true,
-      lazyload: true,
-      lazyloadSelector: '.slideshow-inside__item img',
       responsive: {
         767: {
           disable: false,
