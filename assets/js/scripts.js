@@ -545,3 +545,6 @@ if (formHandle) {
     return false;
   }, options);
 }
+
+// Current Year
+document.getElementById("year").innerHTML = new Date().getFullYear();
